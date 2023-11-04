@@ -30,7 +30,7 @@ This setup ensures a robust development environment for our project.
 
 Trello is a project management tool that lets you create and manage tasks.
 
-**Join us on Trello:** [PancakeSwap Board](https://trello.com/b/qnmEXJ5Q/friendzone)
+**Join us on Trello:** [Friendzone Board](https://trello.com/b/qnmEXJ5Q/friendzone)
 
 Once you're on Trello, check the task that has been assigned to you and click "join" to start working on it.
 
