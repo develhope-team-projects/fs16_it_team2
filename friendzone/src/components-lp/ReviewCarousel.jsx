@@ -96,7 +96,7 @@ const ReviewCarousel = () => {
         {reviews.map((item, index) => (
           <div className="flex justify-center h-70" key={index}>
             <div className=" w-90 max-w-sm bg-white rounded-xl overflow-hidden shadow-lg">
-              <div className="py-4 w-100% flex justify-center bg-gradient-to-t from-[#fbf7f7] to-[#c5b0dc] ">
+              <div className="py-4 w-100% flex justify-center bg-gradient-to-t from-[#fbf7f7] to-[#140426] ">
                 <img
                   className="card-review-img p-5"
                   src={item.img}
