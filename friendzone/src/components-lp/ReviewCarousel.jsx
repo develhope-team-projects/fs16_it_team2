@@ -10,7 +10,7 @@ import img7 from "../assets/media-lp/review8.png";
 import img9 from "../assets/media-lp/review10.png";
 import img10 from "../assets/media-lp/review2.png";
 
-import { FaQuoteLeft } from 'react-icons/fa';
+import { FaQuoteLeft } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 
 const reviews = [
@@ -98,16 +98,12 @@ const ReviewCarousel = () => {
           <div className="flex justify-center h-70" key={index}>
             <div className=" w-90 max-w-sm bg-white rounded-xl overflow-hidden shadow-lg">
               <div className="py-4 w-100% flex justify-center bg-gradient-to-t from-[#fbf7f7] to-[#140426] ">
-                  <div className="text-white">
-                    <FaQuoteLeft/>
-                </div>
+                <FaQuoteLeft className="text-4xl text-gray-600" />
                 <img
                   className="card-review-img p-5"
                   src={item.img}
                   alt="Immagine della card"
                 />
-              
-              
               </div>
 
               <div className=" flex-col justify-center px-6 py-3 ">
