@@ -10,7 +10,7 @@ import img7 from "../assets/media-lp/review8.png";
 import img9 from "../assets/media-lp/review10.png";
 import img10 from "../assets/media-lp/review2.png";
 
-import { PiShootingStarBold } from "react-icons/pi";
+import { FaStar } from "react-icons/fa";
 
 const reviews = [
   {
@@ -107,16 +107,16 @@ const ReviewCarousel = () => {
               <div className=" flex-col justify-center px-6 py-3 ">
                 <div className="h-[100px] flex-col mb-5">
                   <h2 className="font-bold text-xl mb-2">{item.name}</h2>
-                  <i>
-                    <PiShootingStarBold />
+                  <i className="flex  text-yellow-500">
+                    <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStar />
                   </i>
-                  <p className="text-gray-700  text-base">{item.paragraph}</p>
+                  <p className="text-gray-700   text-base">{item.paragraph}</p>
                 </div>
 
                 <div className="px-6 pt-4 flex-col justify-center">
-                  <button  className="bg-indigo-200  p-4 bg- rounded-3xl  hover:bg-[#966ab2] hover:text-white ;">
+                  <button className="bg-indigo-200 w-[100%] p-4 bg- rounded-3xl  hover:bg-[#966ab2] hover:text-white ;">
                     Chat with {item.name}
-                    <i className=" hover:text-[#e058cc]">
+                    <i className="hover:text-[#e058cc]">
                       <ion-icon name="ice-cream-outline"></ion-icon>
                     </i>
                   </button>
