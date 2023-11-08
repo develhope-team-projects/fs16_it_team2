@@ -1,11 +1,14 @@
-import React from "react";
+import { Route, Routes } from "react-router-dom";
+import LandingPage from "../src/components-lp/LandingPage";
 
-const App = () => {
+function App() {
   return (
     <>
-    
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
     </>
   );
-};
+}
 
 export default App;

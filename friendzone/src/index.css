@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.logo1 {
+  width: 200px;
+  padding: 25px;
+}
+
+.card-review-img {
+  width: 50%;
+  height: 12rem;
+  border-radius: 100%;
+ background-color: rgb(176, 176, 209);
+  object-fit: cover;
+}
