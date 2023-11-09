@@ -34,3 +34,17 @@
 .btn-transparent-border {
   @apply py-1 px-4 rounded-full bg-transparent border-2 border-purple-500 text-purple-500 hover:text-purple-800 hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-400;
 }
+
+/* .border-gradient-logo {
+  @apply  border-2 border-gradient-to-r from-fuchsia-500 via-cyan-600 to-purple-600
+} */
+
+/* @layer components {
+  .border-gradient-logo {
+    border: 2px solid;
+    border-radius: 40px;
+    border-image: linear-gradient(to right, fuchsia, cyan, purple);
+    border-image-slice: 1;
+   
+  }
+} */

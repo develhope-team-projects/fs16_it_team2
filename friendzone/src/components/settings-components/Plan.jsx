@@ -1,32 +1,26 @@
 import React, { useState, useEffect } from "react";
-import MyDetails from "../components/settings-components/MyDetails";
-import Profile from "../components/settings-components/Profile";
-import Password from "../components/settings-components/Password";
-import Plan from "../components/settings-components/Plan";
-import Billing from "../components/settings-components/Billing";
-import Email from "../components/settings-components/Email";
-import Notifications from "../components/settings-components/Notifications";
-import AdvancedSettings from "../components/settings-components/AdvancedSettings";
+import PremiumPlus from "../../pages-sidebar/PremiumPlus";
+import PremiumGold from "../../pages-sidebar/PremiumGold";
+import PremiumPlatinum from "../../pages-sidebar/PremiumPlatinum";
 
 const tabComponents = [
-  { component: MyDetails, label: "Account" },
-  { component: Profile, label: "Profile" },
-  { component: Password, label: "Password" },
-  { component: Plan, label: "Plan" },
-  { component: Billing, label: "Billing" },
-  { component: Email, label: "Email" },
-  { component: Notifications, label: "Notifications" },
-  { component: AdvancedSettings, label: "Other" },
+  { component: PremiumPlus, label: "Plus" },
+  { component: PremiumGold, label: "Gold" },
+  { component: PremiumPlatinum, label: "Platinum" },
 ];
 
-const Settings = () => {
-  const [openTab, setOpenTab] = useState(0);
+const Plan = () => {
+  const [openTab, setOpenTab] = useState(1);
 
   useEffect(() => {
     // Retrieve the selected tab index from localStorage on component mount
     const storedTab = localStorage.getItem("selectedTab");
-    if (storedTab) {
+    if (storedTab !== null) {
       setOpenTab(parseInt(storedTab, 10));
+    } else {
+      // If no tab is stored in localStorage, set the default to PremiumGold (index 1)
+      setOpenTab(1);
+      localStorage.setItem("selectedTab", "1");
     }
   }, []);
 
@@ -63,7 +57,7 @@ const Settings = () => {
           ))}
         </ul>
 
-        <div className="relative break-words bg-white w-full mb-6 shadow-lg rounded">
+        <div className="relative break-words bg-white w-full mb-6 ">
           <div className="px-4 py-5 flex-auto">
             <div className="tab-content tab-space">
               {tabComponents.map((tab, index) => (
@@ -86,4 +80,4 @@ const Settings = () => {
   );
 };
 
-export default Settings;
+export default Plan;

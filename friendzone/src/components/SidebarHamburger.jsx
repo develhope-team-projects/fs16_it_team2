@@ -99,7 +99,7 @@ const SidebarHamburger = () => {
             transition: "margin 0.5s",
           }}
         >
-          <div className="flex-1  bg-white dark:bg-black min-h-screen flex justify-center items-center ">
+          <div className="flex-1  bg-white dark:bg-black min-h-screen flex justify-center ">
             <Outlet />
           </div>
         </div>

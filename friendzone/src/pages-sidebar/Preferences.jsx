@@ -4,7 +4,7 @@ import Tabs from "../components/Tabs/Tabs"
 const Preferences = () => {
   return (
     <div className=" bg-white   dark:bg-black">
-    
+    Preferences
     </div>
   )
 }
