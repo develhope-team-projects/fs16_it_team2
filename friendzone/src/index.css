@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-gradient-gold {
+  @apply bg-gradient-to-r from-yellow-300 to-yellow-500;
+}
+
+.bg-gradient-platinum {
+  @apply bg-gradient-to-r from-gray-300 to-gray-500;
+}
+
+.bg-gradient-plus {
+  @apply bg-gradient-to-r from-pink-300 to-pink-500;
+}
+
+.bg-gradient-sidebar {
+  @apply bg-gradient-to-t from-fuchsia-800 to-indigo-500;
+}
+
+.dark .bg-gradient-sidebar-dark {
+  @apply bg-gradient-to-t from-fuchsia-800 to-black;
+}
+
+/* In your CSS file or stylesheet */
+.backdrop-blur {
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  /* Standard */
+  -webkit-backdrop-filter: blur(10px);
+  /* WebKit */
+}
+
+.btn-transparent-border {
+  @apply py-1 px-4 rounded-full bg-transparent border-2 border-purple-500 text-purple-500 hover:text-purple-800 hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-400;
+}
