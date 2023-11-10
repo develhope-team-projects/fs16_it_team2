@@ -1,4 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { MdManageAccounts, MdOutlineSwitchAccount } from "react-icons/md";
+import { RiLockPasswordLine } from "react-icons/ri";
+import { FaCrown, FaRegCreditCard } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
+import { IoNotificationsOutline } from "react-icons/io5";
+import { GrSettingsOption } from "react-icons/gr";
 import MyDetails from "../components/settings-components/MyDetails";
 import Profile from "../components/settings-components/Profile";
 import Password from "../components/settings-components/Password";
@@ -9,14 +15,18 @@ import Notifications from "../components/settings-components/Notifications";
 import AdvancedSettings from "../components/settings-components/AdvancedSettings";
 
 const tabComponents = [
-  { component: MyDetails, label: "Account" },
-  { component: Profile, label: "Profile" },
-  { component: Password, label: "Password" },
-  { component: Plan, label: "Plan" },
-  { component: Billing, label: "Billing" },
-  { component: Email, label: "Email" },
-  { component: Notifications, label: "Notifications" },
-  { component: AdvancedSettings, label: "Other" },
+  { component: MyDetails, label: "Account", icon: <MdManageAccounts /> },
+  { component: Profile, label: "Profile", icon: <MdOutlineSwitchAccount /> },
+  { component: Password, label: "Password", icon: <RiLockPasswordLine /> },
+  { component: Plan, label: "Plan", icon: <FaCrown /> },
+  { component: Billing, label: "Billing", icon: <FaRegCreditCard /> },
+  { component: Email, label: "Email", icon: <HiOutlineMail /> },
+  {
+    component: Notifications,
+    label: "Notifications",
+    icon: <IoNotificationsOutline />,
+  },
+  { component: AdvancedSettings, label: "Other", icon: <GrSettingsOption /> },
 ];
 
 const Settings = () => {
@@ -37,25 +47,29 @@ const Settings = () => {
   };
 
   return (
-    <div className="dark:bg-black">
-      <div className="w-full m-auto">
-        <ul className="flex  mb-0 list-none pt-3 pb-4 flex-row" role="tablist">
+    <div className="dark:bg-black ">
+      <div className="w-full m-auto dark:bg-black ">
+        <ul
+          className="w-3/4 flex mb-0 list-none pt-3 pb-4 flex-row dark:bg-black"
+          role="tablist"
+        >
           {tabComponents.map((tab, index) => (
             <li
               key={index}
-              className={`-mb-px mr-2 last:mr-0 flex-auto text-center text-gray-500 hover:border-2 rounded-xl ${
+              className={`-mb-px mr-2 last:mr-0 flex-auto dark:bg-black text-center text-gray-500 dark:text-gray-300 hover:border-2 rounded-xl ${
                 openTab === index ? "border-2 border-purple-500 rounded-xl" : ""
               }`}
             >
               <a
-                className="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded leading-normal flex"
+                className="dark:bg-black text-xs font-bold uppercase px-5 py-3 shadow-lg rounded-xl leading-normal flex"
                 onClick={(e) => {
                   e.preventDefault();
                   handleTabChange(index);
                 }}
                 role="tablist"
               >
-                <div>
+                <div className="dark:bg-black flex items-center">
+                  {tab.icon && <span className="mr-2 text-xl">{tab.icon}</span>}
                   <h3 className="text-xs">{tab.label}</h3>
                 </div>
               </a>
@@ -63,14 +77,14 @@ const Settings = () => {
           ))}
         </ul>
 
-        <div className="relative break-words bg-white w-full mb-6 shadow-lg rounded">
+        <div className=" dark:bg-black relative break-words bg-white w-full mb-6 shadow-lg rounded">
           <div className="px-4 py-5 flex-auto">
             <div className="tab-content tab-space">
               {tabComponents.map((tab, index) => (
                 <div
                   key={index}
                   className={
-                    openTab === index ? "flex justify-between" : "hidden"
+                    openTab === index ? (tab.component === Plan ? "flex justify-center" : "flex justify-between") : "hidden"
                   }
                 >
                   <div className="flex">

@@ -9,9 +9,9 @@ const DeleteAccountModal = ({ onCancel, onConfirm }) => {
         <div className="flex justify-center">
           <button
             onClick={onCancel}
-            className="mr-2 bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-600 focus:outline-none"
+            className="mr-2 bg-purple-500 text-white py-2 px-6 rounded-md hover:bg-purple-600 focus:outline-none"
           >
-            No
+            Cancel
           </button>
           <button
             onClick={onConfirm}

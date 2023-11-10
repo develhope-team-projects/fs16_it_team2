@@ -7,9 +7,7 @@ const Passions = () => {
 
   return (
     <div>
-      {/* ... other sections ... */}
-
-      {/* Passions Section */}
+   
       <SelectionList
         title="Passions"
         items={passionsList}

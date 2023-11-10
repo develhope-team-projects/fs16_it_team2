@@ -12,9 +12,9 @@ const SelectionList = ({ title, items, selectedItems, onItemChange }) => {
   };
 
   return (
-    <div className="flex-col">
+    <div className="flex flex-col ">
       <div>
-        <h3 className="mb-4 text-lg font-semibold">{title}</h3>
+        <h3 className="mb-4 mt-5 text-lg font-semibold gray-text ">{title}</h3>
       </div>
       <div>
         {items.map((item, index) => (
@@ -24,7 +24,7 @@ const SelectionList = ({ title, items, selectedItems, onItemChange }) => {
               selectedItems.includes(item)
                 ? "border-2 border-purple-500 bg-transparent  text-purple-500"
                 : "border border-gray-600 bg-transparent"
-            } rounded-3xl text-gray-600 px-4 py-2 m-1 cursor-pointer focus:outline-none`}
+            } rounded-3xl gray-text px-4 py-2 m-1 cursor-pointer focus:outline-none`}
             onClick={() => handleItemChange(item)}
           >
             {item}

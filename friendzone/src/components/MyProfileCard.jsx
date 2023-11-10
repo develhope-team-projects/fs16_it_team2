@@ -10,7 +10,7 @@ import { AiFillPlusCircle } from "react-icons/ai";
 const MyProfileCard = () => {
   return (
     <div>
-      <div className="w-full  bg-white border border-gray-200 rounded-lg shadow dark:bg-black dark:border-gray-700">
+      <div className="w-full  bg-white dark:bg-black">
         <div className="flex justify-end px-4 pt-4">
           <button
             id="dropdownButton"
@@ -80,7 +80,7 @@ const MyProfileCard = () => {
           </div>
 
           <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-           Monica Icecream
+            Monica Icecream
           </h5>
           <span className="text-sm text-gray-500 dark:text-gray-400">
             Icecream lover
@@ -98,16 +98,22 @@ const MyProfileCard = () => {
               </Link>
             </div>
             <div className="w-full">
-              <Link to="/editprofile" className="flex flex-col items-center mt-6 ">
+              <Link
+                to="/editprofile"
+                className="flex flex-col items-center mt-6 "
+              >
                 <div className="p-6 border-2 border-purple-500 bg-transparent rounded-full hover:bg-purple-100 focus:ring-blue-300 dark:hover:bg-gray-900 dark:focus:ring-blue-800">
-                  <FaPencilAlt size={26} className="fill-purple-500"/>
+                  <FaPencilAlt size={26} className="fill-purple-500" />
                 </div>
 
                 <h2 className="text-gray-500 mt-1 text-xl">Edit Profile</h2>
               </Link>
             </div>
             <div className="w-full">
-              <Link to="/addmedia" className="flex flex-col items-center mb-10 ">
+              <Link
+                to="/addmedia"
+                className="flex flex-col items-center mb-10 "
+              >
                 <div className="relative p-4  bg-purple-500 border-purple-500 border-2 rounded-full  hover:bg-purple-600 focus:ring-blue-300  dark:hover:bg-purple-700 dark:focus:ring-blue-800">
                   <BsFillCameraFill size={24} className="fill-white" />
                   <div className="absolute bottom-0 right-0 ">

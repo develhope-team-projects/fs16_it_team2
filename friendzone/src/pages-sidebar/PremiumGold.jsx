@@ -18,7 +18,7 @@ const PremiumGold = ({ type, price, title }) => {
               </h3>
             </div>
             <div className="flex flex-col items-center gap-5 dark:text-gray-200">
-              <h2 className="text-4xl ">
+              <h2 className="text-4xl px-3">
                 see who likes you with Friendzone Gold
               </h2>
               <h2 className="text-3xl">

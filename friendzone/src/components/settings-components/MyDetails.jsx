@@ -76,10 +76,12 @@ const MyDetails = () => {
 
   return (
     <div className="dark:bg-black">
-      <h2 className="text-2xl font-bold mb-6">Account Settings</h2>
-      <div className="mb-4 flex gap-5">
+      <h2 className="dark:bg-transparent dark:text-gray-400 text-2xl font-bold mb-6">
+        Account Settings
+      </h2>
+      <div className="mb-4 flex gap-8">
         <div className="mb-4">
-          <label className="block align-middle text-gray-700 text-sm font-bold mb-2">
+          <label className="block align-middle text-gray-700  dark:text-gray-500  text-sm font-bold mb-2">
             First Name:
           </label>
           <div className="flex">
@@ -87,20 +89,12 @@ const MyDetails = () => {
               type="text"
               value={firstName}
               onChange={(event) => handleFieldChange(event, setFirstName)}
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+              className="dark:bg-transparent dark:text-gray-400 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
             />
-            <button
-              onClick={() =>
-                handleSaveData("First Name", firstName, setFirstName)
-              }
-              className="ml-2 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none"
-            >
-              Save
-            </button>
           </div>
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">
+          <label className="block text-gray-700 dark:text-gray-500  text-sm font-bold mb-2">
             Last Name:
           </label>
           <div className="flex">
@@ -108,19 +102,13 @@ const MyDetails = () => {
               type="text"
               value={lastName}
               onChange={(event) => handleFieldChange(event, setLastName)}
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+              className="dark:bg-transparent dark:text-gray-400 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
             />
-            <button
-              onClick={() => handleSaveData("Last Name", lastName, setLastName)}
-              className="ml-2 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none"
-            >
-              Save
-            </button>
           </div>
         </div>
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2">
+        <label className="block text-gray-700 dark:text-gray-500 text-sm font-bold mb-2">
           Username:
         </label>
         <div className="flex">
@@ -128,14 +116,8 @@ const MyDetails = () => {
             type="text"
             value={username}
             onChange={(event) => handleFieldChange(event, setUsername)}
-            className="w-full px-3 h-11 border rounded-md focus:outline-none focus:border-blue-500"
+            className="dark:bg-transparent dark:text-gray-400 w-full px-3 h-11 border rounded-md focus:outline-none focus:border-blue-500"
           />
-          <button
-            onClick={() => handleSaveData("Username", username, setUsername)}
-            className="ml-2 mt-6 bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none"
-          >
-            Save
-          </button>
         </div>
       </div>
 
@@ -143,27 +125,23 @@ const MyDetails = () => {
         timezone={timezone}
         onTimezoneChange={handleTimezoneChange}
       />
-      <div className="mt-4 flex flex-end">
+      <div className="dark:bg-black dark:text-gray-500 mt-4 flex flex-end">
         {successMessage && (
           <p className="text-green-500 mb-2">{successMessage}</p>
         )}
         <button
           onClick={handleSaveAllChanges}
-          className= " bg-green-500  text-white py-2 px-4 rounded-md hover:bg-green-600 focus:outline-none"
+          className=" bg-purple-500  text-white py-2 px-4 rounded-md hover:bg-green-600 focus:outline-none"
         >
           Save All Changes
         </button>
       </div>
- <h2 className="text-2xl font-bold mb-4 mt-4">Delete Account</h2>
+      <h2 className="dark:text-gray-400 text-2xl font-bold mb-4 mt-4">
+        Delete Account
+      </h2>
       <div className="mt-4 flex gap-5">
-     
         <div className="flex  items-center justify-start">
-          <h2 className="" >Delete account:</h2>
-          {/* <p>
-            No longer want to use our service? You can delete your account here.
-            This action is not reversible. All information related to this
-            account will be deleted permanently.
-          </p> */}
+          <h2 className="dark:text-gray-500">Delete account:</h2>
         </div>
         <button
           onClick={handleDeleteAccount}

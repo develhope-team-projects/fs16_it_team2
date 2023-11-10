@@ -12,9 +12,9 @@ const DrinkingHabits = () => {
 
   return (
     <div>
-      <h3 className="mb-4 text-lg font-semibold">Drinking Habits</h3>
+   
       <SelectionList
-     
+        title="Drinking Habits"
         items={drinkingOptions}
         selectedItems={selectedDrinking}
         onItemChange={setSelectedDrinking}

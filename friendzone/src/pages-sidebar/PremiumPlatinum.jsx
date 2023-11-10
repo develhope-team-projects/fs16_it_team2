@@ -20,7 +20,7 @@ const PremiumPlatinum = ({ type, price, title }) => {
             <div className="flex flex-col items-center gap-5 dark:text-gray-200">
               <h2 className="text-4xl text-center">see who likes you with Friendzone Platinum
               </h2>
-              <h2 className="text-3xl">
+              <h2 className="text-3xl px-3">
                 Your new friends are waiting for you{" "}
               </h2>
               <h4 className="dark:text-gray-400">Select a Plan</h4>

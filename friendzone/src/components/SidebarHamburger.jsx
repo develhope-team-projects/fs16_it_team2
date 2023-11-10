@@ -40,12 +40,12 @@ const SidebarHamburger = () => {
   const [open, setOpen] = useState(true);
 
   return (
-    <div className="dark:bg-black">
+    <div className="dark:bg-black ">
       <section className="flex w-full min-w-full">
         <div
-          className={`bg-[#9A59E5] dark:bg-[#0e0e0e] fixed top-0 left-0 min-h-screen ${
+          className={` bg-[#9A59E5] dark:bg-[#0e0e0e] fixed top-0 left-0 min-h-screen ${
             open ? "w-72" : "w-16"
-          } duration-500  text-gray-100 px-4 border-r rounded-r-lg`}
+          } duration-500  text-gray-100 px-4 border-r rounded-r-lg `}
         >
           <div
             className={`py-3 flex justify-between ${
@@ -85,7 +85,7 @@ const SidebarHamburger = () => {
                 <h2
                   className={`${
                     open && "hidden"
-                  } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit`}
+                  } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:z-10 group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit`}
                 >
                   {menu?.name}
                 </h2>
