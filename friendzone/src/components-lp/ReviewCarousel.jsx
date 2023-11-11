@@ -1,76 +1,11 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import img1 from "../assets/media-lp/review.png";
-import img2 from "../assets/media-lp/review3.png";
-import img3 from "../assets/media-lp/review4.png";
-import img4 from "../assets/media-lp/review5.png";
-import img5 from "../assets/media-lp/review6.png";
-import img6 from "../assets/media-lp/review7.png";
-import img7 from "../assets/media-lp/review8.png";
-import img9 from "../assets/media-lp/review10.png";
-import img10 from "../assets/media-lp/review2.png";
 
 import { FaQuoteLeft } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 
-const reviews = [
-  {
-    img: img1,
-    name: "Cloe",
-    paragraph:
-      "This app removed the pressure of searching for a soulmate. I've made many genuine friendships.",
-  },
-  {
-    img: img2,
-    name: "Juan",
-    paragraph:
-      "I was very skeptical at first, but it introduced me to amazing people. I learned not to underestimate online dating.",
-  },
-  {
-    img: img9,
-    name: "Robin",
-    paragraph:
-      "I'm finally surrounded by friends who share my passion for comics. I've never met such like-minded people!",
-  },
-  {
-    img: img7,
-    name: "Lily",
-    paragraph:
-      "I just moved to a new city, and it helped me find friends who know all the best places.",
-  },
-  {
-    img: img3,
-    name: "Marshall",
-    paragraph:
-      "In this incredible app, I stumbled upon a magical community of fellow Magic enthusiasts!",
-  },
-  {
-    img: img6,
-    name: "Charlotte",
-    paragraph:
-      "I was longing for travel companions, and this app connected me with a group of adventurous souls. Unforgettable memories.",
-  },
-  {
-    img: img4,
-    name: "Gaz",
-    paragraph:
-      "This app led me to a group of Latin music lovers, nights out have never been more fun!",
-  },
-  {
-    img: img5,
-    name: "Sophie",
-    paragraph:
-      "I was looking for workout buddies, and this app introduced me to a fitness community that's become like family!",
-  },
-  {
-    img: img10,
-    name: "Adam",
-    paragraph:
-      "My foodie heart is happy. Thanks to this app, I've joined a community of fellow food lovers and culinary explorers.",
-  },
-];
 
-const ReviewCarousel = () => {
+const ReviewCarousel = ({reviews}) => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -96,7 +31,7 @@ const ReviewCarousel = () => {
       <Carousel responsive={responsive}>
         {reviews.map((item, index) => (
           <div className="flex justify-center h-70" key={index}>
-            <div className=" w-90 max-w-sm bg-white rounded-xl overflow-hidden shadow-lg">
+            <div className=" max-w-sm bg-white rounded-xl overflow-hidden">
               <div className="py-4 w-100% flex justify-center bg-gradient-to-t from-[#fbf7f7] to-[#140426] ">
                 <FaQuoteLeft className="text-4xl text-gray-600" />
                 <img
@@ -118,7 +53,7 @@ const ReviewCarousel = () => {
                 <div className="px-6 pt-4 flex-col justify-center">
                   <button className="bg-indigo-200 w-[100%] p-4 bg- rounded-3xl  hover:bg-[#966ab2] hover:text-white ;">
                     Chat with {item.name}
-                    <i className="hover:text-[#e058cc]">
+                    <i className="hover:text-[#e058cc] text-2xl">
                       <ion-icon name="ice-cream-outline"></ion-icon>
                     </i>
                   </button>
