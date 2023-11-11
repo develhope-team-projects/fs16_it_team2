@@ -38,6 +38,9 @@ const Login = () => {
             </button>
           </div>
         </form>
+        <div className="text-gray-800">
+          <p>or log in with:</p>
+        </div>
         <div className="flex gap-2 p-3">
           <button className="bg-purple-500 p-2 px-5 border-2 rounded-full border-white text-white shadow-xl">
             Google
@@ -46,7 +49,7 @@ const Login = () => {
             Facebook
           </button>
           <button className="bg-purple-500 p-2 px-5 border-2 rounded-full border-white text-white shadow-xl ">
-            Twitter
+            Tinder
           </button>
         </div>
       </div>
