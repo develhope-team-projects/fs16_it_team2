@@ -16,9 +16,9 @@ const Payment = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800 flex min-h-screen">
-      <div className="w-full  mx-auto p-8">
-        <div className="bg-white rounded-lg shadow-lg border-2 w-4/5  mx-auto flex items-center justify-around">
+    <div className="bg-transparent flex  w-full">
+      <div className="  mx-auto p-8">
+        <div className="bg-white dark:bg-black dark:text-white rounded-lg custom-box-shadow border-1 w-4/5  mx-auto flex items-center justify-around">
           <div className="flex intems-center  p-6 ">
             <div className="  flex  items-center">
               <div className="flex">

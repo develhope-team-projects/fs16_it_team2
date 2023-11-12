@@ -9,10 +9,10 @@ const PremiumPlatinum = ({ type, price, title }) => {
 
   return (
     <>
-      <div className="flex flex-wrap gap-7 mt-8 p-4 rounded-3xl ">
-        <div className="w-full m-auto  border-2 rounded-3xl">
-          <div className="rounded-3xl flex flex-col gap-5 mb-8  ">
-            <div className="rounded-t-3xl flex items-center justify-center bg-gradient-to-t from-white to-zinc-300 dark:from-black dark:to-zinc-700 opacity-80">
+      <div className="flex flex-wrap gap-7 mt-8 p-4 bg-transparent">
+        <div className="w-full m-auto  border-2 rounded-3xl  custom-box-shadow">
+          <div className=" flex flex-col gap-5 mb-8 ">
+            <div className="rounded-t-3xl flex items-center justify-center bg-gradient-to-t from-white to-zinc-300 dark:from-black dark:to-zinc-600 opacity-80">
               <h3 className="text-4xl text-slate-900 dark:text-white p-7 ">
                 FRIENDZONE PLATINUM
               </h3>
@@ -110,7 +110,7 @@ const PremiumPlatinum = ({ type, price, title }) => {
             </li>
           </ul>
 
-          <div className="relative flex flex-col p-2 min-w-0 break-words  bg-white dark:bg-gray-800 border-2 rounded-3xl w-full  shadow-lg ">
+          <div className="relative flex flex-col p-2 min-w-0 break-words  bg-white dark:bg-black border-2 rounded-3xl w-full  shadow-lg ">
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
                 <div

@@ -47,10 +47,10 @@ const Matches = () => {
   if (loading) return <Loading />;
 
   return (
-    <div className="bg-white dark:bg-black relative mt-10 flex flex-col items-center justify-center w-4/5 ">
+    <div className="bg-transparent relative mt-10 flex flex-col items-center justify-center w-4/5 ">
       <div className="flex flex-col items-center justify-center relative">
         <div className="flex w-full items-center justify-center gap-5 flex-wrap p-8">
-          <button className="btn-transparent-border">
+          <button className="btn-transparent-border custom-box-shadow">
             <PiSlidersHorizontalDuotone />
           </button>
           <button className="btn-transparent-border">preference</button>

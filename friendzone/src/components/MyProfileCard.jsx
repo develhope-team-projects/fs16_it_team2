@@ -10,7 +10,7 @@ import { AiFillPlusCircle } from "react-icons/ai";
 const MyProfileCard = () => {
   return (
     <div>
-      <div className="w-full  bg-white dark:bg-black">
+      <div className="w-full  bg-transparent">
         <div className="flex justify-end px-4 pt-4">
           <button
             id="dropdownButton"

@@ -26,6 +26,7 @@
 .backdrop-blur {
   background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(10px);
+  color: #57357e;
   /* Standard */
   -webkit-backdrop-filter: blur(10px);
   /* WebKit */
@@ -49,7 +50,197 @@
   }
 } */
 
-
 .gray-text {
-  @apply text-gray-500 dark:text-gray-400 
+  @apply text-gray-500 dark:text-gray-400;
+}
+
+.custom-box-shadow {
+  box-shadow: rgba(56, 125, 255, 0.3) 0px 6px 20px;
+}
+
+.dark-image {
+  background-image: url("./assets/images/backgrounds/bg-dark.jpeg");
+  /* Add other styles as needed */
+}
+
+.light-image {
+  background-image: url("./assets/images/backgrounds/bg-light1.webp");
+  /* Add other styles as needed */
+}
+
+/* Password.css */
+
+@keyframes custom-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.custom-bounce {
+  animation: custom-bounce 3s infinite ease-in-out; /* Use ease-in-out for a smoother effect */
+}
+
+/* settings */
+/* Add these CSS rules to your stylesheets */
+@keyframes disappear {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.content__badges_circle {
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+
+  position: absolute;
+}
+
+/* Random positions for circles */
+.content__badges_circle.circle-1 {
+  background: linear-gradient(180deg, #fa38cd 0, #0e9ad6 100%);
+  animation: disappear 2s ease infinite;
+  top: 23%;
+  left: 40%;
+}
+
+.content__badges_circle.circle-2 {
+  background: linear-gradient(180deg, #ff8008 0, #fac538 100%);
+  animation: disappear 2s ease infinite;
+  top: 85%;
+  left: 70%;
+}
+
+.content__badges_circle.circle-3 {
+  background: linear-gradient(180deg, #12b886 0, #6a67ce 100%);
+  top: 45%;
+  left: 90%;
+  animation: disappear 2s ease infinite;
+}
+
+.content__badges_circle.circle-4 {
+  background: linear-gradient(180deg, #6a67ce 0, #12b886 100%);
+  top: 80%;
+  left: 25%;
+  animation: disappear 2s ease infinite;
+}
+
+.content__badges_circle.circle-5 {
+  background: linear-gradient(180deg, #8532a1 0, #fa38f0 100%);
+  top: 55%;
+  left: 80%;
+  width: 10px;
+  height: 10px;
+}
+
+.content__badges_circle.circle-6 {
+  background: linear-gradient(180deg, #fac538 0, #ed8936 100%);
+  top: 35%;
+  left: 15%;
+}
+
+.content__badges_circle.circle-7 {
+  background: linear-gradient(180deg, #b454eb 0, #724785 100%);
+  top: 5%;
+  left: 30%;
+}
+
+.content__badges_circle.circle-8 {
+  background: linear-gradient(180deg, #12b886 0, #6a67ce 100%);
+  width: 10px;
+  height: 10px;
+  top: 75%;
+  left: 85%;
+  animation: disappear 2s ease infinite;
+}
+
+.content__badges_circle.circle-9 {
+  background: linear-gradient(180deg, #6a67ce 0, #12b886 100%);
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 10%;
+}
+
+.content__badges_circle.circle-10 {
+  background: linear-gradient(180deg, #bc70e2 0, #383bfa 100%);
+  top: 20%;
+  left: 90%;
+}
+
+.content__badges_circle.circle-11 {
+  background: linear-gradient(180deg, #e0de48 0, #f0e220 100%);
+  top: 90%;
+  left: 40%;
+}
+
+.content__badges_circle.circle-12 {
+  background: linear-gradient(180deg, #a3769c 0, #fa38b6 100%);
+  top: 40%;
+  left: 5%;
+  animation: disappear 2s ease infinite;
+}
+
+.content__badges_circle.circle-13 {
+  background: linear-gradient(180deg, #12b886 0, #6a67ce 100%);
+  top: 90%;
+  left: 75%;
+}
+
+.content__badges_circle.circle-14 {
+  background: linear-gradient(180deg, #6a67ce 0, #12b886 100%);
+  width: 10px;
+  height: 10px;
+  top: 65%;
+  left: 20%;
+}
+
+.content__badges_circle.circle-15 {
+  background: linear-gradient(180deg, #ed8936 0, #fac538 100%);
+  top: 10%;
+  left: 50%;
+  animation: disappear 2s ease infinite;
+}
+.circle-16 {
+  position: absolute;
+  background: white;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  top: 20%;
+  left: 10%;
+}
+.circle-17 {
+  position: absolute;
+  background: white;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  top: 60%;
+  left: 10%;
+}
+.circle-18 {
+  position: absolute;
+  background: white;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  top: 30%;
+  left: 70%;
+}
+.circle-19 {
+  position: absolute;
+  background: white;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  top: 85%;
+  left: 50%;
 }

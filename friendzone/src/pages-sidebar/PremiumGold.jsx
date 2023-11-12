@@ -9,10 +9,10 @@ const PremiumGold = ({ type, price, title }) => {
 
   return (
     <>
-      <div className="flex flex-wrap gap-7 mt-8 p-4 rounded-3xl ">
-        <div className="w-full m-auto  border-2 rounded-3xl">
-          <div className="rounded-3xl flex flex-col gap-5 mb-8  ">
-            <div className="rounded-t-3xl flex items-center justify-center bg-gradient-to-t from-white to-yellow-300 dark:from-black dark:to-yellow-700 opacity-80">
+       <div className="flex flex-wrap gap-7 mt-8 p-4 bg-transparent">
+        <div className="w-full m-auto  border-2 rounded-3xl  custom-box-shadow">
+          <div className=" flex flex-col gap-5 mb-8 ">
+            <div className="rounded-t-3xl flex items-center justify-center bg-gradient-to-t from-white to-yellow-300 dark:from-black dark:to-yellow-600 opacity-80">
               <h3 className="text-4xl text-slate-900 dark:text-white p-7 ">
                 FRIENDZONE GOLD
               </h3>

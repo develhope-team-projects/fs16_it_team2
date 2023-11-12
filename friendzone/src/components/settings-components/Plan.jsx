@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PremiumPlus from "../../pages-sidebar/PremiumPlus";
 import PremiumGold from "../../pages-sidebar/PremiumGold";
 import PremiumPlatinum from "../../pages-sidebar/PremiumPlatinum";
+import { IoIceCreamSharp } from "react-icons/io5";
 
 const tabComponents = [
   { component: PremiumPlus, label: "Plus" },
@@ -30,49 +31,58 @@ const Plan = () => {
     setOpenTab(index);
   };
 
-  return (
-    <div className="dark:bg-black">
-      <div className="w-full m-auto">
-        <ul className="flex  mb-0 list-none pt-3 pb-4 flex-row" role="tablist">
-          {tabComponents.map((tab, index) => (
-            <li
-              key={index}
-              className={`-mb-px mr-2 last:mr-0 flex-auto text-center text-gray-500 hover:border-2 rounded-xl ${
-                openTab === index ? "border-2 border-purple-500 rounded-xl" : ""
-              }`}
-            >
-              <a
-                className="text-xs font-bold uppercase px-5 py-3 shadow-lg rounded leading-normal flex"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleTabChange(index);
-                }}
-                role="tablist"
-              >
-                <div>
-                  <h3 className="text-xs">{tab.label}</h3>
-                </div>
-              </a>
-            </li>
-          ))}
-        </ul>
+  const getIceCreamColor = (label) => {
+    switch (label) {
+      case "Plus":
+        return "text-pink-500";
+      case "Gold":
+        return "text-yellow-500";
+      case "Platinum":
+        return "text-zinc-500"; // Update with the actual color class you want
+      default:
+        return "";
+    }
+  };
 
-        <div className="relative break-words bg-white w-full mb-6 ">
-          <div className="px-4 py-5 flex-auto">
-            <div className="tab-content tab-space">
-              {tabComponents.map((tab, index) => (
-                <div
-                  key={index}
-                  className={
-                    openTab === index ? "flex justify-between" : "hidden"
-                  }
-                >
-                  <div className="flex">
-                    <tab.component />
-                  </div>
+  return (
+    <div className="dark:bg-black flex">
+      {/* Vertical Navigation Bar on the Left */}
+      <div className="w-16 bg-transparent flex flex-col items-center justify-center">
+        {tabComponents.map((tab, index) => (
+          <div
+            key={index}
+            className="group cursor-pointer p-3 relative"
+            onClick={() => handleTabChange(index)}
+          >
+            <IoIceCreamSharp
+              size={31}
+              className={` ${
+                openTab === index ? "bg-transparent custom-box-shadow rounded-full" : ""
+              } ${getIceCreamColor(tab.label)}`}
+            />
+            <h2 className="hidden absolute left-0 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-2 py-1 w-fit group-hover:block">
+              {tab.label}
+            </h2>
+          </div>
+        ))}
+      </div>
+
+      {/* Content Area on the Right */}
+      <div className="flex-1 relative break-words bg-transparent w-full mb-6 ">
+        <div className="px-4 py-5 flex-auto">
+          <div className="tab-content tab-space">
+            {tabComponents.map((tab, index) => (
+              <div
+                key={index}
+                className={
+                  openTab === index ? "flex justify-between" : "hidden"
+                }
+              >
+                <div className="flex">
+                  <tab.component />
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -41,14 +41,14 @@ const TimeZoneChanger = () => {
   return (
     <div className="dark:bg-transparent dark:text-gray-400">
       <h2 className="text-2xl font-bold mb-6">Time Zone Settings</h2>
-      <div className="mb-4">
+      <div className="mb-4 flex">
         <label className="dark:text-gray-500 block text-gray-700 text-sm font-bold mb-2">
           Select Time Zone:
         </label>
         <select
           value={selectedTimezone}
           onChange={handleTimezoneChange}
-          className="dark:bg-transparent dark:text-gray-400 w-full px-3 py-2 border rounded-md focus:outline-none focus:border-purple-500"
+          className=" p-2 w-full rounded-md border focus:outline-none focus:border-purple-500 dark:bg-gray-800 dark:text-gray-200"
         >
           {timezones.map((timezone) => (
             <option className="dark:bg-transparent dark:text-gray-400" key={timezone} value={timezone}>

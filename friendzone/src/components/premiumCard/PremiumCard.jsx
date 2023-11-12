@@ -11,7 +11,7 @@ const PremiumCard = () => {
   };
 
   return (
-    <div className="flex justify-center items-center gap-3">
+    <div className="flex justify-center items-center gap-6">
       {people.map((person, personIndex) => {
         const { id, icon, name, title, type, price } = person;
         const typeClass = gradientClasses[type] || "";
@@ -20,13 +20,14 @@ const PremiumCard = () => {
         const isPlus = type === "Plus";
         return (
           <div
-            className={`w-full max-w-sm p-4 bg-white  border-2 rounded-3xl shadow sm:p-8 dark:bg-black dark:border-gray-700 ${
+            className={`w-full max-w-lg p-4 bg-white  border-1 rounded-3xl custom-box-shadow sm:p-8 dark:bg-black  ${
               type == "Gold" ? "mt-5" : "mt-0"
-            }`}
+            }transform transition-transform duration-300 ease-in-out hover:scale-105`}
+          
             key={personIndex}
           >
             <h5
-              className={`text-center mb-4 text-xl font-medium text-gray-800 ${typeClass}
+              className={`text-center mb-4 text-xl font-medium custom-box-shadow text-gray-800 ${typeClass}
                `}
             >
               {type}
@@ -176,7 +177,7 @@ const PremiumCard = () => {
               <button
                 type="button"
                 className={`text-white  ${typeClass}
-               focus:ring-4 focus:outline-none hover:border-gray-500 hover:border-2 focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center`}
+               focus:ring-4 focus:outline-none hover:border-gray-500 hover:border-2 focus:ring-blue-200 dark:focus:ring-blue-900 custom-box-shadow font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center`}
               >
                 Choose plan
               </button>

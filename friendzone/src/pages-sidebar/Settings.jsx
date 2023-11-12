@@ -5,7 +5,7 @@ import { FaCrown, FaRegCreditCard } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { GrSettingsOption } from "react-icons/gr";
-import MyDetails from "../components/settings-components/MyDetails";
+import Account from "../components/settings-components/Account";
 import Profile from "../components/settings-components/Profile";
 import Password from "../components/settings-components/Password";
 import Plan from "../components/settings-components/Plan";
@@ -15,7 +15,7 @@ import Notifications from "../components/settings-components/Notifications";
 import AdvancedSettings from "../components/settings-components/AdvancedSettings";
 
 const tabComponents = [
-  { component: MyDetails, label: "Account", icon: <MdManageAccounts /> },
+  { component: Account, label: "Account", icon: <MdManageAccounts /> },
   { component: Profile, label: "Profile", icon: <MdOutlineSwitchAccount /> },
   { component: Password, label: "Password", icon: <RiLockPasswordLine /> },
   { component: Plan, label: "Plan", icon: <FaCrown /> },
@@ -47,7 +47,7 @@ const Settings = () => {
   };
 
   return (
-    <div className="dark:bg-black ">
+    <div className=" ">
       <div className="w-full m-auto dark:bg-black ">
         <ul
           className="w-3/4 flex mb-0 list-none pt-3 pb-4 flex-row dark:bg-black"
@@ -61,7 +61,7 @@ const Settings = () => {
               }`}
             >
               <a
-                className="dark:bg-black text-xs font-bold uppercase px-5 py-3 shadow-lg rounded-xl leading-normal flex"
+                className="dark:bg-black text-xs font-bold uppercase px-5 py-3 custom-box-shadow rounded-xl leading-normal flex"
                 onClick={(e) => {
                   e.preventDefault();
                   handleTabChange(index);
@@ -77,17 +77,21 @@ const Settings = () => {
           ))}
         </ul>
 
-        <div className=" dark:bg-black relative break-words bg-white w-full mb-6 shadow-lg rounded">
-          <div className="px-4 py-5 flex-auto">
+        <div className=" dark:bg-black  break-words bg-white w-full mb-6 custom-box-shadow rounded-2xl">
+          <div className="px-5 py-3 flex-auto">
             <div className="tab-content tab-space">
               {tabComponents.map((tab, index) => (
                 <div
                   key={index}
                   className={
-                    openTab === index ? (tab.component === Plan ? "flex justify-center" : "flex justify-between") : "hidden"
+                    openTab === index
+                      ? tab.component === Plan
+                        ? "flex justify-center"
+                        : "block"
+                      : "hidden"
                   }
                 >
-                  <div className="flex">
+                  <div className="">
                     <tab.component />
                   </div>
                 </div>

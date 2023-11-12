@@ -2,14 +2,14 @@ import React from "react";
 
 const LogoutModal = () => {
   return (
-    <div className="">
+    <div className="bg-transparent">
       <div
         id="popup-modal"
         tabindex="-1"
         className=" flex justify-center z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
       >
-        <div className="relative w-full max-w-md max-h-full">
-          <div className="relative bg-purple-100 rounded-lg shadow dark:bg-gray-900">
+        <div className="relative w-full max-w-md max-h-full ">
+          <div className="relative bg-white rounded-lg custom-box-shadow dark:bg-gray-800">
           
             <div className="p-6 text-center">
               <svg

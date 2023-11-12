@@ -33,7 +33,7 @@ const Explore = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-black relative mt-10 flex flex-col items-center justify-center w-full">
+    <div className="bg-white dark:bg-black  mt-10 flex flex-col items-center justify-center w-full">
       <div className="flex flex-col items-center justify-center ">
         <h1 className="text-2xl font-semibold mb-4">Explore</h1>
         {users.map(

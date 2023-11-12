@@ -19,12 +19,15 @@ const Zodiac = () => {
   ];
 
   return (
-    <SelectionList
-      title="Zodiac"
-      items={zodiacList}
-      selectedItems={selectedZodiacs}
-      onItemChange={setSelectedZodiacs}
-    />
+    <div className="">
+      {" "}
+      <SelectionList
+        title="Zodiac"
+        items={zodiacList}
+        selectedItems={selectedZodiacs}
+        onItemChange={setSelectedZodiacs}
+      />
+    </div>
   );
 };
 

@@ -12,8 +12,14 @@ import {
 } from "react-icons/ai";
 import { IoIceCreamOutline } from "react-icons/io5";
 import Switcher from "../darkMode/Switcher";
+import bgl from "../assets/images/backgrounds/bg-light.png";
+
+import useDarkSide from "../customHooks/useDarkSide";
 
 const SidebarHamburger = () => {
+  const [colorTheme, setTheme] = useDarkSide();
+  console.log("Current Theme:", colorTheme);
+  const backgroundImage = colorTheme === "dark" ? `url(${bgl})` : `url(${bgl})`;
   const menus = [
     { name: "home", link: "/", icon: AiOutlineHome },
     { name: "premium", link: "/premium", icon: IoIceCreamOutline },
@@ -43,9 +49,9 @@ const SidebarHamburger = () => {
     <div className="dark:bg-black ">
       <section className="flex w-full min-w-full">
         <div
-          className={` bg-[#9A59E5] dark:bg-[#0e0e0e] fixed top-0 left-0 min-h-screen ${
+          className={` bg-[#613b8c] dark:bg-[#0e0e0e] fixed top-0 left-0 min-h-screen ${
             open ? "w-72" : "w-16"
-          } duration-500  text-gray-100 px-4 border-r rounded-r-lg `}
+          } duration-500  text-gray-100 px-4 custom-box-shadow rounded-r-lg `}
         >
           <div
             className={`py-3 flex justify-between ${
@@ -69,7 +75,7 @@ const SidebarHamburger = () => {
                 key={i}
                 className={`${
                   menu?.margin && "mt-5"
-                } group flex items-center text-sm  gap-3.5 font-medium p-2 hover:bg-purple-600  dark:hover:bg-gray-800 rounded-md `}
+                } group flex items-center text-sm  gap-3.5 font-medium p-2 hover:bg-[#57357e]  dark:hover:bg-gray-800 rounded-md `}
               >
                 <div>{React.createElement(menu?.icon, { size: "20" })}</div>
                 <h2
@@ -93,14 +99,18 @@ const SidebarHamburger = () => {
             ))}
           </div>
         </div>
-        <div className="flex w-full"
+        <div
+          className="flex w-full"
           style={{
             marginLeft: open ? "288px" : "64px", // Adjust the margin values accordingly
             transition: "margin 0.5s",
           }}
         >
-          <div className="flex-1  bg-white dark:bg-black min-h-screen flex justify-center ">
-            <Outlet />
+          <div
+            className="flex-1  bg-white dark:bg-black min-h-screen flex justify-center "
+            style={{ backgroundImage, backgroundSize: "cover" }}
+          >
+            <Outlet className="w-full" />
           </div>
         </div>
 

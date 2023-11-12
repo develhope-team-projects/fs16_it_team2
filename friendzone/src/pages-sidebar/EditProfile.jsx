@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import AddMedia from "./AddMedia";
+import Profile from "../components/settings-components/Profile";
 
 const EditProfile = () => {
   return (
-    <div>EditProfile</div>
-  )
-}
+    <div>
+      <AddMedia />
+      <Profile />
+    </div>
+  );
+};
 
-export default EditProfile
+export default EditProfile;

@@ -3,7 +3,7 @@ import LogoutModal from "../components/LogoutModal";
 
 const Logout = () => {
   return (
-    <div className=" bg-white   dark:bg-black">
+    <div className=" bg-transparent flex items-center justify-center" >
     
       <LogoutModal />
     </div>

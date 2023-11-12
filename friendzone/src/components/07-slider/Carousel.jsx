@@ -32,7 +32,7 @@ const Carousel = () => {
   }, [currentPerson]);
 
   return (
-    <section className="slider-container flex flex-col justify-center items-center gap-5">
+    <section className="slider-container flex flex-col justify-center items-center gap-5 border-none bg-transparent">
       {people.map((person, personIndex) => {
         const { id, icon, name, title, quote, type } = person;
         return (
