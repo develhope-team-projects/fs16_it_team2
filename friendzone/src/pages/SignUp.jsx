@@ -1,3 +1,5 @@
+import PasswordComponent from "../components/PasswordComponent";
+
 const SignUp = () => {
   return (
     <div className="flex items-center justify-center w-full h-screen bg-purple-700">
@@ -40,38 +42,8 @@ const SignUp = () => {
               id="email"
             />
           </div>
-          <div className="flex flex-col gap-1 mb-3">
-            <label className="text-xl" htmlFor="password">
-              {" "}
-              Password
-            </label>
-            <input
-              className="w-80 border-2 p-2 bg-transparent border-white rounded-xl shadow-lg"
-              placeholder="enter your password"
-              type="password"
-              id="password"
-            />
-          </div>
-          <div className="flex flex-col gap-1 mb-3">
-            <label className="text-xl" htmlFor="repeatpassword">
-              {" "}
-              Repeat Password
-            </label>
-            <input
-              className="w-80 border-2 p-2 bg-transparent border-white rounded-xl shadow-lg"
-              placeholder="repeat your password"
-              type="repeatpassword"
-              id="repeatpassword"
-            />
-          </div>
-          <div className="m-2">
-            <input type="checkbox" id="checkbox" />
-            <label htmlFor="checkbox"> Check to remember me!</label>
-          </div>
-          <div className="flex items-center justify-center">
-            <button className="bg-purple-500 p-3 px-16 border-2 rounded-full border-white text-white shadow-xl mb-6">
-              Sign Up!
-            </button>
+          <div >
+            <PasswordComponent />
           </div>
         </form>
       </div>

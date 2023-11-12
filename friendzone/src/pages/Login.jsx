@@ -13,7 +13,7 @@ const Login = () => {
               className="w-80 border-2 p-2 bg-transparent border-white rounded-xl shadow-lg"
               placeholder="enter your email"
               type="email"
-              id="email"
+              id="emailLog"
             />
           </div>
           <div className="flex flex-col gap-1 mb-3">
@@ -25,7 +25,7 @@ const Login = () => {
               className="w-80 border-2 p-2 bg-transparent border-white rounded-xl shadow-lg"
               placeholder="enter your password"
               type="password"
-              id="password"
+              id="passwordLog"
             />
           </div>
           <div className="m-2">
