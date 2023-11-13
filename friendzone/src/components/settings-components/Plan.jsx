@@ -78,7 +78,7 @@ const Plan = () => {
                   openTab === index ? "flex justify-between" : "hidden"
                 }
               >
-                <div className="flex">
+                <div className="flex w-4/5">
                   <tab.component />
                 </div>
               </div>

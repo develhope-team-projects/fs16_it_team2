@@ -51,7 +51,7 @@ const Billing = () => {
       <div className="w-full mt-8 p-2">
       <form onSubmit={handleSubmit} >
         <div className="flex justify-between gap-5">
-          <div className="mb-4 w-52 ">
+          <div className="mb-4 max-w-52 ">
             <label
               htmlFor="firstName"
               className="block text-sm font-medium text-gray-400"
@@ -68,7 +68,7 @@ const Billing = () => {
               className="mt-1 p-2 w-full rounded-md border focus:outline-none focus:border-purple-500 dark:bg-gray-800 dark:text-gray-200"
             />
           </div>
-          <div className="mb-4 w-52">
+          <div className="mb-4 max-w-52">
             <label
               htmlFor="lastName"
               className="block text-sm font-medium text-gray-400"
@@ -156,7 +156,7 @@ const Billing = () => {
         </div>
         <div className="flex gap-5 justify-between">
           {" "}
-          <div className="mb-4 w-52">
+          <div className="mb-4 max-w-52">
             <label
               htmlFor="address.building"
               className="block text-sm font-medium text-gray-400"
@@ -173,7 +173,7 @@ const Billing = () => {
               className="mt-1 p-2 w-full rounded-md border focus:outline-none focus:border-purple-500 dark:bg-gray-800 dark:text-gray-200"
             />
           </div>
-          <div className="mb-4 w-52">
+          <div className="mb-4 max-w-52">
             <label
               htmlFor="address.zipCode"
               className="block text-sm font-medium text-gray-400"
@@ -209,7 +209,7 @@ const Billing = () => {
           />
         </div>
         <div className="mb-4 flex justify-between space-x-4">
-          <div className="w-52">
+          <div className="max-w-52">
             <label
               htmlFor="expirationDate"
               className="block text-sm font-medium text-gray-400"
@@ -226,7 +226,7 @@ const Billing = () => {
               className="mt-1 p-2 w-full rounded-md border focus:outline-none focus:border-purple-500 dark:bg-gray-800 dark:text-gray-200"
             />
           </div>
-          <div className="w-52">
+          <div className="max-w-52">
             <label
               htmlFor="cvv"
               className="block text-sm font-medium text-gray-400"

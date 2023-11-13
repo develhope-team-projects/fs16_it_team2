@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ProfileCard from "../components/ProfileCard";
+import ProfileCard from "../components/swipeCard/ProfileCard";
 
 const Explore = () => {
   const [users, setUsers] = useState([]);

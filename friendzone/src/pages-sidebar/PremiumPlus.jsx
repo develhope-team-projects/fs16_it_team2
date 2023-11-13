@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import { useState } from "react";
 
@@ -9,26 +11,25 @@ const PremiumPlus = ({ type, price, title }) => {
 
   return (
     <>
-       <div className="flex flex-wrap gap-7 mt-8 p-4 bg-transparent">
+      <div className="flex flex-wrap gap-7 mt-8 p-4 bg-transparent">
         <div className="w-full m-auto  border-2 rounded-3xl  custom-box-shadow">
           <div className=" flex flex-col gap-5 mb-8 ">
-            <div className="rounded-t-3xl flex items-center justify-center bg-gradient-to-t from-white to-pink-300 dark:from-black dark:to-pink-700 opacity-80">
+            <div className="rounded-t-3xl flex items-center justify-center bg-gradient-to-t from-white to-pink-300 dark:from-black dark:to-pink-600 opacity-80">
               <h3 className="text-4xl text-slate-900 dark:text-white p-7 ">
-                FRIENDZONE PLUS
+                FRIENDZONE Plus
               </h3>
             </div>
             <div className="flex flex-col items-center gap-5 dark:text-gray-200">
-              <h2 className="text-4xl px-3">
-                see who likes you with Friendzone Plus
+              <h2 className="text-4xl text-center">see who likes you with Friendzone Plus
               </h2>
-              <h2 className="text-3xl">
+              <h2 className="text-3xl px-3">
                 Your new friends are waiting for you{" "}
               </h2>
               <h4 className="dark:text-gray-400">Select a Plan</h4>
             </div>
           </div>
           <ul
-            className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
+            className="flex mb-0 list-none  pt-3 pb-4 flex-row"
             role="tablist"
           >
             <li
@@ -38,7 +39,7 @@ const PremiumPlus = ({ type, price, title }) => {
             >
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded leading-normal  h-40 flex flex-col justify-between"
+                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded-3xl leading-normal  h-40 flex flex-col justify-between"
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -63,7 +64,7 @@ const PremiumPlus = ({ type, price, title }) => {
             >
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded leading-normal  h-40 flex flex-col justify-between"
+                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded-3xl leading-normal  h-40 flex flex-col justify-between"
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -78,7 +79,7 @@ const PremiumPlus = ({ type, price, title }) => {
                 </div>
                 <div className="flex justify-between items-center">
                   <div>€10.99/wk</div>
-                  <div className="btn">save 40%</div>
+                  {/* <div >save 40%</div> */}
                 </div>
               </a>
             </li>
@@ -89,7 +90,7 @@ const PremiumPlus = ({ type, price, title }) => {
             >
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3  shadow-lg rounded leading-normal  h-40 flex flex-col justify-between"
+                  "text-xs font-bold uppercase px-5 py-3  shadow-lg rounded-3xl leading-normal  h-40 flex flex-col justify-between"
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -105,7 +106,7 @@ const PremiumPlus = ({ type, price, title }) => {
                 </div>
                 <div className="flex justify-between items-center">
                   <div>€5.99/wk</div>
-                  <div className="btn">save 70%</div>
+                  
                 </div>
               </a>
             </li>

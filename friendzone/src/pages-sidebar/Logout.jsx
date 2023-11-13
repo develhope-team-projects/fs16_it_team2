@@ -1,10 +1,9 @@
 import React from "react";
-import LogoutModal from "../components/LogoutModal";
+import LogoutModal from "../components/logout/LogoutModal";
 
 const Logout = () => {
   return (
     <div className=" bg-transparent flex items-center justify-center" >
-    
       <LogoutModal />
     </div>
   );

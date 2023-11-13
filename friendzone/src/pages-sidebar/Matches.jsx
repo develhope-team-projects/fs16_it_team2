@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ProfileCard from "../components/ProfileCard";
+import ProfileCard from "../components/swipeCard/ProfileCard"
 import Loading from "../components/loading/Loading";
 import { Link } from "react-router-dom";
 import { PiSlidersHorizontalDuotone } from "react-icons/pi";

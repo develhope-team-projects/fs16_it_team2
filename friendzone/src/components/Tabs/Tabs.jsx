@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import img from "../gelato.png";
+
 import { IoIceCreamSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 

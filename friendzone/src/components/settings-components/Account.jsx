@@ -82,7 +82,7 @@ const Account = () => {
           Account Settings
         </h2>
         <div className="mb-4 flex gap-8 justify-between ">
-          <div className="mb-4 w-52">
+          <div className="mb-4 max-w-52">
             <label className="block align-middle text-gray-700  dark:text-gray-500  text-sm font-bold mb-2">
               First Name:
             </label>
@@ -95,7 +95,7 @@ const Account = () => {
               />
             </div>
           </div>
-          <div className="mb-4 w-52">
+          <div className="mb-4 max-w-52">
             <label className="block text-gray-700 dark:text-gray-500  text-sm font-bold mb-2">
               Last Name:
             </label>

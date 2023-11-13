@@ -12,7 +12,6 @@ import Plan from "../components/settings-components/Plan";
 import Billing from "../components/settings-components/Billing";
 import Email from "../components/settings-components/Email";
 import Notifications from "../components/settings-components/Notifications";
-import AdvancedSettings from "../components/settings-components/AdvancedSettings";
 
 const tabComponents = [
   { component: Account, label: "Account", icon: <MdManageAccounts /> },
@@ -26,7 +25,6 @@ const tabComponents = [
     label: "Notifications",
     icon: <IoNotificationsOutline />,
   },
-  { component: AdvancedSettings, label: "Other", icon: <GrSettingsOption /> },
 ];
 
 const Settings = () => {
@@ -50,7 +48,7 @@ const Settings = () => {
     <div className=" ">
       <div className="w-full m-auto dark:bg-black ">
         <ul
-          className="w-3/4 flex mb-0 list-none pt-3 pb-4 flex-row dark:bg-black"
+          className="w-full flex mb-0 list-none pt-3 pb-4 flex-row dark:bg-black"
           role="tablist"
         >
           {tabComponents.map((tab, index) => (
@@ -69,8 +67,12 @@ const Settings = () => {
                 role="tablist"
               >
                 <div className="dark:bg-black flex items-center">
-                  {tab.icon && <span className="mr-2 text-xl">{tab.icon}</span>}
-                  <h3 className="text-xs">{tab.label}</h3>
+                  {tab.icon && (
+                    <span className="mr-2 text-xl ">
+                      {tab.icon}
+                    </span>
+                  )}
+                  <h3 className="text-xs hidden lg:flex">{tab.label}</h3>
                 </div>
               </a>
             </li>

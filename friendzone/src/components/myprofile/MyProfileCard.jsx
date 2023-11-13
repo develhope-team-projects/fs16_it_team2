@@ -11,7 +11,7 @@ const MyProfileCard = () => {
   return (
     <div>
       <div className="w-full  bg-transparent">
-        <div className="flex justify-end px-4 pt-4">
+      <div className="flex justify-end px-4 pt-4 lg:pt-0">
           <button
             id="dropdownButton"
             data-dropdown-toggle="dropdown"
@@ -62,7 +62,7 @@ const MyProfileCard = () => {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col items-center pb-10">
+        <div className="flex flex-col items-center pb-10 lg:pb-0">
           <div className="flex flex-col items-center relative">
             <div className="flex flex-col items-center rounded-full p-3 border-gray-500 border-l-purple-600 border-8">
               <img

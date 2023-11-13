@@ -11,14 +11,15 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 import { IoIceCreamOutline } from "react-icons/io5";
-import Switcher from "../darkMode/Switcher";
-import bgl from "../assets/images/backgrounds/bg-light.png";
+import Switcher from "../../darkMode/Switcher";
+import bgl from "../../assets/images/backgrounds/bg-light.png";
 
-import useDarkSide from "../customHooks/useDarkSide";
+import useDarkSide from "../../customHooks/useDarkSide";
+import { useEffect } from "react";
 
 const SidebarHamburger = () => {
   const [colorTheme, setTheme] = useDarkSide();
-  console.log("Current Theme:", colorTheme);
+ 
   const backgroundImage = colorTheme === "dark" ? `url(${bgl})` : `url(${bgl})`;
   const menus = [
     { name: "home", link: "/", icon: AiOutlineHome },
@@ -43,7 +44,26 @@ const SidebarHamburger = () => {
     { name: "logout", link: "/logout", icon: AiOutlinePoweroff, margin: true },
   ];
 
-  const [open, setOpen] = useState(true);
+ 
+  const [open, setOpen] = useState(window.innerWidth >= 1120);
+  const [showIconsOnly, setShowIconsOnly] = useState(window.innerWidth < 820);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Set open to false if the screen width is below 1050px
+      setOpen(window.innerWidth >= 1120);
+      
+    };
+
+    // Initial check
+    handleResize();
+
+    // Attach the event listener
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="dark:bg-black ">
@@ -62,10 +82,16 @@ const SidebarHamburger = () => {
               <Switcher />
             </div>
 
-            <HiMenuAlt3
+           <HiMenuAlt3
               size={26}
-              className="cursor-pointer"
-              onClick={() => setOpen(!open)}
+              className={`cursor-pointer ${
+                window.innerWidth < 1120 ? "pointer-events-none" : ""
+              }`}
+              onClick={() => {
+                if (window.innerWidth >= 1120) {
+                  setOpen(!open);
+                }
+              }}
             />
           </div>
           <div className="mt-4 flex flex-col gap-4 relative">

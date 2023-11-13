@@ -1,5 +1,5 @@
 import React from "react";
-import SidebarHamburger from "../components/SidebarHamburger";
+import SidebarHamburger from "../components/sidebar/SidebarHamburger";
 import { Outlet } from "react-router-dom";
 
 const DefaultLayout = () => {
