@@ -5,6 +5,7 @@ import VideoSection from "./VideoSection";
 import photoUno from "../../src/assets/media-lp/fotocard1.png";
 import photoDue from "../assets/media-lp/photo2card.png";
 import ReviewCarousel from "./ReviewCarousel";
+import Loading from "./lp-pages/Loading";
 
 import img1 from "../assets/media-lp/review.png";
 import img2 from "../assets/media-lp/review3.png";
@@ -16,18 +17,23 @@ import img7 from "../assets/media-lp/review8.png";
 import img9 from "../assets/media-lp/review10.png";
 import img10 from "../assets/media-lp/review2.png";
 import Footer from "./footer";
+import { useEffect, useState } from "react";
 
 const cardContent = [
   {
-    title:
-      "Leave the 'Friendzone' behind and embrace the adventure of making new friends with FriendZone", //contents to modify
-    paragraph:
-      "Life is too short not to make new friends. Sign up and start creating meaningful bonds",
+    title: "🚀 Friendzone: Where Being 'Zoned' is a Win!",
+    paragraph: "Ready to flip the script on the Friendzone? Welcome to the Friendzone, where being in is a victory lap! No awkwardness, just good times, shared laughs, and heaps of new connections. Join us, because in this Friendzone, friendship always takes the spotlight! 🌟",
+    subtitle: "Find New Friends, Wherever You Are!",
+    paragraph2: "🌍 Whether you have moved to a new city, noticed a decrease in the number of friends over time, or simply want to expand your social circle, Friendzone is the answer. We are here to help you meet fantastic people with similar interests.",
     img: photoUno,
   },
   {
-    title: "The Friendzone now it's an opportunity!", //contents to modify
-    paragraph: "New friends, new stories...",
+    title: "💬 Share Interests, Create Lasting Connections!", //contents to modify
+    paragraph:
+      "We've created Friendzone to make it easy to search for new friendships based on common passions. Whether you're a tech enthusiast, sports lover, or aspiring chef, there's someone here who wants to share their passion with you.",
+    subtitle: "🌈 Friendzone: Where Distance is Just a Number!",
+    paragraph2: "We've overcome the barriers of distance to allow you to connect with extraordinary people, no matter where you are. Join our community and discover how wonderful it can be to make new friends through technology!",
+    subtitle2: "🚀 Download Friendzone today and start your social adventure!",
     img: photoDue,
   },
 ];
@@ -90,15 +96,28 @@ const reviews = [
 ];
 
 const LandingPage = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
   return (
-    <div className="flex-col font-sans  bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee]">
-      <HeroSection />
-      <Card card={cardContent[0]} />
-      <VideoSection />
-      <Card card={cardContent[1]} />
-      <ReviewCarousel reviews={reviews} />
-      <Footer/>
-    </div>
+    <>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div className="flex-col font-sans  bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee]">
+          <HeroSection />
+          <Card card={cardContent[0]} />
+          <VideoSection />
+          <Card card={cardContent[1]} />
+          <ReviewCarousel reviews={reviews} />
+          <Footer />
+        </div>
+      )}
+    </>
   );
 };
 

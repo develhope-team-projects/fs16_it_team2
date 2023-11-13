@@ -1,9 +1,23 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Logo from "./Logo";
-import logoNav from "../assets/images/brand/full-logo-row.png";
+import logoNav from "../assets/images/brand/logo-ice-cream-and-name-row.png";
 
-const navLinks = ["Home", "Products", "About Us", "Support"];
+const navLinks = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "Products",
+    path: "/products",
+  },
+  { name: "About Us", path: "/about-us" },
+  {
+    name: "Support",
+    path: "/support",
+  },
+];
 const Navbar = () => {
   const [navClasses, setNavClasses] = useState(
     "duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5"
@@ -26,7 +40,7 @@ const Navbar = () => {
     <header>
       <nav className="flex">
         <div className="flex items-center w-[92%] justify-start">
-          <div className="w-25 p-8">
+          <div className="w-[250px] p-8">
             <Logo logo={logoNav} />
           </div>
           <div className={navClasses}>
@@ -34,8 +48,11 @@ const Navbar = () => {
               {navLinks.map((link, index) => {
                 return (
                   <li key={index}>
-                    <Link className=" hover:text-[#e058cc] text-white" to="#">
-                      {link}
+                    <Link
+                      className=" hover:text-[#e058cc] text-white"
+                      to={link.path}
+                    >
+                      {link.name}
                     </Link>
                   </li>
                 );
