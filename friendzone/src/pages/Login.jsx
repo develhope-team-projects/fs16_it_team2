@@ -1,7 +1,7 @@
 const Login = () => {
   return (
     <div className="flex items-center justify-center w-full h-screen bg-purple-700">
-      <div className="flex flex-col gap-5 p-5 items-center justify-center border-3 shadow-lg rounded-2xl bg-purple-200 text-gray-800 w-2/4">
+      <div className="sm:(small) flex flex-col gap-5 p-5 items-center justify-center border-3 shadow-lg rounded-2xl bg-purple-200 text-gray-800 w-2/4">
         <h2 className="text-3xl mb-2">Log in to Friendzone</h2>
         <form className="border-b-2 py-3 border-white">
           <div className="flex flex-col gap-1 mb-3">

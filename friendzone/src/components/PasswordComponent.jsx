@@ -28,7 +28,8 @@ const PasswordComponent = () => {
     // Verifica se la password è stata inserita correttamente
     if (
       password.length < minPasswordLength ||
-      !/(?=.*[A-Z])(?=.*[a-z])(?=.*\d)/.test(password)
+      !/[$&+,:;=?@#|'<>.^*()%!-]{8,}/gi
+      // (?=.*[A-Z])(?=.*[a-z])(?=.*\d)/.test(password)
     ) {
       setShowPasswordMessage(true);
       return;
@@ -48,7 +49,7 @@ const PasswordComponent = () => {
           {" "}
           Password
         </label>
-        <div style={{ position: "relative" }}>
+        <div className="relative">
           <input
             className="w-80 border-2 p-2 bg-transparent border-white rounded-xl shadow-lg"
             placeholder="enter your password"
