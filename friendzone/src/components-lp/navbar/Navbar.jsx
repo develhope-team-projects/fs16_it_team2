@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../logo/Logo";
-import logoNav from "../assets/images/brand/logo-ice-cream-and-name-row.png";
+import logoNav from "../../assets/images/brand/logo-ice-cream-and-name-row.png";
 
 const navLinks = [
   {

@@ -1,4 +1,4 @@
-import video from "../assets/media-lp/mainvideo.mp4";
+import video from "../../assets/media-lp/mainvideo.mp4";
 
 const VideoSection = () => {
   return (

@@ -1,4 +1,4 @@
-import heroImg from "../assets/media-lp/hero-img.png";
+import heroImg from "../../assets/media-lp/hero-img.png";
 import Navbar from "../navbar/Navbar";
 
 const HeroSection = () => {

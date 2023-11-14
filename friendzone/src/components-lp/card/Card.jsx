@@ -1,4 +1,4 @@
-import DinamicIceCreams from "./dinamic-color-ice/DinamicIceCreams";
+import DinamicIceCreams from "../dinamic-color-ice/DinamicIceCreams";
 
 const Card = ({ card }) => {
   return (

@@ -1,6 +1,6 @@
 import videoLoading from "../../assets/media-lp/loading-2.mp4";
 import imglogo from "../../assets/images/brand/full-logo-column.png";
-import Logo from "../Logo";
+import Logo from "../logo/Logo";
 
 const Loading = () => {
   return (

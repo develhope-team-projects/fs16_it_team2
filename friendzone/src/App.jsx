@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import LandingPage from "../src/components-lp/LandingPage";
+import LandingPage from "../src/components-lp/landing-page/LandingPage";
 import AboutUsPage from "./components-lp/lp-pages/AboutUsPage";
 import Support from "./components-lp/lp-pages/Support";
 import Products from "./components-lp/lp-pages/Products";

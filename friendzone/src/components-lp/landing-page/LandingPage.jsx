@@ -1,22 +1,22 @@
-import "./Landing-page.css"
-import Card from "../cards/Card";
+import "../landing-page/Landing-page.css";
+import Card from "../card/Card";
 import HeroSection from "../heroSection/HeroSection";
-import VideoSection from "../VideoSection";
-import photoUno from "../../src/assets/media-lp/fotocard1.png";
-import photoDue from "../assets/media-lp/photo2card.png";
+import VideoSection from "../video-section/VideoSection";
 import ReviewCarousel from "../review-carousel/ReviewCarousel";
 import Loading from "../lp-pages/Loading";
 import Footer from "../footer/Footer";
 
-import img1 from "../assets/media-lp/review.png";
-import img2 from "../assets/media-lp/review3.png";
-import img3 from "../assets/media-lp/review4.png";
-import img4 from "../assets/media-lp/review5.png";
-import img5 from "../assets/media-lp/review6.png";
-import img6 from "../assets/media-lp/review7.png";
-import img7 from "../assets/media-lp/review8.png";
-import img9 from "../assets/media-lp/review10.png";
-import img10 from "../assets/media-lp/review2.png";
+import photoUno from "../../assets/media-lp/fotocard1.png";
+import photoDue from "../../assets/media-lp/photo2card.png";
+import img1 from "../../assets/media-lp/review.png";
+import img2 from "../../assets/media-lp/review3.png";
+import img3 from "../../assets/media-lp/review4.png";
+import img4 from "../../assets/media-lp/review5.png";
+import img5 from "../../assets/media-lp/review6.png";
+import img6 from "../../assets/media-lp/review7.png";
+import img7 from "../../assets/media-lp/review8.png";
+import img9 from "../../assets/media-lp/review10.png";
+import img10 from "../../assets/media-lp/review2.png";
 
 import { useEffect, useState } from "react";
 

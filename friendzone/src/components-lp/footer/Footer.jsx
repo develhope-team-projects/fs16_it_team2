@@ -1,8 +1,8 @@
 import FooterItems from "./FooterItems";
 import { LEGAL, CAREERS, SUPPORT, FAQ, ICONS } from "./FooterOptions";
 import Logo from "../logo/Logo";
-import SocialIcons from "../social-icons/SocialIcons";
-import logoImg from "../assets/images/brand/logo-ice-cream-and-name-row.png";
+import SocialIcons from "../SocialIcons";
+import logoImg from "../../assets/images/brand/logo-ice-cream-and-name-row.png";
 
 const Footer = () => {
   return (
