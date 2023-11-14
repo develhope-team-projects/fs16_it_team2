@@ -1,7 +1,7 @@
 import FooterItems from "./FooterItems";
 import { LEGAL, CAREERS, SUPPORT, FAQ, ICONS } from "./FooterOptions";
 import Logo from "../logo/Logo";
-import SocialIcons from "../SocialIcons";
+import SocialIcons from "../social-icons/SocialIcons";
 import logoImg from "../../assets/images/brand/logo-ice-cream-and-name-row.png";
 
 const Footer = () => {
@@ -10,7 +10,6 @@ const Footer = () => {
       <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[ffffff19] py-7"></div>
       <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-10 sm:px-8 px-5 py-16">
         <span className="w-30 p-4">
-          {" "}
           <Logo logo={logoImg} />
         </span>
         <FooterItems Links={LEGAL} title="LEGAL" />

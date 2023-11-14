@@ -1,7 +1,7 @@
 import "../landing-page/Landing-page.css";
 import Card from "../card/Card";
 import HeroSection from "../heroSection/HeroSection";
-import VideoSection from "../video-section/VideoSection";
+
 import ReviewCarousel from "../review-carousel/ReviewCarousel";
 import Loading from "../lp-pages/Loading";
 import Footer from "../footer/Footer";
@@ -19,6 +19,7 @@ import img9 from "../../assets/media-lp/review10.png";
 import img10 from "../../assets/media-lp/review2.png";
 
 import { useEffect, useState } from "react";
+import CentralSection from "../central-section/CentralSection";
 
 const cardContent = [
   {
@@ -114,9 +115,7 @@ const LandingPage = () => {
       ) : (
         <div className="flex-col font-sans  bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee]">
           <HeroSection />
-          <Card card={cardContent[0]} />
-          <VideoSection />
-          <Card card={cardContent[1]} />
+         <CentralSection cardContent={cardContent}/>
           <ReviewCarousel reviews={reviews} />
           <Footer />
         </div>
