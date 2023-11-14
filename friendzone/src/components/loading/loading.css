@@ -1,0 +1,20 @@
+@keyframes meltAnimation {
+    0% {
+      background-image: url('image1.png');
+    }
+    12.5% {
+      background-image: url('image2.png');
+    }
+    25% {
+      background-image: url('image3.png');
+    }
+    /* Repeat this pattern for all eight images */
+    100% {
+      background-image: url('image8.png');
+    }
+  }
+  
+  .ice-cream {
+    animation: meltAnimation 8s infinite;
+  }
+  
