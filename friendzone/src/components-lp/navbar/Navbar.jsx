@@ -62,9 +62,11 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center w-[92%] justify-end">
-          <button className=" text-white px-5 py-2 rounded-full hover:text-[#e058cc]">
-            Login
-          </button>
+          <Link to="/defaultLogin">
+            <button className=" text-white px-5 py-2 rounded-full hover:text-[#e058cc]">
+              Login
+            </button>
+          </Link>
           <button className=" text-white px-5 py-2 rounded-full hover:text-[#e058cc]">
             Sign Up
           </button>
