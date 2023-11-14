@@ -1,3 +1,5 @@
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 import { Navigate, Route, Routes } from "react-router-dom";
 import DefaultLayout from "./defaultLayout/DefaultLayout";
 import User from "./pages-sidebar/User";
@@ -43,7 +45,8 @@ const App = () => {
         <Route path="editprofile" element={<EditProfile />} />
         <Route path="addmedia" element={<AddMedia />} />
         <Route path="payment" element={<Payment />} />
-
+        <Route path="login" element={<Login/>}/>
+        <Route path="signup" element={<Signup/>}/>
         <Route path="" element={<LandingPage />} />
         <Route
           path="about-us"
