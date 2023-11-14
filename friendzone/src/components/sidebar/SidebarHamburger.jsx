@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { RiSettings4Line, RiUserSearchLine } from "react-icons/ri";
 import { MdOutlineDashboard } from "react-icons/md";
@@ -20,12 +20,11 @@ import { useEffect } from "react";
 
 const SidebarHamburger = () => {
   const [colorTheme, setTheme] = useDarkSide();
- 
+
   const backgroundImage = colorTheme === "dark" ? `url(${bgl})` : `url(${bgl})`;
   const menus = [
     { name: "home", link: "/", icon: AiOutlineHome },
     { name: "premium", link: "/premium", icon: IoIceCreamOutline },
-    ,
     { name: "user", link: "/", icon: AiOutlineUser, margin: true },
     { name: "matches", link: "/matches", icon: AiOutlineHeart },
     { name: "messages", link: "/messages", icon: PiWechatLogo },
@@ -45,7 +44,6 @@ const SidebarHamburger = () => {
     { name: "logout", link: "/logout", icon: AiOutlinePoweroff, margin: true },
   ];
 
- 
   const [open, setOpen] = useState(window.innerWidth >= 1120);
   const [showIconsOnly, setShowIconsOnly] = useState(window.innerWidth < 820);
 
@@ -53,7 +51,6 @@ const SidebarHamburger = () => {
     const handleResize = () => {
       // Set open to false if the screen width is below 1050px
       setOpen(window.innerWidth >= 1120);
-      
     };
 
     // Initial check
@@ -83,7 +80,7 @@ const SidebarHamburger = () => {
               <Switcher />
             </div>
 
-           <HiMenuAlt3
+            <HiMenuAlt3
               size={26}
               className={`cursor-pointer ${
                 window.innerWidth < 1120 ? "pointer-events-none" : ""
