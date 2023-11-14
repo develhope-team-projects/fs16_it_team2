@@ -11,7 +11,7 @@ const PremiumCard = () => {
   };
 
   return (
-    <div className="flex justify-center items-center gap-6 mq-935:flex-row flex-col md:w-2/4">
+    <div className="flex justify-center items-center gap-6 mq-935:flex-row flex-col md:w-2/4 z-10">
       {people.map((person, personIndex) => {
         const { id, icon, name, title, type, price } = person;
         const typeClass = gradientClasses[type] || "";

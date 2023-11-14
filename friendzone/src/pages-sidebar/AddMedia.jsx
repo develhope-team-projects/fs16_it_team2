@@ -1,155 +1,114 @@
-import React, { useState, useEffect, useRef } from "react";
-import Cropper from "react-cropper";
-import "cropperjs/dist/cropper.css";
+import React, { useState, useEffect } from 'react';
 
 const ImageUploader = () => {
-  const [profilePicture, setProfilePicture] = useState("");
-  const [additionalPictures, setAdditionalPictures] = useState([]);
+  const [images, setImages] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const cropperRef = useRef(null);
-
+  // Load images from localStorage on component mount
   useEffect(() => {
-    const savedProfilePicture = localStorage.getItem("profilePicture") || "";
-    const savedAdditionalPictures =
-      JSON.parse(localStorage.getItem("additionalPictures")) || [];
+    const storedImages = JSON.parse(localStorage.getItem('images')) || [];
+    setImages(storedImages);
+  }, []); // Only run on component mount
 
-    setProfilePicture(savedProfilePicture);
-    setAdditionalPictures(savedAdditionalPictures);
-  }, []);
-
+  // Save images to localStorage whenever images change
   useEffect(() => {
-    localStorage.setItem("profilePicture", profilePicture);
-    localStorage.setItem(
-      "additionalPictures",
-      JSON.stringify(additionalPictures)
-    );
-  }, [profilePicture, additionalPictures]);
+    localStorage.setItem('images', JSON.stringify(images));
+  }, [images]);
 
-  const handleProfilePictureChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setProfilePicture(reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const handleAdditionalPicturesChange = (e) => {
+  const handleImageChange = (e) => {
     const files = e.target.files;
-    const newPictures = Array.from(files).map((file) =>
-      URL.createObjectURL(file)
-    );
-    setAdditionalPictures((prevPictures) => [...prevPictures, ...newPictures]);
+
+    // Convert files to an array of URLs
+    const imageArray = Array.from(files).map((file) => URL.createObjectURL(file));
+
+    setImages((prevImages) => [...prevImages, ...imageArray]);
   };
 
-  const handleImageClick = (image) => {
-    setSelectedImage(image);
+  const openModal = (index) => {
+    setSelectedImage(index);
   };
-  const handleCrop = () => {
-    if (cropperRef.current) {
-      // Get the cropped data as a base64 encoded string
-      const croppedDataUrl = cropperRef.current.getCroppedCanvas().toDataURL();
-      setProfilePicture(croppedDataUrl);
-      setSelectedImage(null); // Clear selected image
-    }
-  };
-  
 
-  const handleCancel = () => {
-    setProfilePicture("");
-    setAdditionalPictures([]);
+  const closeModal = () => {
     setSelectedImage(null);
   };
 
+  const handleNext = () => {
+    setSelectedImage((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const handlePrev = () => {
+    setSelectedImage((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  const handleCancel = (index) => {
+    const updatedImages = [...images];
+    updatedImages.splice(index, 1);
+    setImages(updatedImages);
+    setSelectedImage(null); // Close modal if the image being canceled is open
+  };
+
   return (
-    <div className="dark:bg-black text-gray-900 p-6">
-      <h2 className="text-2xl font-semibold mb-4">Image Uploader</h2>
+    <div className="max-w-screen-lg mx-auto p-4">
+      <input
+        type="file"
+        accept="image/*"
+        onChange={handleImageChange}
+        multiple
+        className="mb-4"
+      />
 
-      {/* Profile Picture */}
-      <div className="mb-4">
-        <label htmlFor="profilePicture" className="block text-sm font-medium">
-          Profile Picture:
-        </label>
-        <input
-          type="file"
-          id="profilePicture"
-          accept="image/*"
-          onChange={handleProfilePictureChange}
-          className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-purple-500"
-        />
-        {profilePicture && (
-          <div className="relative">
-            <Cropper
-              ref={cropperRef}
-              src={profilePicture}
-              style={{ height: 200, width: "100%" }}
-              // Other cropper options as needed
-            />
-            <button
-              onClick={handleCrop}
-              className="absolute bottom-2 right-2 bg-purple-500 text-white px-2 py-1 rounded-md"
-            >
-              Crop
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* Additional Pictures */}
-      <div className="mb-4">
-        <label
-          htmlFor="additionalPictures"
-          className="block text-sm font-medium"
-        >
-          Additional Pictures (up to 9):
-        </label>
-        <input
-          type="file"
-          id="additionalPictures"
-          accept="image/*"
-          multiple
-          onChange={handleAdditionalPicturesChange}
-          className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:border-purple-500"
-        />
-        <div className="grid grid-cols-3 gap-4 mt-2">
-          {additionalPictures.map((picture, index) => (
-            <div
-              key={index}
-              className="relative group cursor-pointer"
-              onClick={() => handleImageClick(picture)}
-            >
+      <div className="flex flex-wrap -mx-2">
+        {images.map((image, index) => (
+          <div key={index} className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 p-2">
+            <div className="relative">
               <img
-                src={picture}
-                alt={`Additional ${index + 1}`}
-                className="rounded-md shadow-lg"
+                src={image}
+                alt={`Image ${index + 1}`}
+                className="cursor-pointer w-160 h-200 object-cover rounded"
+                onClick={() => openModal(index)}
               />
+              <button
+                className="absolute top-2 right-2 text-white cursor-pointer bg-gray-800 rounded-full hover:bg-purple-600"
+                onClick={() => handleCancel(index)}
+              >
+                &times;
+              </button>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
 
-      {/* Selected Image Preview */}
-      {selectedImage && (
-        <div className="mb-4">
-          <p className="text-sm font-medium">Selected Image Preview:</p>
-          <img
-            src={selectedImage}
-            alt="Selected"
-            className="mt-2 rounded-md shadow-lg"
-          />
+      {selectedImage !== null && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="fixed inset-0 bg-transparent  opacity-50" onClick={closeModal}></div>
+          <div className="relative max-h-70vh mx-auto">
+            <button
+              className="absolute top-1/2 left-4 text-white cursor-pointer  rounded-full p-2 hover:bg-purple-600"
+              onClick={handlePrev}
+            >
+              &lt;
+            </button>
+            <button
+              className="absolute top-1/2 right-4 text-white cursor-pointer rounded-full p-2 hover:bg-purple-600"
+              onClick={handleNext}
+            >
+              &gt;
+            </button>
+            <button
+              className="absolute top-0 right-0 m-4 text-white cursor-pointer bg-gray-800 rounded-full p-2 hover:bg-purple-600"
+              onClick={closeModal}
+            >
+              &times;
+            </button>
+            <img
+              src={images[selectedImage]}
+              alt={`Image ${selectedImage + 1}`}
+              className="max-w-full max-h-70vh"
+              style={{ maxHeight: '800px' }}
+            />
+          </div>
         </div>
       )}
-
-      {/* Cancel Button */}
-      <button
-        onClick={handleCancel}
-        className="bg-red-500 text-white py-2 px-4 rounded-md cursor-pointer hover:bg-red-600"
-      >
-        Cancel
-      </button>
     </div>
   );
 };

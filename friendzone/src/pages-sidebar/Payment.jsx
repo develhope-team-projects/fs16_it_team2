@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CircleComponent from "../components/animation_circles/CircleComponent";
 
 const Payment = () => {
   const [cardInfo, setCardInfo] = useState({
@@ -16,8 +17,8 @@ const Payment = () => {
   };
 
   return (
-    <div className="bg-transparent flex  w-full">
-      <div className="  mx-auto p-8">
+    <div className="bg-transparent flex  w-full relative">
+      <div className="z-10  mx-auto p-8">
         <div className="bg-white dark:bg-black dark:text-white rounded-lg custom-box-shadow border-1 w-4/5  mx-auto flex items-center justify-around">
           <div className="flex intems-center  p-6 ">
             <div className="  flex  items-center">
@@ -152,6 +153,7 @@ const Payment = () => {
           </div>
         </div>
       </div>
+      <CircleComponent />
     </div>
   );
 };
