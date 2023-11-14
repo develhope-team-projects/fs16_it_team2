@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 .bg-gradient-gold {
   @apply bg-gradient-to-r from-yellow-300 to-yellow-500;
 }
