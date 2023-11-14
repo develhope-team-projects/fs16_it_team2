@@ -1,11 +1,11 @@
-import videoLoading from "../../assets/media-lp/loading.mp4";
-import imglogo from "../../assets/images/brand/full-logo-row.png";
+import videoLoading from "../../assets/media-lp/loading-2.mp4";
+import imglogo from "../../assets/images/brand/full-logo-column.png";
 import Logo from "../Logo";
 
 const Loading = () => {
   return (
     <div className="flex items-center justify-center flex-col p-5">
-      <div>
+      <div className="w-[300px]">
         <Logo logo={imglogo} />
       </div>
 
