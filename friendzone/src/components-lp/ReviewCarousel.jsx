@@ -4,8 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import { FaQuoteLeft } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 
-
-const ReviewCarousel = ({reviews}) => {
+const ReviewCarousel = ({ reviews }) => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -31,11 +30,11 @@ const ReviewCarousel = ({reviews}) => {
       <Carousel responsive={responsive}>
         {reviews.map((item, index) => (
           <div className="flex justify-center h-70" key={index}>
-            <div className=" max-w-sm bg-white rounded-xl overflow-hidden">
-              <div className="py-4 w-100% flex justify-center bg-gradient-to-t from-[#fbf7f7] to-[#140426] ">
-                <FaQuoteLeft className="text-4xl text-gray-600" />
+            <div className="max-w-sm bg-white rounded-xl overflow-hidden relative">
+              <div className="py-4 w-full bg-gradient-to-t from-[#fbf7f7] to-[#140426] relative">
+                <FaQuoteLeft className="text-4xl text-gray-600 absolute left-4 top-0 mt-4 ml-4" />
                 <img
-                  className="card-review-img p-5"
+                  className="card-review-img p-5 mx-auto"
                   src={item.img}
                   alt="Immagine della card"
                 />
