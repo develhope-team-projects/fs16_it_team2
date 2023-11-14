@@ -2,7 +2,7 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center w-full h-screen bg-purple-700">
       <div className="sm:(small) flex flex-col gap-5 p-5 items-center justify-center border-3 shadow-lg rounded-2xl bg-purple-200 text-gray-800 w-2/4">
-        <h2 className="text-3xl mb-2">Log in to Friendzone</h2>
+        <h2 className="text-3xl mb-2">Login</h2>
         <form className="border-b-2 py-3 border-white">
           <div className="flex flex-col gap-1 mb-3">
             <label className="text-xl" htmlFor="email">
@@ -39,7 +39,7 @@ const Login = () => {
           </div>
         </form>
         <div className="text-gray-800">
-          <p>or log in with:</p>
+          <p>or login with:</p>
         </div>
         <div className="flex gap-2 p-3">
           <button className="bg-purple-500 p-2 px-5 border-2 rounded-full border-white text-white shadow-xl">
