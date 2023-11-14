@@ -5,11 +5,11 @@ import Logo from "../Logo";
 const Loading = () => {
   return (
     <div className="flex items-center justify-center flex-col p-5">
-      <div className="w-[300px]">
+      <div className="w-1/4">
         <Logo logo={imglogo} />
       </div>
 
-      <div className="flex items-center justify-center w-3/4 mx-auto h-full">
+      <div className="flex items-center justify-center w-1/3 mx-auto h-full">
         <video autoPlay loop muted className="mx-auto">
           <source src={videoLoading} type="video/mp4" />
           Loading...

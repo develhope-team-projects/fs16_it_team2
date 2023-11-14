@@ -22,22 +22,22 @@ import { useEffect, useState } from "react";
 
 const cardContent = [
   {
-    title: "🚀 Friendzone: Where Being 'Zoned' is a Win!",
+    title: "Friendzone: Where Being 'Zoned' is a Win!",
     paragraph:
-      "Ready to flip the script on the Friendzone? Welcome to the Friendzone, where being in is a victory lap! No awkwardness, just good times, shared laughs, and heaps of new connections. Join us, because in this Friendzone, friendship always takes the spotlight! 🌟",
+      "Ready to flip the script on the Friendzone? Welcome to the Friendzone, where being in is a victory lap! No awkwardness, just good times, shared laughs, and heaps of new connections. Join us, because in this Friendzone, friendship always takes the spotlight!",
     subtitle: "Find New Friends, Wherever You Are!",
     paragraph2:
-      "🌍 Whether you have moved to a new city, noticed a decrease in the number of friends over time, or simply want to expand your social circle, Friendzone is the answer. We are here to help you meet fantastic people with similar interests.",
+      "Whether you have moved to a new city, noticed a decrease in the number of friends over time, or simply want to expand your social circle, Friendzone is the answer. We are here to help you meet fantastic people with similar interests.",
     img: photoUno,
   },
   {
-    title: "💬 Share Interests, Create Lasting Connections!", //contents to modify
+    title: "Share Interests, Create Lasting Connections!", //contents to modify
     paragraph:
       "We've created Friendzone to make it easy to search for new friendships based on common passions. Whether you're a tech enthusiast, sports lover, or aspiring chef, there's someone here who wants to share their passion with you.",
-    subtitle: "🌈 Friendzone: Where Distance is Just a Number!",
+    subtitle: "Friendzone: Where Distance is Just a Number!",
     paragraph2:
       "We've overcome the barriers of distance to allow you to connect with extraordinary people, no matter where you are. Join our community and discover how wonderful it can be to make new friends through technology!",
-    subtitle2: "🚀 Download Friendzone today and start your social adventure!",
+    subtitle2: "Download Friendzone today and start your social adventure!",
     img: photoDue,
   },
 ];
