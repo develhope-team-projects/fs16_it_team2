@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const PasswordComponent = () => {
   const [password, setPassword] = useState("");
@@ -115,12 +116,14 @@ const PasswordComponent = () => {
         </div>
       </div>
       <div className="flex items-center justify-center">
-        <button
-          onClick={handleSubmit}
-          className="p-3 px-16 mt-6 mb-6 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl"
-        >
-          SignUp!
-        </button>
+        <Link to="/login">
+          <button
+            onClick={handleSubmit}
+            className="p-3 px-16 mt-6 mb-6 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl"
+          >
+            SignUp!
+          </button>
+        </Link>
       </div>
     </div>
   );

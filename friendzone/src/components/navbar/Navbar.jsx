@@ -62,14 +62,17 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center w-[92%] justify-end">
-          <Link to="/defaultLogin">
+          <Link to="/login">
             <button className=" text-white px-5 py-2 rounded-full hover:text-[#e058cc]">
               Login
             </button>
           </Link>
-          <button className=" text-white px-5 py-2 rounded-full hover:text-[#e058cc]">
-            Sign Up
-          </button>
+          <Link to="/signup">
+            <button className=" text-white px-5 py-2 rounded-full hover:text-[#e058cc]">
+              Sign Up
+            </button>
+          </Link>
+
           <div className="text-3xl cursor-pointer md:hidden">
             <ion-icon onClick={handleToggleMenu} name={nameIcon}></ion-icon>
           </div>

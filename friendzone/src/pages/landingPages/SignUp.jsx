@@ -8,7 +8,6 @@ const SignUp = () => {
         <form className="py-3 border-white border-b-3">
           <div className="flex flex-col gap-1 mb-3">
             <label className="text-xl" htmlFor="name">
-              {" "}
               Full Name
             </label>
             <input
@@ -20,7 +19,6 @@ const SignUp = () => {
           </div>
           <div className="flex flex-col gap-1 mb-3">
             <label className="text-xl" htmlFor="username">
-              {" "}
               Username
             </label>
             <input
@@ -32,7 +30,6 @@ const SignUp = () => {
           </div>
           <div className="flex flex-col gap-1 mb-3">
             <label className="text-xl" htmlFor="email">
-              {" "}
               Email
             </label>
             <input

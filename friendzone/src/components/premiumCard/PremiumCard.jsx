@@ -172,7 +172,7 @@ const PremiumCard = () => {
                 </span>
               </li>
             </ul>
-            <Link to="/payment">
+            <Link to="/app/payment">
               <button
                 type="button"
                 className={`text-white  ${typeClass}

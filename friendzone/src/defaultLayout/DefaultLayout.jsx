@@ -1,13 +1,9 @@
-/* import SidebarHamburger from "../components/sidebar/SidebarHamburger"; */
-
-import LandingPage from "../components/landingPage/LandingPage";
+import SidebarHamburger from "../components/sidebar/SidebarHamburger";
 
 const DefaultLayout = () => {
   return (
     <div>
-      <LandingPage />
-
-      {/*       <SidebarHamburger /> */}
+      <SidebarHamburger />
     </div>
   );
 };

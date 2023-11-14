@@ -72,7 +72,7 @@ const MyProfileCard = () => {
               />
             </div>
             <Link
-              to="/editprofile"
+              to="/app/editprofile"
               className="absolute bottom-0 inline-flex items-center px-8 py-2 text-sm font-medium text-center text-white bg-purple-500 border border-gray-300 rounded-full hover:bg-purple-600 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
             >
               30% Complete
@@ -87,7 +87,7 @@ const MyProfileCard = () => {
           </span>
           <div className="flex justify-between w-full mt-4">
             <div className="w-full ">
-              <Link to="/settings" className="flex justify-center mb-10">
+              <Link to="/app/settings" className="flex justify-center mb-10">
                 <div className="flex flex-col items-center ">
                   <div className="p-4 bg-transparent border-2 border-purple-500 rounded-full hover:bg-purple-100 focus:ring-blue-300 dark:hover:bg-gray-900 dark:focus:ring-blue-800">
                     <RiSettings4Line size={24} className="fill-purple-500" />
@@ -99,7 +99,7 @@ const MyProfileCard = () => {
             </div>
             <div className="w-full">
               <Link
-                to="/editprofile"
+                to="/app/editprofile"
                 className="flex flex-col items-center mt-6 "
               >
                 <div className="p-6 bg-transparent border-2 border-purple-500 rounded-full hover:bg-purple-100 focus:ring-blue-300 dark:hover:bg-gray-900 dark:focus:ring-blue-800">
@@ -111,7 +111,7 @@ const MyProfileCard = () => {
             </div>
             <div className="w-full">
               <Link
-                to="/addmedia"
+                to="/app/addmedia"
                 className="flex flex-col items-center mb-10 "
               >
                 <div className="relative p-4 bg-purple-500 border-2 border-purple-500 rounded-full hover:bg-purple-600 focus:ring-blue-300 dark:hover:bg-purple-700 dark:focus:ring-blue-800">

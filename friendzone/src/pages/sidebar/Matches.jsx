@@ -77,7 +77,7 @@ const Matches = () => {
           ))}
         </div>
         <Link
-          to="/premium"
+          to="/app/premium"
           className="fixed flex items-center p-4 text-2xl transform -translate-x-1/2 rounded-full bottom-20 left-1/2 bg-gradient-gold px-7"
         >
           Get Gold Now

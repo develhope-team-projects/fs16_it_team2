@@ -1,16 +1,17 @@
+import { Link } from "react-router-dom";
+
 const Login = () => {
   return (
     <div className="flex items-center justify-center w-full h-screen bg-purple-700">
       <div className="sm:(small) flex flex-col gap-5 p-5 items-center justify-center border-3 shadow-lg rounded-2xl bg-purple-200 text-gray-800 w-2/4">
-        <h2 className="text-3xl mb-2">Login</h2>
-        <form className="border-b-2 py-3 border-white">
+        <h2 className="mb-2 text-3xl">Login</h2>
+        <form className="py-3 border-b-2 border-white">
           <div className="flex flex-col gap-1 mb-3">
             <label className="text-xl" htmlFor="email">
-              {" "}
               Email
             </label>
             <input
-              className="w-80 border-2 p-2 bg-transparent border-white rounded-xl shadow-lg"
+              className="p-2 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl"
               placeholder="enter your email"
               type="email"
               id="emailLog"
@@ -18,11 +19,10 @@ const Login = () => {
           </div>
           <div className="flex flex-col gap-1 mb-3">
             <label className="text-xl" htmlFor="password">
-              {" "}
               Password
             </label>
             <input
-              className="w-80 border-2 p-2 bg-transparent border-white rounded-xl shadow-lg"
+              className="p-2 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl"
               placeholder="enter your password"
               type="password"
               id="passwordLog"
@@ -33,22 +33,24 @@ const Login = () => {
             <label htmlFor="checkbox"> Check to remember me!</label>
           </div>
           <div className="flex items-center justify-center">
-            <button className="bg-purple-500 p-2 px-16 border-2 rounded-full border-white text-white shadow-xl mb-6">
-              Login
-            </button>
+            <Link to="/app">
+              <button className="p-2 px-16 mb-6 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl">
+                Login
+              </button>
+            </Link>
           </div>
         </form>
         <div className="text-gray-800">
           <p>or login with:</p>
         </div>
         <div className="flex gap-2 p-3">
-          <button className="bg-purple-500 p-2 px-5 border-2 rounded-full border-white text-white shadow-xl">
+          <button className="p-2 px-5 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl">
             Google
           </button>
-          <button className="bg-purple-500 p-2 px-5 border-2 rounded-full border-white text-white shadow-xl">
+          <button className="p-2 px-5 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl">
             Facebook
           </button>
-          <button className="bg-purple-500 p-2 px-5 border-2 rounded-full border-white text-white shadow-xl ">
+          <button className="p-2 px-5 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl ">
             Tinder
           </button>
         </div>

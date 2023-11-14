@@ -35,7 +35,7 @@
 }
 
 .btn-transparent-border {
-  @apply py-1 px-4 rounded-full bg-transparent border-2 border-purple-500 text-purple-500 hover:text-purple-800 hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-400;
+  @apply px-4 py-1 text-purple-500 bg-transparent border-2 border-purple-500 rounded-full hover:text-purple-800 hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-400;
 }
 
 /* .border-gradient-logo {
@@ -73,25 +73,31 @@
 /* Password.css */
 
 @keyframes custom-bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
 }
 
 .custom-bounce {
-  animation: custom-bounce 3s infinite ease-in-out; /* Use ease-in-out for a smoother effect */
+  animation: custom-bounce 3s infinite ease-in-out;
+  /* Use ease-in-out for a smoother effect */
 }
 
 /* settings */
 /* Add these CSS rules to your stylesheets */
 @keyframes disappear {
+
   0%,
   100% {
     transform: scale(0);
   }
+
   50% {
     transform: scale(1.08);
   }
@@ -210,6 +216,7 @@
   left: 50%;
   animation: disappear 2s ease infinite;
 }
+
 .circle-16 {
   position: absolute;
   background: white;
@@ -219,6 +226,7 @@
   top: 20%;
   left: 10%;
 }
+
 .circle-17 {
   position: absolute;
   background: white;
@@ -228,6 +236,7 @@
   top: 60%;
   left: 10%;
 }
+
 .circle-18 {
   position: absolute;
   background: white;
@@ -237,6 +246,7 @@
   top: 30%;
   left: 70%;
 }
+
 .circle-19 {
   position: absolute;
   background: white;
@@ -245,4 +255,27 @@
   border-radius: 50%;
   top: 85%;
   left: 50%;
+}
+
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #8f54a0 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(128, 66, 133);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #8f54a0;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
 }

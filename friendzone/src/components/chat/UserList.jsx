@@ -4,7 +4,7 @@ const UserList = ({ onSelectUser, selectedUser }) => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("https://randomuser.me/api/?results=2")
+    fetch("https://randomuser.me/api/?results=299")
       .then((response) => response.json())
       .then((data) => setUsers(data.results));
   }, []);
@@ -14,7 +14,7 @@ const UserList = ({ onSelectUser, selectedUser }) => {
   };
 
   return (
-    <div className="w-64 p-4 overflow-y-scroll bg-gray-100">
+    <div className="w-64 p-4 overflow-y-scroll bg-transparent">
       <ul className="space-y-2">
         {users.map((user, index) => (
           <li

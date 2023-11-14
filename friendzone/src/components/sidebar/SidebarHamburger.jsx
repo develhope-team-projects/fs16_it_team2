@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { RiSettings4Line, RiUserSearchLine } from "react-icons/ri";
@@ -23,25 +24,30 @@ const SidebarHamburger = () => {
 
   const backgroundImage = colorTheme === "dark" ? `url(${bgl})` : `url(${bgl})`;
   const menus = [
-    { name: "home", link: "/", icon: AiOutlineHome },
-    { name: "premium", link: "/premium", icon: IoIceCreamOutline },
-    { name: "user", link: "/", icon: AiOutlineUser, margin: true },
-    { name: "matches", link: "/matches", icon: AiOutlineHeart },
-    { name: "messages", link: "/messages", icon: PiWechatLogo },
+    { name: "home", link: "/app/home", icon: AiOutlineHome },
+    { name: "premium", link: "/app/premium", icon: IoIceCreamOutline },
+    { name: "user", link: "/app/user", icon: AiOutlineUser, margin: true },
+    { name: "matches", link: "/app/matches", icon: AiOutlineHeart },
+    { name: "messages", link: "/app/messages", icon: PiWechatLogo },
     {
       name: "explore",
-      link: "/explore",
+      link: "/app/explore",
       icon: MdOutlineDashboard,
       margin: true,
     },
     {
       name: "preferences",
-      link: "/preferences",
+      link: "/app/preferences",
       icon: RiUserSearchLine,
     },
 
-    { name: "settings", link: "/settings", icon: RiSettings4Line },
-    { name: "logout", link: "/logout", icon: AiOutlinePoweroff, margin: true },
+    { name: "settings", link: "/app/settings", icon: RiSettings4Line },
+    {
+      name: "logout",
+      link: "/app/logout",
+      icon: AiOutlinePoweroff,
+      margin: true,
+    },
   ];
 
   const [open, setOpen] = useState(window.innerWidth >= 1120);

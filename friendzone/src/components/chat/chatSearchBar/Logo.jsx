@@ -4,7 +4,7 @@ const Logo = () => {
   return (
     <div>
       <img
-        src="./src/assets/images/brand/logo-ice-cream-and-name-row.png"
+        src="../src/assets/images/brand/logo-ice-cream-and-name-row.png"
         alt="App Logo"
         width="250px"
         draggable="false"
