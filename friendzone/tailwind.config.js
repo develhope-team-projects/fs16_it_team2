@@ -20,7 +20,7 @@ export default {
   plugins: [],
   extend: {
     width: {
-      "4/5vw": "80vw",
+      "4/5w": "80vw",
     },
   },
 };
