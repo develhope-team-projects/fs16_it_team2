@@ -46,7 +46,7 @@ const Navbar = () => {
           </div>
 
           <div className={navClasses}>
-            <div className="pr-5">
+            <div className="pr-8">
               <Switcher />
             </div>
             <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
