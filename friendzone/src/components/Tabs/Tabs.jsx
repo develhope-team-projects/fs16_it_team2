@@ -10,8 +10,8 @@ const Tabs = ({ type, price, title }) => {
   return (
     <>
       <div className="flex flex-wrap gap-7">
-        <div className="w-full m-auto  ">
-          <div className="bg-gradient-to-t from-white to-yellow-400 flex flex-col gap-5 mb-5">
+        <div className="w-full m-auto ">
+          <div className="flex flex-col gap-5 mb-5 bg-gradient-to-t from-white to-yellow-400">
             <div className="flex items-center justify-center">
               <h3 className="text-5xl">FRIENDZONE GOLD</h3>
             </div>
@@ -26,7 +26,7 @@ const Tabs = ({ type, price, title }) => {
             </div>
           </div>
           <ul
-            className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
+            className="flex flex-row flex-wrap pt-3 pb-4 mb-0 list-none"
             role="tablist"
           >
             <li
@@ -72,7 +72,7 @@ const Tabs = ({ type, price, title }) => {
                 role="tablist"
               >
                 1 Month{" "}
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <div>€10.99/wk</div>
                   <div className="btn">save 40%</div>
                 </div>
@@ -99,7 +99,7 @@ const Tabs = ({ type, price, title }) => {
                   <h3>Best value</h3>
                   <h1>6 Months</h1>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex items-center justify-between">
                   <div>€5.99/wk</div>
                   <div className="btn">save 70%</div>
                 </div>
@@ -232,8 +232,8 @@ const Tabs = ({ type, price, title }) => {
             </li>
           </ul>
 
-          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-            <div className="px-4 py-5 flex-auto">
+          <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-white rounded shadow-lg">
+            <div className="flex-auto px-4 py-5">
               <div className="tab-content tab-space">
                 <div
                   className={openTab === 1 ? "flex justify-between" : "hidden"}

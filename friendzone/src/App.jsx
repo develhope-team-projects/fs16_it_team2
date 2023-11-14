@@ -1,28 +1,28 @@
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
+import Login from "./pages/landingPages/Login";
+import SignUp from "./pages/landingPages/SignUp";
 import { Navigate, Route, Routes } from "react-router-dom";
 import DefaultLayout from "./defaultLayout/DefaultLayout";
-import User from "./pages-sidebar/User";
-import Messages from "./pages-sidebar/Messages";
-import Settings from "./pages-sidebar/Settings";
-import Home from "./pages-sidebar/Home";
-import Explore from "./pages-sidebar/Explore";
-import Logout from "./pages-sidebar/Logout";
-import Matches from "./pages-sidebar/Matches";
-import Preferences from "./pages-sidebar/Preferences";
-import Premium from "./pages-sidebar/Premium";
-import EditProfile from "./pages-sidebar/EditProfile";
-import AddMedia from "./pages-sidebar/AddMedia";
-import Payment from "./pages-sidebar/Payment";
-import PremiumGold from "./pages-sidebar/PremiumGold";
-import PremiumPlatinum from "./pages-sidebar/PremiumPlatinum";
-import PremiumPlus from "./pages-sidebar/PremiumPlus";
+import User from "./pages/sidebar/User";
+import Messages from "./pages/sidebar/Messages";
+import Settings from "./pages/sidebar/Settings";
+import Home from "./pages/sidebar/Home";
+import Explore from "./pages/sidebar/Explore";
+import Logout from "./pages/sidebar/Logout";
+import Matches from "./pages/sidebar/Matches";
+import Preferences from "./pages/sidebar/Preferences";
+import Premium from "./pages/sidebar/Premium";
+import EditProfile from "./pages/sidebar/EditProfile";
+import AddMedia from "./pages/sidebar/AddMedia";
+import Payment from "./pages/sidebar/Payment";
+import PremiumGold from "./pages/sidebar/PremiumGold";
+import PremiumPlatinum from "./pages/sidebar/PremiumPlatinum";
+import PremiumPlus from "./pages/sidebar/PremiumPlus";
 
-import LandingPage from "../src/components-lp/landing-page/LandingPage";
-import AboutUsPage from "../src/components-lp/lp-pages/AboutUsPage";
-import Support from "./components-lp/lp-pages/Support";
-import Products from "./components-lp/lp-pages/Products";
-import DefaultLogin from "./defaultLayout/DefaultLogin";
+import LandingPage from "../src/components/landingPage/LandingPage";
+import AboutUsPage from "../src/pages/landingPages/AboutUsPage";
+import Support from "../src/pages/landingPages/Support";
+import Products from "../src/pages/landingPages/Products";
+import DefaultLogin from "../src/defaultLayout/DefaultLogin";
 
 const App = () => {
   return (
@@ -45,8 +45,8 @@ const App = () => {
         <Route path="editprofile" element={<EditProfile />} />
         <Route path="addmedia" element={<AddMedia />} />
         <Route path="payment" element={<Payment />} />
-        <Route path="login" element={<Login/>}/>
-        <Route path="signup" element={<Signup/>}/>
+        <Route path="login" element={<Login />} />
+        <Route path="signup" element={<SignUp />} />
         <Route path="" element={<LandingPage />} />
         <Route
           path="about-us"

@@ -6,7 +6,7 @@ export const longList = [
     image: "https://www.course-api.com/images/people/person-2.jpeg",
     name: "Friendzone Plus",
     title: "Unlimited Likes, Rewinds and More!",
-    price: 7.99,
+    price: 10.99,
   },
   {
     id: 3,
@@ -25,6 +25,6 @@ export const longList = [
     image: "https://www.course-api.com/images/people/person-1.jpeg",
     name: "Friendzone Platinum",
     title: "level up every action you take on Friendzone",
-    price: 11.99,
+    price: 13.99,
   },
 ];

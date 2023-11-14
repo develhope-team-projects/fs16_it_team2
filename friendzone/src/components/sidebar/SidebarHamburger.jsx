@@ -12,7 +12,7 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 import { IoIceCreamOutline } from "react-icons/io5";
-import Switcher from "../../darkMode/Switcher";
+import Switcher from "../../components/darkMode/Switcher";
 import bgl from "../../assets/images/backgrounds/bg-light.png";
 
 import useDarkSide from "../../customHooks/useDarkSide";
@@ -92,7 +92,7 @@ const SidebarHamburger = () => {
               }}
             />
           </div>
-          <div className="mt-4 flex flex-col gap-4 relative">
+          <div className="relative flex flex-col gap-4 mt-4">
             {menus?.map((menu, i) => (
               <Link
                 to={menu?.link}
@@ -131,14 +131,14 @@ const SidebarHamburger = () => {
           }}
         >
           <div
-            className="flex-1  bg-white dark:bg-black min-h-screen flex justify-center "
+            className="flex justify-center flex-1 min-h-screen bg-white dark:bg-black "
             style={{ backgroundImage, backgroundSize: "cover" }}
           >
             <Outlet className="w-full" />
           </div>
         </div>
 
-        {/* <div className="m-3 text-x1 text-gray-900 font-semibold">sideBar</div> */}
+        {/* <div className="m-3 font-semibold text-gray-900 text-x1">sideBar</div> */}
       </section>
     </div>
   );

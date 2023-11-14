@@ -10,10 +10,9 @@ const LogoutModal = () => {
       >
         <div className="relative w-full max-w-md max-h-full ">
           <div className="relative bg-white rounded-lg custom-box-shadow dark:bg-gray-800">
-          
             <div className="p-6 text-center">
               <svg
-                className="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200"
+                className="w-12 h-12 mx-auto mb-4 text-gray-400 dark:text-gray-200"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -31,7 +30,8 @@ const LogoutModal = () => {
                 Are you sure you want to logout?
               </h3>
               <h4 className="mb-5 font-normal text-gray-800 dark:text-gray-500">
-                You will continue to be seen by compatible users in your last known location
+                You will continue to be seen by compatible users in your last
+                known location
               </h4>
               <button
                 data-modal-hide="popup-modal"
@@ -45,7 +45,7 @@ const LogoutModal = () => {
                 type="button"
                 className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
               >
-               Cancel
+                Cancel
               </button>
             </div>
           </div>

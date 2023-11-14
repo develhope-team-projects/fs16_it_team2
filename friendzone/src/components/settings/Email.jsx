@@ -1,0 +1,202 @@
+import React, { useState } from "react";
+import icecream from "../../assets/images/icecreams/Designer.png";
+
+const Email = () => {
+  const [currentEmail, setCurrentEmail] = useState("user@example.com");
+  const [newEmail, setNewEmail] = useState("");
+  const [confirmNewEmail, setConfirmNewEmail] = useState("");
+  const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [additionalEmail, setAdditionalEmail] = useState("");
+  const [additionalEmails, setAdditionalEmails] = useState([]);
+  const [defaultEmail, setDefaultEmail] = useState("");
+
+  const handleChangeEmail = () => {
+    // Basic validation
+    if (!currentEmail || !newEmail || !confirmNewEmail) {
+      setError("Please fill in all fields");
+      return;
+    }
+
+    if (newEmail !== confirmNewEmail) {
+      setError("New email and confirm email do not match");
+      return;
+    }
+
+    // TODO: Add logic to send a request to change the email
+    // For example, you can use an API call to update the email on the server
+
+    // Clear form, reset error state, and show success message
+    setCurrentEmail(newEmail);
+    setNewEmail("");
+    setConfirmNewEmail("");
+    setError("");
+    setSuccessMessage("Email successfully changed!");
+  };
+
+  const handleAddEmail = () => {
+    // Basic validation
+    if (!additionalEmail) {
+      setError("Please enter an additional email");
+      return;
+    }
+
+    // TODO: Add logic to send a request to add the additional email
+    // For example, you can use an API call to save the additional email on the server
+
+    // Clear form, reset error state, and add the additional email to the list
+    setAdditionalEmails([...additionalEmails, additionalEmail]);
+    setAdditionalEmail("");
+    setError("");
+  };
+
+  const handleSetDefaultEmail = (email) => {
+    // Find the index of the clicked email in the additionalEmails array
+    const emailIndex = additionalEmails.indexOf(email);
+
+    // Swap the default email with the clicked email
+    setAdditionalEmails([
+      ...additionalEmails.slice(0, emailIndex),
+      defaultEmail || currentEmail,
+      ...additionalEmails.slice(emailIndex + 1),
+    ]);
+
+    // Set the clicked email as the new default email
+    setDefaultEmail(email);
+  };
+
+  const handleDeleteEmail = (email) => {
+    // Filter out the clicked email from the additionalEmails array
+    const updatedEmails = additionalEmails.filter((e) => e !== email);
+    setAdditionalEmails(updatedEmails);
+  };
+
+  return (
+    <div className="flex justify-between gap-4 dark:bg-black gray-text ">
+      <div className="w-full p-2  gray-text">
+        <h2 className="mb-4 text-xl font-semibold">Email Settings</h2>
+        {error && <p className="mb-4 text-red-500">{error}</p>}
+        {successMessage && (
+          <p className="mb-4 text-green-500">{successMessage}</p>
+        )}
+        <div className="mb-4">
+          <p className="mb-2">Email: </p>
+          <hr />
+          <span className="mt-2">
+            {defaultEmail || currentEmail}{" "}
+            <span className="px-2 text-purple-500 rounded-full ">
+              {" "}
+              default
+            </span>
+          </span>
+          <br />
+
+          <ul className="mt-2 list-disc list-inside">
+            {additionalEmails.map((email, index) => (
+              <li key={index} className="text-gray-700 list-none">
+                {email}
+                <button
+                  onClick={() => handleSetDefaultEmail(email)}
+                  className="px-2 ml-2 text-purple-500 underline rounded-2xl"
+                >
+                  Set as Default
+                </button>
+                <button
+                  onClick={() => handleDeleteEmail(email)}
+                  className="ml-2 text-red-500 underline"
+                >
+                  Delete
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="newEmail"
+            className="block text-sm font-medium text-gray-400"
+          >
+            New Email:
+          </label>
+          <input
+            type="email"
+            id="newEmail"
+            value={newEmail}
+            onChange={(e) => setNewEmail(e.target.value)}
+            placeholder="Enter new email"
+            className="w-full p-2 mt-1 border rounded-md focus:outline-none focus:border-purple-500 dark:bg-gray-800 dark:text-gray-200"
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            htmlFor="confirmNewEmail"
+            className="block text-sm font-medium text-gray-400"
+          >
+            Confirm New Email:
+          </label>
+          <input
+            type="email"
+            id="confirmNewEmail"
+            value={confirmNewEmail}
+            onChange={(e) => setConfirmNewEmail(e.target.value)}
+            placeholder="Confirm new email"
+            className="w-full p-2 mt-1 border rounded-md focus:outline-none focus:border-purple-500 dark:bg-gray-800 dark:text-gray-200"
+          />
+        </div>
+        <button
+          onClick={handleChangeEmail}
+          className="px-4 py-2 text-white bg-purple-500 rounded-md cursor-pointer"
+        >
+          Change Email
+        </button>
+
+        <div className="mt-6 mb-4">
+          <label
+            htmlFor="additionalEmail"
+            className="block text-sm font-medium text-gray-400"
+          >
+            Additional Email:
+          </label>
+          <input
+            type="email"
+            id="additionalEmail"
+            value={additionalEmail}
+            onChange={(e) => setAdditionalEmail(e.target.value)}
+            placeholder="Enter additional email"
+            className="w-full p-2 mt-1 border rounded-md focus:outline-none focus:border-purple-500 dark:bg-gray-800 dark:text-gray-200"
+          />
+        </div>
+        <button
+          onClick={handleAddEmail}
+          className="px-4 py-2 text-white bg-purple-500 rounded-md cursor-pointer"
+        >
+          Add Email
+        </button>
+      </div>
+      <div className="relative flex items-center justify-center w-full">
+        <img src={icecream} className="p-4 w-96 custom-bounce" />
+        <span className=" circle-1"></span>
+        <span className="content__badges_circle circle-2"></span>
+        <span className="content__badges_circle circle-3"></span>
+        <span className="content__badges_circle circle-4"></span>
+        <span className="content__badges_circle circle-5"></span>
+        <span className="content__badges_circle circle-6"></span>
+        <span className="content__badges_circle circle-7"></span>
+        <span className="content__badges_circle circle-8"></span>
+        <span className="content__badges_circle circle-9"></span>
+        <span className="content__badges_circle circle-10"></span>
+        <span className="content__badges_circle circle-11"></span>
+        <span className="content__badges_circle circle-12"></span>
+        <span className="content__badges_circle circle-13"></span>
+        <span className="content__badges_circle circle-14"></span>
+        <span className="content__badges_circle circle-15"></span>
+        <span className="circle-16"></span>
+        <span className="circle-17"></span>
+        <span className="circle-18"></span>
+        <span className="circle-19"></span>
+      </div>
+    </div>
+  );
+};
+
+export default Email;

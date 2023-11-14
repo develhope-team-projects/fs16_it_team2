@@ -1,6 +1,6 @@
-/ @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src//*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   safelist: ["backdrop-blur"],
   darkMode: "class",
   theme: {
@@ -9,10 +9,10 @@ export default {
         lato: ["Lato", "sans-serif"],
       },
       screens: {
-        'mq-576': '576px',
-        'mq-768': '768px',
-        'mq-935': '935px',
-        'mq-1200': '1200px',
+        "mq-576": "576px",
+        "mq-768": "768px",
+        "mq-935": "935px",
+        "mq-1200": "1200px",
       },
     },
   },
@@ -20,7 +20,7 @@ export default {
   plugins: [],
   extend: {
     width: {
-      "4/5w": "80vw",
+      "4/5vw": "80vw",
     },
   },
 };

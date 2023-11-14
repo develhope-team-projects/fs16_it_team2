@@ -10,8 +10,8 @@ import { AiFillPlusCircle } from "react-icons/ai";
 const MyProfileCard = () => {
   return (
     <div>
-      <div className="w-full  bg-transparent">
-      <div className="flex justify-end px-4 pt-4 lg:pt-0">
+      <div className="w-full bg-transparent">
+        <div className="flex justify-end px-4 pt-4 lg:pt-0">
           <button
             id="dropdownButton"
             data-dropdown-toggle="dropdown"
@@ -63,10 +63,10 @@ const MyProfileCard = () => {
           </div>
         </div>
         <div className="flex flex-col items-center pb-10 lg:pb-0">
-          <div className="flex flex-col items-center relative">
-            <div className="flex flex-col items-center rounded-full p-3 border-gray-500 border-l-purple-600 border-8">
+          <div className="relative flex flex-col items-center">
+            <div className="flex flex-col items-center p-3 border-8 border-gray-500 rounded-full border-l-purple-600">
               <img
-                className="w-40 h-40  rounded-full shadow-lg"
+                className="w-40 h-40 rounded-full shadow-lg"
                 src={img}
                 alt="Bonnie image"
               />
@@ -85,15 +85,15 @@ const MyProfileCard = () => {
           <span className="text-sm text-gray-500 dark:text-gray-400">
             Icecream lover
           </span>
-          <div className="w-full flex mt-4 justify-between">
-            <div className="w-full  ">
+          <div className="flex justify-between w-full mt-4">
+            <div className="w-full ">
               <Link to="/settings" className="flex justify-center mb-10">
                 <div className="flex flex-col items-center ">
-                  <div className="p-4 border-2 border-purple-500 bg-transparent rounded-full hover:bg-purple-100 focus:ring-blue-300 dark:hover:bg-gray-900 dark:focus:ring-blue-800">
+                  <div className="p-4 bg-transparent border-2 border-purple-500 rounded-full hover:bg-purple-100 focus:ring-blue-300 dark:hover:bg-gray-900 dark:focus:ring-blue-800">
                     <RiSettings4Line size={24} className="fill-purple-500" />
                   </div>
 
-                  <h2 className="text-gray-500 mt-1 text-xl">Settings</h2>
+                  <h2 className="mt-1 text-xl text-gray-500">Settings</h2>
                 </div>
               </Link>
             </div>
@@ -102,11 +102,11 @@ const MyProfileCard = () => {
                 to="/editprofile"
                 className="flex flex-col items-center mt-6 "
               >
-                <div className="p-6 border-2 border-purple-500 bg-transparent rounded-full hover:bg-purple-100 focus:ring-blue-300 dark:hover:bg-gray-900 dark:focus:ring-blue-800">
+                <div className="p-6 bg-transparent border-2 border-purple-500 rounded-full hover:bg-purple-100 focus:ring-blue-300 dark:hover:bg-gray-900 dark:focus:ring-blue-800">
                   <FaPencilAlt size={26} className="fill-purple-500" />
                 </div>
 
-                <h2 className="text-gray-500 mt-1 text-xl">Edit Profile</h2>
+                <h2 className="mt-1 text-xl text-gray-500">Edit Profile</h2>
               </Link>
             </div>
             <div className="w-full">
@@ -114,14 +114,14 @@ const MyProfileCard = () => {
                 to="/addmedia"
                 className="flex flex-col items-center mb-10 "
               >
-                <div className="relative p-4  bg-purple-500 border-purple-500 border-2 rounded-full  hover:bg-purple-600 focus:ring-blue-300  dark:hover:bg-purple-700 dark:focus:ring-blue-800">
+                <div className="relative p-4 bg-purple-500 border-2 border-purple-500 rounded-full hover:bg-purple-600 focus:ring-blue-300 dark:hover:bg-purple-700 dark:focus:ring-blue-800">
                   <BsFillCameraFill size={24} className="fill-white" />
                   <div className="absolute bottom-0 right-0 ">
                     <AiFillPlusCircle size={22} className="fill-white" />
                   </div>
                 </div>
 
-                <h2 className="text-gray-500 mt-1 text-xl">Add media</h2>
+                <h2 className="mt-1 text-xl text-gray-500">Add media</h2>
               </Link>
             </div>
           </div>

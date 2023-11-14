@@ -1,13 +1,16 @@
-import React from 'react'
-import './loading.css'
-import img from "../loading/img/gelato.gif"
+import videoLoading from "../../assets/videos/loading/loading.webm";
 
 const Loading = () => {
   return (
-    <div className='flex justify-center items-center min-h-screen'>
-    <img  className="flex items-center justify-center" src={img} style={{width:"300px"}}/>
+    <div className="flex flex-col items-center justify-center w-full h-screen p-5">
+      <div className="flex items-center justify-center w-2/4 h-full mx-auto">
+        <video autoPlay loop muted className="mx-auto">
+          <source src={videoLoading} type="video/webm" />
+          Loading...
+        </video>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Loading
+export default Loading;

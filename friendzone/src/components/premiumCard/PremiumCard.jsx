@@ -11,7 +11,7 @@ const PremiumCard = () => {
   };
 
   return (
-    <div className="flex justify-center items-center gap-6 mq-935:flex-row flex-col md:w-2/4">
+    <div className="z-10 flex flex-col items-center justify-center gap-6 mq-935:flex-row md:w-2/4">
       {people.map((person, personIndex) => {
         const { id, icon, name, title, type, price } = person;
         const typeClass = gradientClasses[type] || "";
@@ -23,7 +23,6 @@ const PremiumCard = () => {
             className={`w-full max-w-lg p-4 bg-white  border-1 rounded-3xl custom-box-shadow sm:p-8 dark:bg-black  ${
               type == "Gold" ? "mt-5" : "mt-0"
             }transform transition-transform duration-300 ease-in-out hover:scale-105`}
-          
             key={personIndex}
           >
             <h5
@@ -42,7 +41,7 @@ const PremiumCard = () => {
               </span>
             </div>
             <ul role="list" className="space-y-5 my-7">
-              <li className="flex space-x-3 items-center">
+              <li className="flex items-center space-x-3">
                 <svg
                   className="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500"
                   aria-hidden="true"
@@ -52,8 +51,8 @@ const PremiumCard = () => {
                 >
                   <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                 </svg>
-                <span className="text-base font-normal leading-tight text-gray-500  dark:text-gray-400">
-                 Unlimited Likes
+                <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">
+                  Unlimited Likes
                 </span>
               </li>
               <li className="flex space-x-3">
@@ -66,7 +65,7 @@ const PremiumCard = () => {
                 >
                   <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                 </svg>
-                <span className="text-base font-normal leading-tight text-gray-500  dark:text-gray-400">
+                <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">
                   See Who Likes You
                 </span>
               </li>
@@ -80,7 +79,7 @@ const PremiumCard = () => {
                 >
                   <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                 </svg>
-                <span className="text-base font-normal leading-tight text-gray-500  dark:text-gray-400">
+                <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">
                   Unlimited Rewinds
                 </span>
               </li>
@@ -102,7 +101,7 @@ const PremiumCard = () => {
                 >
                   <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                 </svg>
-                <span className="text-base font-normal leading-tight text-gray-500  dark:text-gray-400">
+                <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">
                   1 Free Boost per month
                 </span>
               </li>
@@ -124,8 +123,8 @@ const PremiumCard = () => {
                 >
                   <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                 </svg>
-                <span className="text-base font-normal leading-tight text-gray-500  dark:text-gray-400 ">
-                 5 free super likes
+                <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ">
+                  5 free super likes
                 </span>
               </li>
               <li
@@ -146,7 +145,7 @@ const PremiumCard = () => {
                 >
                   <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                 </svg>
-                <span className="text-base font-normal leading-tight text-gray-500  dark:text-gray-400">
+                <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">
                   Control who sees you
                 </span>
               </li>
@@ -168,7 +167,7 @@ const PremiumCard = () => {
                 >
                   <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
                 </svg>
-                <span className="text-base font-normal leading-tight text-gray-500  dark:text-gray-400">
+                <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">
                   Control your profile
                 </span>
               </li>
