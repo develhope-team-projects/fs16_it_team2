@@ -25,7 +25,6 @@ const SidebarHamburger = () => {
   const menus = [
     { name: "home", link: "/", icon: AiOutlineHome },
     { name: "premium", link: "/premium", icon: IoIceCreamOutline },
-    ,
     { name: "user", link: "/", icon: AiOutlineUser, margin: true },
     { name: "matches", link: "/matches", icon: AiOutlineHeart },
     { name: "messages", link: "/messages", icon: PiWechatLogo },

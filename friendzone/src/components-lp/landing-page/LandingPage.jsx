@@ -24,8 +24,7 @@ import CentralSection from "../central-section/CentralSection";
 const cardContent = [
   {
     title: "Friendzone: Where Being 'Zoned' is a Win!",
-    paragraph:
-      "Ready to flip the script on the Friendzone? Welcome to the Friendzone, where being in is a victory lap! No awkwardness, just good times, shared laughs, and heaps of new connections. Join us, because in this Friendzone, friendship always takes the spotlight!",
+    paragraph: "Ready to flip the script on the Friendzone? Welcome to the Friendzone, where being in is a victory lap! No awkwardness, just good times, shared laughs, and heaps of new connections. Join us, because in this Friendzone, friendship always takes the spotlight!",
     subtitle: "Find New Friends, Wherever You Are!",
     paragraph2:
       "Whether you have moved to a new city, noticed a decrease in the number of friends over time, or simply want to expand your social circle, Friendzone is the answer. We are here to help you meet fantastic people with similar interests.",
@@ -113,9 +112,9 @@ const LandingPage = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className="flex-col font-sans  bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee]">
+        <div className="flex-col font-sans background-landing-page"> 
           <HeroSection />
-         <CentralSection cardContent={cardContent}/>
+          <CentralSection cardContent={cardContent} />
           <ReviewCarousel reviews={reviews} />
           <Footer />
         </div>
@@ -125,3 +124,4 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+ /* bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] */

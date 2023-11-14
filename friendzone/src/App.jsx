@@ -15,11 +15,10 @@ import Payment from "./pages-sidebar/Payment";
 import PremiumGold from "./pages-sidebar/PremiumGold";
 import PremiumPlatinum from "./pages-sidebar/PremiumPlatinum";
 import PremiumPlus from "./pages-sidebar/PremiumPlus";
-
+// import landing page
 import LandingPage from "../src/components-lp/landing-page/LandingPage";
 import AboutUsPage from "../src/components-lp/lp-pages/AboutUsPage";
 import Support from "./components-lp/lp-pages/Support";
-import Products from "./components-lp/lp-pages/Products";
 import DefaultLogin from "./defaultLayout/DefaultLogin";
 
 const App = () => {
@@ -59,11 +58,11 @@ const App = () => {
         />
         <Route
           path="products"
-          element={<Products />}
+          element={<Premium />}
           // Render condizionale per gestire il redirect
           render={({ location }) => {
             if (location.pathname === "/") {
-              return <Products />;
+              return <Premium />;
             } else {
               return <Navigate to="/" />;
             }

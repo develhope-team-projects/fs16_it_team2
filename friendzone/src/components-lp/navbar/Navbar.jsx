@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../logo/Logo";
 import logoNav from "../../assets/images/brand/logo-ice-cream-and-name-row.png";
+import Switcher from "../../darkMode/Switcher";
 
 const navLinks = [
   {
@@ -43,7 +44,11 @@ const Navbar = () => {
           <div className="w-[250px] p-8">
             <Logo logo={logoNav} />
           </div>
+
           <div className={navClasses}>
+            <div className="pr-5">
+              <Switcher />
+            </div>
             <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
               {navLinks.map((link, index) => {
                 return (
