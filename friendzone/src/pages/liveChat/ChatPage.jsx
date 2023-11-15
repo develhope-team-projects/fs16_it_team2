@@ -46,7 +46,7 @@ const Index = () => {
 
   return (
     <div className="flex flex-col w-full h-screen">
-      <div className="flex items-center justify-between p-4 text-white bg-[#552888] dark:bg-[#0e0e0e] custom-box-shadow">
+      <div className="flex items-center justify-between p-4 text-white bg-[#552888] dark:bg-[#2c1a3f] custom-box-shadow">
         <Logo />
         <SearchBar
           searchWord={searchWord}

@@ -113,7 +113,7 @@ const LandingPage = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className="flex-col font-sans  bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee]">
+        <div className="flex-col font-sans background-landing-page">
           <HeroSection />
           <CentralSection cardContent={cardContent} />
           <ReviewCarousel reviews={reviews} />
@@ -125,3 +125,4 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+/* bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] */

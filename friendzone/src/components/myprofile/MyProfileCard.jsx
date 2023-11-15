@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img from "./mo.png";
+import img from "./luca_ice_cream.jpg";
 import { RiSettings4Line } from "react-icons/ri";
 import { FaPencilAlt } from "react-icons/fa";
 
@@ -66,7 +66,7 @@ const MyProfileCard = () => {
           <div className="relative flex flex-col items-center">
             <div className="flex flex-col items-center p-3 border-8 border-gray-500 rounded-full border-l-purple-600">
               <img
-                className="w-40 h-40 rounded-full shadow-lg"
+                className="rounded-full shadow-lg w-72 h-72"
                 src={img}
                 alt="Bonnie image"
               />
@@ -80,10 +80,10 @@ const MyProfileCard = () => {
           </div>
 
           <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
-            Monica Icecream
+            Luca Reina
           </h5>
           <span className="text-sm text-gray-500 dark:text-gray-400">
-            Icecream lover
+            Develhope
           </span>
           <div className="flex justify-between w-full mt-4">
             <div className="w-full ">

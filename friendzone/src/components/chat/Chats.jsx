@@ -21,15 +21,16 @@ const Chat = ({ searchMessage, selectedUser }) => {
               className="w-12 h-12 mr-4 rounded-full"
             />
             <div>
-              <h2 className="text-lg font-semibold text-gray-800">
+              <h2 className="text-lg font-semibold text-gray-800 dark:text-white">
                 {`${selectedUser.name.first} ${selectedUser.name.last}`}
               </h2>
-              <p className="text-sm text-gray-500">
-                Online <span className="text-green-500">&#8226;</span> Active
+              <p className="text-sm text-gray-500 dark:text-[#c3c3c3]">
+                Online <span className="text-green-500">&#8226;</span>
+                Active
               </p>
             </div>
           </div>
-          <div className="w-full p-4 bg-white border-t border-gray-300 "></div>
+          <div className="w-full p-4 bg-transparent border-0 border-gray-300 "></div>
         </>
       )}
       <div className="flex flex-col flex-grow">

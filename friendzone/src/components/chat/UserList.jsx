@@ -4,7 +4,7 @@ const UserList = ({ onSelectUser, selectedUser }) => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("https://randomuser.me/api/?results=299")
+    fetch("https://randomuser.me/api/?results=10")
       .then((response) => response.json())
       .then((data) => setUsers(data.results));
   }, []);
@@ -19,10 +19,10 @@ const UserList = ({ onSelectUser, selectedUser }) => {
         {users.map((user, index) => (
           <li
             key={index}
-            className={`flex items-center p-2 space-x-3 border-2 border-gray-800 rounded-lg cursor-pointer ${
+            className={`flex items-center p-2 space-x-3 border-2 border-purple-400 rounded-lg cursor-pointer ${
               selectedUser && selectedUser.login.uuid === user.login.uuid
-                ? "bg-blue-200"
-                : "bg-white"
+                ? "bg-blue-200 dark:bg-[#643168]"
+                : "bg-transparent"
             }`}
             onClick={() => handleUserClick(user)}
           >
@@ -31,7 +31,7 @@ const UserList = ({ onSelectUser, selectedUser }) => {
               src={user.picture.medium}
               alt="Profile"
             />
-            <span className="font-medium text-gray-900">{`${user.name.first} ${user.name.last}`}</span>
+            <span className="font-medium text-gray-900 dark:text-white">{`${user.name.first} ${user.name.last}`}</span>
           </li>
         ))}
       </ul>
