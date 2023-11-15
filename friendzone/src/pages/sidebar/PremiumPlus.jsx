@@ -141,7 +141,7 @@ const PremiumPlus = ({ type, price, title }) => {
                       <p className="dark:text-gray-100 text-xl">19€/week</p>
                     </div>
                   </div>
-                  <Link to="/payment">
+                  <Link to="/app/payment">
                     <div className="btn text-base rounded-full px-9 py-3 bg-gradient-to-r from-pink-200 to-pink-600 ">
                       Continue
                     </div>
