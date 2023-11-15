@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ProfileCard from "../../components/swipeCard/ProfileCard";
+import CircleComponent from "../../components/animationCircles/CircleComponent";
 
 const Explore = () => {
   const [users, setUsers] = useState([]);
@@ -33,9 +34,9 @@ const Explore = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full mt-10 bg-white dark:bg-black">
-      <div className="flex flex-col items-center justify-center ">
-        <h1 className="mb-4 text-2xl font-semibold">Explore</h1>
+    <div className="flex flex-col items-center justify-center w-full  bg-transparent relative">
+      <div className="flex flex-col items-center justify-center z-10">
+  
         {users.map(
           (user, index) =>
             index === currentProfileIndex && (
@@ -48,6 +49,7 @@ const Explore = () => {
             )
         )}
       </div>
+      <CircleComponent />
     </div>
   );
 };

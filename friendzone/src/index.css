@@ -258,6 +258,15 @@
 }
 
 
+/* In the Matches component CSS or a global stylesheet */
+.small-profile-card {
+  /* Add styles for a smaller profile card */
+  width: 300px; /* Adjust as needed */
+
+}
+
+
+
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
@@ -279,3 +288,5 @@
   border-radius: 10px;
   border: 3px solid #ffffff;
 }
+
+

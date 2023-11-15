@@ -33,7 +33,7 @@ const Login = () => {
             <label htmlFor="checkbox"> Check to remember me!</label>
           </div>
           <div className="flex items-center justify-center">
-            <Link to="/app">
+            <Link to="/app/">
               <button className="p-2 px-16 mb-6 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl">
                 Login
               </button>

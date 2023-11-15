@@ -24,9 +24,9 @@ const SidebarHamburger = () => {
 
   const backgroundImage = colorTheme === "dark" ? `url(${bgl})` : `url(${bgl})`;
   const menus = [
-    { name: "home", link: "/app/home", icon: AiOutlineHome },
+    { name: "home", link: "/app/", icon: AiOutlineHome },
     { name: "premium", link: "/app/premium", icon: IoIceCreamOutline },
-    { name: "user", link: "/app/user", icon: AiOutlineUser, margin: true },
+    { name: "user", link: "/app/", icon: AiOutlineUser, margin: true },
     { name: "matches", link: "/app/matches", icon: AiOutlineHeart },
     { name: "messages", link: "/app/messages", icon: PiWechatLogo },
     {

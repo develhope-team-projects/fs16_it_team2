@@ -3,6 +3,7 @@ import ProfileCard from "../../components/swipeCard/ProfileCard";
 import Loading from "../../components/loading/Loading";
 import { Link } from "react-router-dom";
 import { PiSlidersHorizontalDuotone } from "react-icons/pi";
+import CircleComponent from "../../components/animationCircles/CircleComponent";
 
 const Matches = () => {
   const [users, setUsers] = useState([]);
@@ -47,8 +48,8 @@ const Matches = () => {
   if (loading) return <Loading />;
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-4/5 mt-10 bg-transparent ">
-      <div className="relative flex flex-col items-center justify-center">
+    <div className="relative flex flex-col items-center justify-center w-full mt-10 bg-transparent">
+      <div className="relative flex flex-col items-center justify-center w-4/5 z-10">
         <div className="flex flex-wrap items-center justify-center w-full gap-5 p-8">
           <button className="btn-transparent-border custom-box-shadow">
             <PiSlidersHorizontalDuotone />
@@ -70,8 +71,8 @@ const Matches = () => {
 
         <div className="flex flex-wrap justify-center gap-4 ">
           {users.map((user) => (
-            <div key={user.id} className="relative backdrop-blur rounded-2xl">
-              <ProfileCard user={user} />
+            <div key={user.id} className="relative backdrop-blur rounded-2xl ">
+              <ProfileCard user={user} smallSize />
               <div class="rounded-2xl backdrop-blur absolute top-0 left-0 w-full h-full opacity-100 pointer-events-none"></div>
             </div>
           ))}
@@ -83,6 +84,7 @@ const Matches = () => {
           Get Gold Now
         </Link>
       </div>
+      <CircleComponent />
     </div>
   );
 };

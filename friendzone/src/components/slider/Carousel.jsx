@@ -68,12 +68,12 @@ const Carousel = () => {
               <Link
                 to={
                   type === "Friendzone Platinum"
-                    ? "/platinum"
+                    ? "/app/platinum"
                     : type === "Friendzone Gold"
-                    ? "/gold"
+                    ? "/app/gold"
                     : type === "Friendzone Plus"
-                    ? "/plus"
-                    : "/premium" // Default link if the type doesn't match any of the specified types
+                    ? "/app/plus"
+                    : "/app/premium" // Default link if the type doesn't match any of the specified types
                 }
                 className="w-80 bg-transparent border-2  dark:hover:bg-gray-900 dark:border-gray-500 hover:bg-purple-100 rounded-full p-5 font-semibold text-xl text-black"
               >
