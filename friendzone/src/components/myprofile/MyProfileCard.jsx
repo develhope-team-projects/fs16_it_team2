@@ -73,7 +73,7 @@ const MyProfileCard = () => {
             </div>
             <Link
               to="/app/editprofile"
-              className="absolute bottom-0 inline-flex items-center px-8 py-2 text-sm font-medium text-center text-white bg-purple-500 border border-gray-300 rounded-full hover:bg-purple-600 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
+              className="absolute bottom-0 inline-flex items-center px-8 py-2 text-sm font-medium text-center text-white bg-purple-500 border border-gray-300 rounded-full hover:bg-purple-600 focus:ring-4 focus:outline-none focus:ring-gray-200  dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
             >
               30% Complete
             </Link>

@@ -29,8 +29,8 @@ const ReviewCarousel = ({ reviews }) => {
     <div className="p-10 font-semibold">
       <Carousel responsive={responsive}>
         {reviews.map((item, index) => (
-          <div className="flex justify-center h-70" key={index}>
-            <div className="relative max-w-sm overflow-hidden bg-white rounded-xl">
+          <div className="flex justify-center h-70 " key={index}>
+            <div className="relative max-w-sm overflow-hidden bg-white rounded-xl custom-box-shadow">
               <div className="py-4 w-full bg-gradient-to-t from-[#fbf7f7] to-[#140426] relative">
                 <FaQuoteLeft className="absolute top-0 mt-4 ml-4 text-4xl text-gray-600 left-4" />
                 <img

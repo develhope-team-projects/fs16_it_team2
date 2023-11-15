@@ -3,7 +3,7 @@ import Navbar from "../navbar/Navbar";
 
 const HeroSection = () => {
   return (
-    <div className="relative h-screen">
+    <div className="relative h-screen custom-box-shadow">
       <div
         className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-70"
         aria-hidden="true"
