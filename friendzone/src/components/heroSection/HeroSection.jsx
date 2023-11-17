@@ -1,5 +1,8 @@
 import heroImg from "../../assets/images/landingPage/hero-img.png";
 import Navbar from "../navbar/Navbar";
+import DinamicColor from "../dinamicColorIce/DinamicColor";
+import { IoIceCream } from "react-icons/io5";
+import DinamicColorLight from "../dinamicColorIce/DinamicColorLight";
 
 const HeroSection = () => {
   return (
@@ -13,16 +16,21 @@ const HeroSection = () => {
         src={heroImg}
         alt="Hero Background"
       />
+
       <div className="absolute top-0 left-0 z-20 w-full">
         <Navbar />
       </div>
-      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-4xl text-center text-white">
-        <h1>Swipe smiles, make friends miles! </h1>
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center">
+        <DinamicColorLight>
+          <h1 className="text-7xl">Swipe smiles, make friends miles! </h1>
+        </DinamicColorLight>
+
         <div className="flex items-center">
-          <h2>Join our community, before your ice cream melts down! </h2>{" "}
-          <span className="hover:text-[#e058cc]">
-            <ion-icon name="ice-cream-outline"></ion-icon>
-          </span>
+          <DinamicColorLight>
+            <h2 className="text-3xl">
+              Join our community, before your ice cream melts down! <span> {<IoIceCream />}</span>
+            </h2>
+          </DinamicColorLight>
         </div>
       </div>
     </div>
