@@ -29,14 +29,16 @@ const CentralSection = ({ cardContent }) => {
         src={icecream4}
         alt="icecream 4"
       />
+      
       <div className="absolute flex items-center justify-center w-full h-full ">
         <CircleComponent />
       </div>
-      <div className="flex flex-col items-center justify-center w-100%">
+      <div className="flex flex-col items-center justify-center w-[100%]">
         <Card card={cardContent[0]} />
 
         <VideoSection />
-        <Card card={cardContent[1]} />
+        
+        <Card  card={cardContent[1]} />
       </div>
     </div>
   );

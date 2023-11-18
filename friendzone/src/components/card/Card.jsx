@@ -4,12 +4,12 @@ import { IoIceCream } from "react-icons/io5";
 
 const Card = ({ card }) => {
   return (
-    <div className="flex items-center justify-center h-screen relative">
-      <div className="relative h-100% mt-4 h-54 custom-box-shadow ">
+    <div className="flex items-center justify-center 2xl:h-screen relative">
+      <div className="relative mt-4 h-54 custom-box-shadow ">
         <img src={card.img} alt="photo first card" />
       </div>
 
-      <div className="w-1/4 p-10 text-center ">
+      <div className="w-1/3 p-10 text-center ">
         <DinamicColor>
           <h1 className="text-2xl font-bold dark:text-white ">
             <span>{<IoIceCream />}</span>
@@ -17,12 +17,12 @@ const Card = ({ card }) => {
           </h1>
         </DinamicColor>
         <p className="pb-5 dark:text-white text-xl">{card.paragraph}</p>
-        <DinamicColor>
+        <>
      
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
             {card.subtitle}
           </h2>
-        </DinamicColor>
+        </>
         <p className=" dark:text-white text-xl">{card.paragraph2}</p>
       </div>
     </div>
