@@ -6,7 +6,11 @@
   object-fit: cover;
 }
 
-.background-landing-page {
+.background-landing-page{
   background-image: url("../../assets/images/backgrounds/bg-light.png");
   background-size: cover;
+}
+
+.bg-navbar{
+   background-image: url("../../assets/images/backgrounds/bg-light1.webp");
 }

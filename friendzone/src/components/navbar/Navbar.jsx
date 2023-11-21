@@ -20,60 +20,66 @@ const navLinks = [
   },
 ];
 const Navbar = () => {
-  const [navClasses, setNavClasses] = useState(
-    "duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5"
-  );
-  const [nameIcon, setNameIcone] = useState("menu-outline");
+  const [menuIcon, setMenuIcon] = useState("menu");
+  const [menuVisible, setMenuVisible] = useState(false);
 
-const handleToggleMenu = () => {
-  setNameIcone(nameIcon === "menu-outline" ? "close" : "menu-outline");
+  const handleToggleMenu = () => {
+    setMenuIcon((prevIcon) => (prevIcon === "menu" ? "close" : "menu"));
+    setMenuVisible((prevVisible) => !prevVisible);
+  };
 
-  if (nameIcon === "menu-outline") {
-    setNavClasses(
-      "md:static md:min-h-fit duration-500 absolute min-h-[60vh] left-0 top-[9%] md:w-auto w-full flex items-center px-5"
-    );
-  } else {
-    setNavClasses(
-      "duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
-    );
-  }
-};
-
-
+  const navLinks = [
+    {
+      name: "Home",
+      path: "/",
+    },
+    {
+      name: "Products",
+      path: "/products",
+    },
+    { name: "About Us", path: "/about-us" },
+    {
+      name: "Support",
+      path: "/support",
+    },
+  ];
 
   return (
-    <header>
-      <nav className="flex">
-        <div className="flex items-center w-[92%] justify-start">
-          <div className="w-[250px] p-8">
-            <Logo logo={logoNav} />
-          </div>
+    <nav className="p-5 bg-transparent shadow md:flex md:items-center md:justify-between">
+      <div className="flex justify-between items-center">
+        <span className="text-2xl cursor-pointer">
+          <img
+            className="h-10 inline"
+            src={logoNav}
+            alt="Logo"
+          />
+        
+        </span>
 
-          <div className={navClasses}>
-            <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
-              <li>
-                <div className="pr-8">
-                  <Switcher />
-                </div>
-              </li>
-              {navLinks.map((link, index) => {
-                return (
-                  <li key={index}>
-                    <Link
-                      className=" hover:text-[#e058cc] text-white"
-                      to={link.path}
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </div>
+        <span className="text-3xl text-white cursor-pointer mx-2 md:hidden block">
+          <ion-icon name={menuIcon} onClick={handleToggleMenu}></ion-icon>
+        </span>
+      </div>
 
-        <div className="flex items-center w-[92%] justify-end">
-          <Link to="/login">
+      <ul
+        className={`md:flex md:items-center ${
+          menuVisible
+            ? "z-[-1] md:z-auto md:static absolute bg-opacity-70 bg-black w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-100 top-[30px] transition-all ease-in duration-500"
+            : "hidden"
+          }`}
+      >
+        {navLinks.map((link, index) => (
+          <li key={index} className="mx-4 my-6 md:my-0">
+            <Link
+              to={link.path}
+              className="text-xl text-white hover:text-cyan-500 duration-500"
+            >
+              {link.name}
+            </Link>
+          </li>
+        ))}
+
+         <Link to="/login">
             <button className=" text-white px-5 py-2 rounded-full hover:text-[#e058cc]">
               Login
             </button>
@@ -83,14 +89,11 @@ const handleToggleMenu = () => {
               Sign Up
             </button>
           </Link>
-
-          <div className="text-3xl cursor-pointer md:hidden">
-            <ion-icon onClick={handleToggleMenu} name={nameIcon}></ion-icon>
-          </div>
-        </div>
-      </nav>
-    </header>
+      
+      </ul>
+    </nav>
   );
 };
 
 export default Navbar;
+

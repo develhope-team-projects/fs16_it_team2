@@ -111,7 +111,7 @@ const LandingPage = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className="flex-col  font-mono background-landing-page">
+        <div className="flex-col  font-quick background-landing-page">
           <HeroSection />
           <CentralSection cardContent={cardContent} />
           <ReviewCarousel reviews={reviews} />

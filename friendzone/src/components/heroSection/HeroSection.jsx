@@ -1,4 +1,3 @@
-import React from "react";
 import { IoIceCream } from "react-icons/io5";
 import Navbar from "../navbar/Navbar";
 import DinamicColorLight from "../dinamicColorIce/DinamicColorLight";

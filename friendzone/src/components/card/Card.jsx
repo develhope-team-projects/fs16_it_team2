@@ -5,7 +5,7 @@ import { IoIceCream } from "react-icons/io5";
 const Card = ({ card }) => {
   return (
     <div className="flex items-center justify-center 2xl:h-screen relative">
-      <div className="relative mt-4 h-54 custom-box-shadow ">
+      <div className="relative z-0 mt-4 h-54 custom-box-shadow ">
         <img src={card.img} alt="photo first card" />
       </div>
 
