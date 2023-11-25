@@ -119,7 +119,7 @@ const PasswordComponent = () => {
         <Link to="/login">
           <button
             onClick={handleSubmit}
-            className="p-3 px-16 mt-6 mb-6 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl"
+            className="p-3 px-16 mt-6 mb-6 w-80 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl"
           >
             SignUp!
           </button>
