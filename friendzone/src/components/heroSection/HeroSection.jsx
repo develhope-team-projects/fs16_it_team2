@@ -25,9 +25,9 @@ const HeroSection = () => {
 
         <div className="flex flex-col items-center md:flex-row md:space-x-4 mt-4">
           <DinamicColorLight>
-            <h2 className="text-lg md:text-2xl">
-              Join our community, before your ice cream melts down!{" "}
-              <span className="text-xl md:text-3xl">{<IoIceCream />}</span>
+            <h2 className="flex text-lg md:text-5xl">
+              Join our community, before your ice cream melts down!
+              <span className="p-2 text-xl md:text-3xl">{<IoIceCream />}</span>
             </h2>
           </DinamicColorLight>
         </div>
