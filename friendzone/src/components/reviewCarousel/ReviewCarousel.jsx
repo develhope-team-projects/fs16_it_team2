@@ -3,9 +3,12 @@ import "react-multi-carousel/lib/styles.css";
 
 import { FaQuoteLeft } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
-import CircleComponent from "../animationCircles/CircleComponent";
+import { useEffect, useState } from "react";
 
-const ReviewCarousel = ({ reviews }) => {
+
+const ReviewCarousel = () => {
+const [reviews, setReviews] = useState([]);
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -25,13 +28,26 @@ const ReviewCarousel = ({ reviews }) => {
       items: 1,
     },
   };
+useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const response = await fetch('http://localhost:3003/api/reviews');
+        const data = await response.json();
+        setReviews(data);
+      } catch (error) {
+        console.error('Error fetching reviews:', error);
+      }
+    };
+
+    fetchReviews();
+  }, []);
 
   return (
     <>
-      <div className="p-10 font-semibold h-1''">
+      <div className="p-10 font-semibold">
         <Carousel responsive={responsive}>
-          {reviews.map((item, index) => (
-            <div className="flex justify-center h-70 " key={index}>
+          {reviews && reviews.map((item, index) => (
+            <div className="flex justify-center md:ms-2 h-70 " key={index}>
               <div className="relative max-w-sm overflow-hidden bg-white rounded-xl custom-box-shadow">
                 <div className="py-4 w-full bg-gradient-to-t from-[#fbf7f7] to-[#140426] relative">
                   <FaQuoteLeft className="absolute top-0 mt-4 ml-4 text-4xl text-gray-600 left-4" />
@@ -70,3 +86,4 @@ const ReviewCarousel = ({ reviews }) => {
 };
 
 export default ReviewCarousel;
+

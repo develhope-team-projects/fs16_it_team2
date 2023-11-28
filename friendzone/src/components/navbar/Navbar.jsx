@@ -68,6 +68,7 @@ const Navbar = () => {
             : "hidden"
           }`}
       >
+        <li> <Switcher/> </li>
         {navLinks.map((link, index) => (
           <li key={index} className="mx-4 my-6 md:my-0">
             <Link
