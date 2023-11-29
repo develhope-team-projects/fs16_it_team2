@@ -18,8 +18,6 @@ const fadeIn = keyframes`
 // Componente stilizzato per il titolo
 const StyledTitle = styled.h1`
   font-family:'Ms Madi', 'cursive';
-  color: #ffffff; // Personalizza il colore del testo
-  font-size: 2em;
   animation: ${fadeIn} 1s ease-in-out; // Applica l'animazione
 `;
 
@@ -33,12 +31,12 @@ const Loading = () => {
       className="flex flex-col items-center justify-center  w-full h-screen p-5"
       style={{ backgroundImage, backgroundSize: "cover" }}
     >
-      <div className="flex-col relative items-center justify-center w-[50%] h-full mx-auto">
+      <div className="flex-col relative items-center justify-center w-[70%] mx-auto">
         <video autoPlay loop muted className="mx-auto">
           <source src={videoLoading} type="video/webm" />
           Loading...
         </video>
-        <div className='flex absolute text-center text-6xl'>
+        <div className='absolute text-center dark:text-white lg:text-8xl lg:right-[150px] flex text-4xl'>
                 <StyledTitle> Please, don't let it melt!</StyledTitle>
         </div>
   
