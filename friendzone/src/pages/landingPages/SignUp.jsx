@@ -1,4 +1,5 @@
 import PasswordComponent from "../../components/login/PasswordComponent";
+import DateForm from "../../components/SignUp/DateForm";
 
 const SignUp = () => {
   return (
@@ -35,6 +36,9 @@ const SignUp = () => {
               type="username"
               id="username"
             />
+          </div>
+          <div>
+            <DateForm />
           </div>
           <div className="flex flex-col gap-1 mb-3">
             <label className="text-xl" htmlFor="email">

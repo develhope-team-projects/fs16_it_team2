@@ -61,7 +61,7 @@ const PasswordComponent = () => {
           />
           <span
             style={{
-              position: "absolute",
+              position: "static",
               right: "10px",
               top: "50%",
               transform: "translateY(-50%)",
@@ -73,11 +73,11 @@ const PasswordComponent = () => {
           </span>
 
           {showPasswordMessage && (
-            <p style={{ color: "red" }}>
+            <div className="right-0 mt-2 text-red-950">
               La password deve contenere almeno {minPasswordLength} caratteri
               con <br /> una lettera maiuscola, una lettera minuscola e un
               numero.
-            </p>
+            </div>
           )}
         </div>
       </div>
@@ -97,7 +97,7 @@ const PasswordComponent = () => {
           />
           <span
             style={{
-              position: "absolute",
+              position: "static",
               right: "10px",
               top: "50%",
               transform: "translateY(-50%)",
@@ -108,10 +108,10 @@ const PasswordComponent = () => {
             {showPassword ? "👁️" : "👁️‍🗨️"}
           </span>
           {showMatchMessage && (
-            <p style={{ color: "red" }}>
+            <div className="right-0 mt-2 text-red-950">
               La conferma della password non
               <br /> corrisponde alla password inserita.
-            </p>
+            </div>
           )}
         </div>
       </div>
