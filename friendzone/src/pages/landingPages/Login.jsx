@@ -19,7 +19,7 @@ const Login = () => {
               Email
             </label>
             <input
-              className="p-2 bg-transparent border-2 border-white shadow-lg w-96 rounded-xl"
+              className="p-2 bg-transparent border-2 border-white shadow-lg w-96 rounded-xl placeholder-gray-700 ::placeholder-gray-500 focus:placeholder-purple-600"
               placeholder="enter your email"
               type="email"
               id="emailLog"
@@ -30,7 +30,7 @@ const Login = () => {
               Password
             </label>
             <input
-              className="p-2 bg-transparent border-2 border-white shadow-lg w-96 rounded-xl"
+              className="p-2 bg-transparent border-2 border-white shadow-lg w-96 rounded-xl  placeholder-gray-700 ::placeholder-gray-500 focus:placeholder-purple-600"
               placeholder="enter your password"
               type="password"
               id="passwordLog"
@@ -41,13 +41,13 @@ const Login = () => {
             <label className="gap-3 mr-3" htmlFor="checkbox">
               Check to remember me!
             </label>
-            <button className="ml-4 px-4 text-white bg-gradient-to-l from-gray-700 via-gray-500 to-gray-700 rounded-full shadow-xl">
+            <button className="ml-4 px-4 text-white focus:outline-none focus:ring-2 focus:text-blue-300 hover:text-xl hover:text-blue-300 transition-colors duration-300 bg-gradient-to-l from-gray-700 via-gray-500 to-gray-700 rounded-full shadow-xl">
               Forgot password?
             </button>
           </div>
           <div className="flex items-center justify-center">
             <Link to="/app/">
-              <button className="p-3 px-20 w-96 text-xl mt-4 mb-4 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl">
+              <button className="p-3 px-20 w-96 text-xl mt-4 mb-4 hover:text-2xl text-white bg-purple-500 border-2 border-white rounded-full shadow-xl">
                 Login
               </button>
             </Link>
@@ -57,13 +57,13 @@ const Login = () => {
           <p>or login with:</p>
         </div>
         <div className="flex gap-2 p-3">
-          <button className="p-2 px-5 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl">
+          <button className="p-2 px-5 text-white hover:text-xl bg-purple-500 border-2 border-white rounded-full shadow-xl">
             Google
           </button>
-          <button className="p-2 px-5 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl">
+          <button className="p-2 px-5 text-white hover:text-xl bg-purple-500 border-2 border-white rounded-full shadow-xl">
             Facebook
           </button>
-          <button className="p-2 px-5 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl ">
+          <button className="p-2 px-5 text-white hover:text-xl bg-purple-500 border-2 border-white rounded-full shadow-xl ">
             Tinder
           </button>
         </div>

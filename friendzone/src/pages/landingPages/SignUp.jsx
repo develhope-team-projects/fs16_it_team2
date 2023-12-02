@@ -20,7 +20,7 @@ const SignUp = () => {
               Full Name
             </label>
             <input
-              className="p-2 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl"
+              className="p-2 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl placeholder-gray-700 ::placeholder-gray-500 focus:placeholder-purple-600"
               placeholder="enter your name"
               type="name"
               id="name"
@@ -31,7 +31,7 @@ const SignUp = () => {
               Username
             </label>
             <input
-              className="p-2 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl"
+              className="p-2 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl placeholder-gray-700 ::placeholder-gray-500 focus:placeholder-purple-600"
               placeholder="enter your username"
               type="username"
               id="username"
@@ -45,7 +45,7 @@ const SignUp = () => {
               Email
             </label>
             <input
-              className="p-2 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl"
+              className="p-2 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl placeholder-gray-700 ::placeholder-gray-500 focus:placeholder-purple-600"
               placeholder="enter your email"
               type="email"
               id="email"

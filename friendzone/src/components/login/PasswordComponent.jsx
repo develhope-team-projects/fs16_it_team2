@@ -52,7 +52,7 @@ const PasswordComponent = () => {
         </label>
         <div className="relative">
           <input
-            className="p-2 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl"
+            className="p-2 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl placeholder-gray-700 ::placeholder-gray-500 focus:placeholder-purple-600"
             placeholder="enter your password"
             type={showPassword ? "text" : "password"}
             id="password"
@@ -88,7 +88,7 @@ const PasswordComponent = () => {
         </label>
         <div style={{ position: "relative" }}>
           <input
-            className="p-2 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl"
+            className="p-2 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl placeholder-gray-700 ::placeholder-gray-500 focus:placeholder-purple-700"
             placeholder="repeat your password"
             type={showPassword ? "text" : "password"}
             id="repeatpassword"
@@ -119,7 +119,7 @@ const PasswordComponent = () => {
         <Link to="/login">
           <button
             onClick={handleSubmit}
-            className="p-3 px-16 mt-6 mb-6 w-80 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl"
+            className="p-3 px-16 mt-6 mb-6 w-80 hover:text-2xl text-white bg-purple-500 border-2 border-white rounded-full shadow-xl"
           >
             SignUp!
           </button>
