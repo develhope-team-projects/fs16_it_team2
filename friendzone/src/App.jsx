@@ -1,12 +1,10 @@
 import React from "react";
-import { ProfileCard } from "./ProfileCard";
+import ProfileCard from "./ProfileCard";
 
 const App = () => {
   return (
     <>
     <ProfileCard />
-    {/* <Advanced /> */}
-    {/* <Bozza /> */}
     </>
   );
 };
