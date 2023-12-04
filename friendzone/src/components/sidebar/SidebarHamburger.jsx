@@ -73,12 +73,12 @@ const SidebarHamburger = () => {
     <div className="dark:bg-black ">
       <section className="flex w-full min-w-full">
         <div
-          className={` bg-[#613b8c] dark:bg-[#0e0e0e] fixed top-0 left-0 min-h-screen ${
+          className={`z-20 bg-[#613b8c] dark:bg-[#0e0e0e] fixed top-0 left-0  min-h-screen ${
             open ? "w-72" : "w-16"
           } duration-500  text-gray-100 px-4 custom-box-shadow rounded-r-lg `}
         >
           <div
-            className={`py-3 flex justify-between ${
+            className={`mb-10 py-3 flex justify-between ${
               !open ? "flex-col-reverse gap-4 items-center" : "flex"
             }`}
           >
@@ -104,7 +104,7 @@ const SidebarHamburger = () => {
                 to={menu?.link}
                 key={i}
                 className={`${
-                  menu?.margin && "mt-5"
+                  menu?.margin && "mt-10"
                 } group flex items-center text-sm  gap-3.5 font-medium p-2 hover:bg-[#57357e]  dark:hover:bg-gray-800 rounded-md `}
               >
                 <div>{React.createElement(menu?.icon, { size: "20" })}</div>

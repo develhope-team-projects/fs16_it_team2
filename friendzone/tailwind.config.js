@@ -9,10 +9,7 @@ export default {
         lato: ["Lato", "sans-serif"],
       },
       screens: {
-        "mq-576": "576px",
-        "mq-768": "768px",
-        "mq-935": "935px",
-        "mq-1200": "1200px",
+        
       },
     },
   },

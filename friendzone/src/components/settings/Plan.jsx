@@ -45,13 +45,13 @@ const Plan = () => {
   };
 
   return (
-    <div className="flex dark:bg-black">
+    <div className="flex lg:flex-row flex-col  dark:bg-black">
       {/* Vertical Navigation Bar on the Left */}
-      <div className="flex flex-col items-center justify-center w-16 bg-transparent">
+      <div className="flex lg:flex-col items-center justify-center mt-1 lg:w-16 bg-transparent">
         {tabComponents.map((tab, index) => (
           <div
             key={index}
-            className="relative p-3 cursor-pointer group"
+            className=" p-3 cursor-pointer group"
             onClick={() => handleTabChange(index)}
           >
             <IoIceCreamSharp
@@ -70,7 +70,7 @@ const Plan = () => {
       </div>
 
       {/* Content Area on the Right */}
-      <div className="relative flex-1 w-full mb-6 break-words bg-transparent ">
+      <div className="relative flex-1 w-full mb-6 break-words bg-transparent items-center  justify-center">
         <div className="flex-auto px-4 py-5">
           <div className="tab-content tab-space">
             {tabComponents.map((tab, index) => (
@@ -80,7 +80,7 @@ const Plan = () => {
                   openTab === index ? "flex justify-between" : "hidden"
                 }
               >
-                <div className="flex w-4/5">
+                <div className="flex  lg:w-4/5 ">
                   <tab.component />
                 </div>
               </div>

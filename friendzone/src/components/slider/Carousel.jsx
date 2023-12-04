@@ -31,7 +31,7 @@ const Carousel = () => {
   }, [currentPerson]);
 
   return (
-    <section className="slider-container flex flex-col justify-center items-center gap-5 border-none bg-transparent">
+    <section className="slider-container mb-2 mt-3 sm:mt-[2rem] h-[150px] sm:h-[250px] flex flex-col justify-center items-center gap-5 border-none bg-transparent ">
       {people.map((person, personIndex) => {
         const { id, icon, name, title, quote, type } = person;
         return (
@@ -44,7 +44,7 @@ const Carousel = () => {
             }}
             key={id}
           >
-            <div className="flex justify-center items-center mb-5 ">
+            <div className="flex justify-center items-center mb-1 sm:mb-5 ">
               <IoIceCream
                 size={32}
                 className={
@@ -58,12 +58,12 @@ const Carousel = () => {
               />
 
               <h5
-                className={`name text-black dark:text-white font-bold text-2xl`}
+                className={`name text-black dark:text-white font-bold text-lg sm:text-2xl`}
               >
                 {name}
               </h5>
             </div>
-            <p className="title mb-9 dark:text-gray-300">{title}</p>
+            <p className="title mb-4 sm:mb-9 dark:text-gray-300">{title}</p>
             <div className="flex justify-center items-center">
               <Link
                 to={
@@ -75,7 +75,7 @@ const Carousel = () => {
                     ? "/app/plus"
                     : "/app/premium" // Default link if the type doesn't match any of the specified types
                 }
-                className="w-80 bg-transparent border-2  dark:hover:bg-gray-900 dark:border-gray-500 hover:bg-purple-100 rounded-full p-5 font-semibold text-xl text-black"
+                className="w-60 sm:w-80 bg-transparent border-2  dark:hover:bg-gray-900 dark:border-gray-500 hover:bg-purple-100 rounded-full  p-2 sm:p-5 font-semibold text-xl text-black"
               >
                 <div>
                   <span
@@ -98,14 +98,14 @@ const Carousel = () => {
       })}
       <button
         type="button"
-        className="prev bg-transparent border border-purple-500 text-purple-500  hover:bg-purple-100 dark:hover:bg-gray-900"
+        className="absolute left-0 sm:prev bg-transparent border border-purple-500 text-purple-500  hover:bg-purple-100 dark:hover:bg-gray-900"
         onClick={prevSlide}
       >
         <FiChevronLeft />
       </button>
       <button
         type="button"
-        className="next bg-transparent border border-purple-500 text-purple-500 hover:bg-purple-100 dark:hover:bg-gray-900"
+        className=" absolute right-0 sm:next bg-transparent border border-purple-500 text-purple-500 hover:bg-purple-100 dark:hover:bg-gray-900"
         onClick={nextSlide}
       >
         <FiChevronRight />

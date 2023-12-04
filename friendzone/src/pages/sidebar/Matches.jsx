@@ -49,18 +49,17 @@ const Matches = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center w-full mt-10 bg-transparent">
-      <div className="relative flex flex-col items-center justify-center w-4/5 z-10">
-        <div className="flex flex-wrap items-center justify-center w-full gap-5 p-8">
+      <div className="relative flex flex-col items-center justify-center md:w-4/5 z-10">
+        <div className="flex flex-wrap items-center justify-center w-full gap-2 md:gap-5 md:p-8 p-2">
           <button className="btn-transparent-border custom-box-shadow">
             <PiSlidersHorizontalDuotone />
           </button>
-          <button className="btn-transparent-border">preference</button>
-          <button className="btn-transparent-border">preference</button>
-          <button className="btn-transparent-border">preference</button>
-          <button className="btn-transparent-border">preference</button>
-          <button className="btn-transparent-border">preference</button>
-          <button className="btn-transparent-border">preference</button>
-          <button className="btn-transparent-border">preference</button>
+          <button className="btn-transparent-border-mobile md:btn-transparent-border">preference</button>
+          <button className="btn-transparent-border-mobile md:btn-transparent-border">preference</button>
+          <button className="btn-transparent-border-mobile md:btn-transparent-border">preference</button>
+          <button className="btn-transparent-border-mobile md:btn-transparent-border">preference</button>
+          <button className="btn-transparent-border-mobile md:btn-transparent-border">preference</button>
+          <button className="btn-transparent-border-mobile md:btn-transparent-border">preference</button>
         </div>
         <hr />
         <div className="flex items-center justify-center w-full p-5 mb-4">
@@ -79,7 +78,7 @@ const Matches = () => {
         </div>
         <Link
           to="/app/premium"
-          className="fixed flex items-center p-4 text-2xl transform -translate-x-1/2 rounded-full bottom-20 left-1/2 bg-gradient-gold px-7"
+          className="fixed flex items-center md:p-4 md:text-2xl  text-base p-2 transform -translate-x-1/2 rounded-full bottom-20 left-1/2 bg-gradient-gold px-7 active:bg-yellow-300"
         >
           Get Gold Now
         </Link>
