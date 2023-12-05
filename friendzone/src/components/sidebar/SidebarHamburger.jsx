@@ -137,7 +137,7 @@ const SidebarHamburger = () => {
           }}
         >
           <div
-            className="flex justify-center flex-1 min-h-screen bg-white dark:bg-black "
+            className="flex justify-center flex-1 min-h-screen bg-white dark:bg-black overflow-hidden"
             style={{ backgroundImage, backgroundSize: "cover" }}
           >
             <Outlet className="w-full" />

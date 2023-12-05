@@ -149,7 +149,7 @@ const PremiumPlatinum = ({ type, price, title }) => {
                       </p>
                     </div>
                   </div>
-                  <Link to="/payment">
+                  <Link to="/app/payment">
                     <div className="btn text-base rounded-full px-4 py-2 lg:px-9 lg:py-3 bg-gradient-to-r from-zinc-200 to-zinc-600 ">
                       Continue
                     </div>
@@ -176,7 +176,7 @@ const PremiumPlatinum = ({ type, price, title }) => {
                       </p>
                     </div>
                   </div>
-                  <Link to="/payment">
+                  <Link to="/app/payment">
                     <div className="btn text-base rounded-full px-4 py-2 lg:px-9 lg:py-3 bg-gradient-to-r from-zinc-200 to-zinc-600 ">
                       Continue
                     </div>

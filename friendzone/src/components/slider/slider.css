@@ -320,7 +320,7 @@ ul {
 .prev,
 .next {
   position: absolute;
-  top: 200px;
+
   background: var(--grey-500);
   color: var(--white);
   width: 1.25rem;
@@ -351,6 +351,7 @@ ul {
 
   }
 }
+
 .next-slide {
   transform: translateX(100%);
 }

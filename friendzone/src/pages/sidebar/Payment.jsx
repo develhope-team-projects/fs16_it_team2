@@ -17,10 +17,10 @@ const Payment = () => {
   };
 
   return (
-    <div className="bg-transparent flex  w-full relative">
-      <div className="z-10  mx-auto p-8">
-        <div className="bg-white dark:bg-black dark:text-white rounded-lg custom-box-shadow border-1 w-4/5  mx-auto flex items-center justify-around">
-          <div className="flex intems-center  p-6 ">
+    <div className="bg-transparent flex  w-full relative md:items-center ">
+      <div className="z-10  mx-auto md:p-8">
+        <div className="bg-white dark:bg-black dark:text-white rounded-lg custom-box-shadow border-1 lg:w-4/5  mx-auto flex lg:flex-row flex-col items-center justify-around">
+          <div className="hidden md:flex intems-center  p-6 ">
             <div className="  flex  items-center">
               <div className="flex">
                 <div className="w-96 h-56  bg-red-100 rounded-xl relative text-white shadow-2xl transition-transform transform hover:scale-110">
@@ -74,7 +74,7 @@ const Payment = () => {
               </div>
             </div>
           </div>
-          <div className="p-6 ">
+          <div className="w-full px-20 py-6 lg:p-6 ">
             <h2 className="text-lg font-medium mb-6">Payment Information</h2>
             <form>
               <div className="grid grid-cols-2 gap-6">
@@ -144,7 +144,7 @@ const Payment = () => {
               <div className="mt-8">
                 <button
                   type="submit"
-                  className="w-full bg-green-500 hover:bg-blue-600 text-white font-medium py-3 rounded-lg focus:outline-none"
+                  className="w-full bg-purple-500 hover:bg-blue-600 text-white font-medium py-3 rounded-lg focus:outline-none"
                 >
                   Submit
                 </button>

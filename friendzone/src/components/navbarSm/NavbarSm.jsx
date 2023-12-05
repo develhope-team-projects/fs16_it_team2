@@ -31,7 +31,7 @@ const NavbarSm = () => {
         <TopNavbar />
         <BottomNavbar />
       </div>
-      <div className="mt-14 mb-14 h-full">
+      <div className=" relative mt-14 mb-14 h-full flex  justify-center w-full overflow-x-hidden ">
         <Outlet />
       </div>
     </div>

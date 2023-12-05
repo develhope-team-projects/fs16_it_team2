@@ -35,7 +35,7 @@ const TopNavbar = () => {
           <Link key={index} to={menu?.link} className="group">
             <div
               data-tooltip-target={`tooltip-${menu.name}`}
-              className="inline-flex flex-col items-center justify-center p-5  hover:bg-gray-50 dark:hover:bg-gray-800 group"
+              className="inline-flex flex-col items-center justify-center p-[19px] rounded-xl hover:bg-purple-700 dark:hover:bg-gray-800 group"
             >
               {menu.icon}
               <span className="sr-only">

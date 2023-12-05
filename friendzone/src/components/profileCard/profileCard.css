@@ -83,7 +83,6 @@
   overflow: hidden;
 }
 .dashboard {
-  display: flex;
-  flex-direction: column; /* Make it a column layout */
+
   height: 100%; /* Cover the full height of the parent */
 }

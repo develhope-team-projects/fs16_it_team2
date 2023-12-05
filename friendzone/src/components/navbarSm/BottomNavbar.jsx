@@ -73,14 +73,14 @@ import { AiOutlineHeart, AiOutlineUser } from "react-icons/ai";
 
 const BottomNavbar = () => {
   const menus = [
-    { name: "user", link: "/app/", icon: <AiOutlineUser />, margin: true },
+    { name: "user", link: "/app/", icon: <AiOutlineUser />,  },
     { name: "matches", link: "/app/matches", icon: <AiOutlineHeart /> },
     { name: "messages", link: "/app/messages", icon: <PiWechatLogo /> },
     {
       name: "explore",
       link: "/app/explore",
       icon: <MdOutlineDashboard />,
-      margin: true,
+      
     },
     {
       name: "preferences",
@@ -93,12 +93,16 @@ const BottomNavbar = () => {
     <div className="fixed text-white z-50 w-full h-14 max-w-full  bg-purple-500 border-t bottom-0  dark:bg-black custom-box-shadow">
       <div className="grid h-full max-w-lg grid-cols-5 mx-auto">
         {menus.map((menu, index) => (
-          <Link key={index} to={menu.link} className="group flex items-center justify-center">
+          <Link
+            key={index}
+            to={menu.link}
+            className="group flex items-center justify-center"
+          >
             <div
               data-tooltip-target={`tooltip-${menu.name}`}
-              className={`inline-flex flex-col items-center justify-center p-4${
+              className={`inline-flex flex-col items-center justify-center p-5${
                 menu.margin ? "rounded-s-full" : ""
-              } hover:bg-gray-50 dark:hover:bg-gray-800 group`}
+              } rounded-xl hover:bg-purple-700 dark:hover:bg-gray-800 group`}
             >
               {menu.icon}
               <span className="sr-only">

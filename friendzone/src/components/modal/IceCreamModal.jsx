@@ -43,9 +43,9 @@ const IceCreamModal = ({ onClose }) => {
       contentLabel="Ice Cream Modal"
       style={modalStyles} // Apply the custom styles
     >
-      <div className="flex items-center justify-center p-8 bg-transparent w-4/5 relative animate-fadeIn">
-        <img src={match} alt="Ice Cream Match" className="w-4/5" />
-        <h2 className="text-9xl font-bold text-purple-500  text-shadow-xl absolute bottom-10">
+      <div className="flex items-center justify-center md:p-8 p-2 pb-10  md:pb-32 bg-transparent w-full md:w-4/5 relative animate-fadeIn ">
+        <img src={match} alt="Ice Cream Match" className="md:w-4/5 w-full" />
+        <h2 className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text text-2xl md:text-5xl lg:text-9xl font-bold  text-shadow-xl absolute bottom-0">
           New friend!
         </h2>
         <Confetti active={confettiActive} />

@@ -145,7 +145,7 @@ const PremiumGold = ({ type, price, title }) => {
                       <p className="dark:text-gray-100 text-base lg:text-xl">19€/week</p>
                     </div>
                   </div>
-                  <Link to="/payment">
+                  <Link to="/app/payment">
                   <div className="btn text-base rounded-full px-4 py-2 lg:px-9 lg:py-3 bg-gradient-to-r from-yellow-200 to-yellow-600 ">
                       Continue
                     </div>
@@ -168,7 +168,7 @@ const PremiumGold = ({ type, price, title }) => {
                       <p className="dark:text-gray-100 text-base lg:text-xl">15€/week</p>
                     </div>
                   </div>
-                  <Link to="/payment">
+                  <Link to="/app/payment">
                   <div className="btn text-base rounded-full px-4 py-2 lg:px-9 lg:py-3 bg-gradient-to-r from-yellow-200 to-yellow-600 ">
                       Continue
                     </div>
