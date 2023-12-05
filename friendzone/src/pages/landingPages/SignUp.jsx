@@ -3,8 +3,8 @@ import DateForm from "../../components/SignUp/DateForm";
 
 const SignUp = () => {
   return (
-    <div className="flex items-center justify-center w-full h-screen bg-gradient-to-t from-blue-800 via-purple-700 to-fuchsia-600">
-      <div className="sm:(small) flex flex-col gap-5 p-5 items-center justify-center border-3 custom-box-shadow rounded-2xl bg-gradient-to-t from-blue-600 via-purple-500 to-purple-400 text-gray-800 w-2/4">
+    <div className=" sm:max-width: 640px flex items-center justify-center w-full h-screen bg-gradient-to-t from-blue-800 via-purple-700 to-fuchsia-600">
+      <div className="sm:max-width: 640px flex flex-col gap-5 p-5 items-center justify-center border-3 custom-box-shadow rounded-2xl bg-gradient-to-t from-blue-600 via-purple-500 to-purple-400 text-gray-800 w-2/4">
         <div className="flex items-center">
           <span className="hover:text-[#a22f91] p-2 text-2xl">
             <ion-icon name="ice-cream-outline"></ion-icon>
