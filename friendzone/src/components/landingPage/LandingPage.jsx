@@ -1,5 +1,4 @@
 import "./Landing-page.css";
-import Card from "../card/Card";
 import HeroSection from "../heroSection/HeroSection";
 
 import ReviewCarousel from "../reviewCarousel/ReviewCarousel";
@@ -24,8 +23,7 @@ import CentralSection from "../centralSection/CentralSection";
 const cardContent = [
   {
     title: "Friendzone: Where Being 'Zoned' is a Win!",
-    paragraph:
-      "Ready to flip the script on the Friendzone? Welcome to the Friendzone, where being in is a victory lap! No awkwardness, just good times, shared laughs, and heaps of new connections. Join us, because in this Friendzone, friendship always takes the spotlight!",
+    paragraph: "Ready to flip the script on the Friendzone? Welcome to the Friendzone, where being in is a victory lap! No awkwardness, just good times, shared laughs, and heaps of new connections. Join us, because in this Friendzone, friendship always takes the spotlight!",
     subtitle: "Find New Friends, Wherever You Are!",
     paragraph2:
       "Whether you have moved to a new city, noticed a decrease in the number of friends over time, or simply want to expand your social circle, Friendzone is the answer. We are here to help you meet fantastic people with similar interests.",
@@ -113,7 +111,7 @@ const LandingPage = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className="flex-col font-sans background-landing-page">
+        <div className="flex-col  font-quick background-landing-page">
           <HeroSection />
           <CentralSection cardContent={cardContent} />
           <ReviewCarousel reviews={reviews} />

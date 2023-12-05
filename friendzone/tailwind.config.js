@@ -5,9 +5,17 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
-      fontFamily: {
+      fontFamily: 
+
+      
+      { medienda: ['Merienda', 'san-serif'],
+
+        mono: ['Inconsolata', 'monospace'],
+        
         lato: ["Lato", "sans-serif"],
       },
+   
+
       screens: {
         
       },

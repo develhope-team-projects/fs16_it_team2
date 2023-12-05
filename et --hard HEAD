@@ -1,0 +1,171 @@
+[33mcommit 72331f2503922b4520ec4ca1f2c269cbfc273f8e[m[33m ([m[1;36mHEAD -> [m[1;32mfeauture/landing-page-draft[m[33m)[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Tue Nov 14 18:04:56 2023 +0100
+
+    LP:  dark mode updated
+
+[33mcommit 55f1337148790b7be95ae8657ff10f833a7faa1f[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Tue Nov 14 17:53:45 2023 +0100
+
+    LP: updated the dark mode on the  navbar, and the background of the lp
+
+[33mcommit 1a78212f2fee714133b345336b1dfcf3ee7768b4[m[33m ([m[1;31morigin/feature/landing-page[m[33m, [m[1;32mfeature/landing-page[m[33m)[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Tue Nov 14 15:51:45 2023 +0100
+
+    LP: updated with development
+
+[33mcommit ab8d3715434bb8d72c6ad36952a9b88b1be4005f[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Tue Nov 14 15:16:19 2023 +0100
+
+    merged development in feature/landing page
+
+[33mcommit 241e631e37c1b2b666eb34d9e8371282927501a4[m
+Merge: 764f26c 81df06b
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Tue Nov 14 15:14:44 2023 +0100
+
+    Merge branch 'development' into feature/landing-page
+
+[33mcommit 764f26c11cf2b09a1bd09d40bb415c6f82e88c08[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Tue Nov 14 12:59:34 2023 +0100
+
+    LP some updates
+
+[33mcommit fa7ea123d9096e5f8e6f6190df81fa4546117007[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Tue Nov 14 12:24:34 2023 +0100
+
+    LP: create a folder for each component
+
+[33mcommit 815425aabe5e4148cf991a35b4ab216dd47aa1ef[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Tue Nov 14 12:06:19 2023 +0100
+
+    LP: many updates
+
+[33mcommit 9354f1d3d568aa2eda2213b0dc47c642a8ca9a52[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Tue Nov 14 10:52:25 2023 +0100
+
+    LP updated
+
+[33mcommit 1bb6b958b4d2d408ba0d479b641cf54bb65ace28[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Tue Nov 14 10:10:32 2023 +0100
+
+    LP: carousel updated
+
+[33mcommit 81df06be9c0ac1e35fd98a0594ccd8b6fc92ba5f[m
+Merge: d0670a8 d1a3e82
+Author: Monica Lucaci <138821338+monica-lucaci@users.noreply.github.com>
+Date:   Mon Nov 13 18:37:36 2023 +0100
+
+    Merge pull request #1 from develhope-team-projects/feature/sidebar
+    
+    Feature/sidebar
+
+[33mcommit d1a3e829e696eeaba23ace4275f13a6dba650133[m
+Author: monica-lucaci <138821338+monica-lucaci@users.noreply.github.com>
+Date:   Mon Nov 13 18:34:05 2023 +0100
+
+    SIDEBAR: Add some mq
+
+[33mcommit 7036c678a52ba0aeaff24eda3817d7a07a7d39d5[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Mon Nov 13 12:19:54 2023 +0100
+
+    LP: Hero section improved with a filter, and adjusted card's content
+
+[33mcommit 3f06b11ff10bb5c93f8467723d1a7bcafa5eb1aa[m
+Author: monica-lucaci <138821338+monica-lucaci@users.noreply.github.com>
+Date:   Sun Nov 12 18:48:09 2023 +0100
+
+    SIDEBAR:Add settings animation
+
+[33mcommit d55741218b2f4c4c3abf5f8123fc67de4832f987[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Sat Nov 11 19:02:46 2023 +0100
+
+    LP: draft od footer updated
+
+[33mcommit 014223f4b305a8f27054901b7d6365a67c81138a[m
+Author: monica-lucaci <138821338+monica-lucaci@users.noreply.github.com>
+Date:   Fri Nov 10 08:43:56 2023 +0100
+
+    SIDEBAR: add small changes to settings page
+
+[33mcommit ff499dfc6e1c0abe4447b284f9c9b57a86e29c2d[m
+Author: monica-lucaci <138821338+monica-lucaci@users.noreply.github.com>
+Date:   Thu Nov 9 23:24:19 2023 +0100
+
+    SIDEBAR: Add Settings Components
+
+[33mcommit 204c63abf65c62e20954289ad59ea3196be7be80[m
+Author: monica-lucaci <138821338+monica-lucaci@users.noreply.github.com>
+Date:   Thu Nov 9 15:18:51 2023 +0100
+
+    SIDEBAR: add sidebar and premium plans page
+
+[33mcommit 236e6b2560b6e2aa0565d97f69f429abb86839d7[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Wed Nov 8 12:56:01 2023 +0100
+
+    LP: carousel updated
+
+[33mcommit 6dbded5f212178e299684f60858eda74e61e8eaa[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Wed Nov 8 12:53:38 2023 +0100
+
+    LP: carousel updated
+
+[33mcommit 4d66f56e2d3e30399693088667cd07dcf27a2fc5[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Wed Nov 8 12:44:35 2023 +0100
+
+    LANDING PAGE: carousel updated
+
+[33mcommit 4dd7ed42a67a54e43f42f9989630c200c8b23198[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Wed Nov 8 12:20:15 2023 +0100
+
+    colors of carousel updated
+
+[33mcommit 78490b6c11b89943dde6ca3d6631f0ad456f5cc4[m
+Author: Eleonora Melodia <eleonoramelodia92@gmail.com>
+Date:   Wed Nov 8 12:16:51 2023 +0100
+
+    LANDING PAGE: draft of carousel updated
+
+[33mcommit d0670a8040fe494f6c850ae318743b9fea110209[m[33m ([m[1;32mmain[m[33m)[m
+Author: Luigi Rauso <darjkzer@hotmail.it>
+Date:   Sat Nov 4 16:05:28 2023 +0100
+
+    README: Update documentation v2
+
+[33mcommit 8cd6770136924e67363af44dfe32483b7617a0c9[m
+Author: Luigi Rauso <darjkzer@hotmail.it>
+Date:   Sat Nov 4 16:02:04 2023 +0100
+
+    README: Update documentation
+
+[33mcommit 8eed929ce14ac38c17fe249f4f30b49ebf4908b9[m
+Author: Luigi Rauso <darjkzer@hotmail.it>
+Date:   Sat Nov 4 15:14:30 2023 +0100
+
+    DEVELOPMENT: add basic configuration
+
+[33mcommit 87c8b863d8fa04660f592a406f9c6cb55ee35788[m
+Author: Luigi Rauso <darjkzer@hotmail.it>
+Date:   Sat Nov 4 11:58:34 2023 +0100
+
+    DEVELOPMENT: create react app
+
+[33mcommit d82fed3b38bbf3e1d72a81e1b4356d21d64a4fff[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Luigi Rauso <darjkzer@hotmail.it>
+Date:   Sat Nov 4 11:54:16 2023 +0100
+
+    first commit
