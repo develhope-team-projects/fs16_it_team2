@@ -47,31 +47,31 @@ const Settings = () => {
     <div className="">
       <div className="w-full m-auto dark:bg-black ">
         <ul
-          className="flex flex-row w-full pt-3 pb-4 mb-0 list-none dark:bg-black"
+          className="mt-0 lg:mt-4 flex flex-row w-full pt-3 pb-4 mb-0 list-none dark:bg-black"
           role="tablist"
         >
           {tabComponents.map((tab, index) => (
             <li
               key={index}
-              className={`-mb-px mr-2 last:mr-0 flex-auto dark:bg-black text-center text-gray-500 dark:text-gray-300 hover:border-2 rounded-xl ${
+              className={`-mb-px lg:mr-2 mr-0  last:mr-0 flex-auto dark:bg-black text-center text-gray-500 dark:text-gray-300 hover:border-2 rounded-xl ${
                 openTab === index ? "border-2 border-purple-500 rounded-xl" : ""
               }`}
             >
               <a
-                className="flex px-5 py-3 text-xs font-bold leading-normal uppercase dark:bg-black custom-box-shadow rounded-xl"
+                className="flex items-center justify-center lg:px-5 lg:py-3 px-2 py-2  text-xs font-bold  uppercase dark:bg-black custom-box-shadow rounded-xl"
                 onClick={(e) => {
                   e.preventDefault();
                   handleTabChange(index);
                 }}
                 role="tablist"
               >
-                <div className="flex items-center dark:bg-black">
+                <div className="flex items-center justify-center dark:bg-black">
                   {tab.icon && (
-                    <span className="mr-2 text-xl ">
+                    <span className=" text-xl  xs:text-base">
                       {tab.icon}
                     </span>
                   )}
-                  <h3 className="hidden text-xs lg:flex">{tab.label}</h3>
+                  <h3 className="hidden ml-2 text-xs lg:flex">{tab.label}</h3>
                 </div>
               </a>
             </li>

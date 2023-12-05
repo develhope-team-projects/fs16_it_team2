@@ -47,7 +47,7 @@ const Billing = () => {
   };
 
   return (
-    <div className="flex justify-between gap-4 ">
+    <div className="sm:flex-row flex justify-between gap-4 flex-col">
       <div className="w-full p-2 mt-8">
       <form onSubmit={handleSubmit} >
         <div className="flex justify-between gap-5">

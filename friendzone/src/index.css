@@ -37,6 +37,9 @@
 .btn-transparent-border {
   @apply px-4 py-1 text-purple-500 bg-transparent border-2 border-purple-500 rounded-full hover:text-purple-800 hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-400;
 }
+.btn-transparent-border-mobile {
+  @apply px-2 text-sm py-1 text-purple-500 bg-transparent border-2 border-purple-500 rounded-full hover:text-purple-800 hover:border-purple-800 dark:hover:border-purple-400 dark:hover:text-purple-400
+}
 
 /* .border-gradient-logo {
   @apply  border-2 border-gradient-to-r from-fuchsia-500 via-cyan-600 to-purple-600
@@ -263,6 +266,14 @@
   /* Add styles for a smaller profile card */
   width: 300px; /* Adjust as needed */
 
+}
+
+@media screen and (max-width: 620px) {
+  .small-profile-card {
+    /* Add styles for a smaller profile card */
+    width: 150px; /* Adjust as needed */
+  
+  }
 }
 
 @keyframes fadeIn {

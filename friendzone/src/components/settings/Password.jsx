@@ -30,7 +30,7 @@ const Password = () => {
   };
 
   return (
-    <div className="flex justify-between gap-4 dark:bg-black gray-text ">
+    <div className="sm:flex-row flex justify-between gap-4 flex-col dark:bg-black gray-text ">
       <div className="w-full p-2 ">
         <h2 className="mb-4 text-xl font-semibold text-gray-500 dark:text-gray-200">
           Change Password
