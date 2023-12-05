@@ -35,7 +35,7 @@ export const longList = [
     type: "Premium",
     link: "/premium",
     image: "https://www.course-api.com/images/people/person-2.jpeg",
-    name: "Upgrade your friendishps",
+    name: "Upgrade friendishps",
     title: "Subscribe to Friendzone and get access to premium features",
     quote:
       "Marfa af yr 3 wolf moon kogi, readymade distillery asymmetrical seitan kale chips fingerstache cloud bread mustache twee messenger bag. ",

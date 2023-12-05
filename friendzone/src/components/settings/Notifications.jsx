@@ -61,20 +61,20 @@ const NotificationSettings = () => {
   };
 
   return (
-    <div className="flex justify-between gap-4 dark:bg-black gray-text ">
-      <div className="w-2/4 p-2  gray-text">
+    <div className="sm:flex-row flex justify-between gap-4 flex-col dark:bg-black gray-text ">
+      <div className="sm:w-2/4 xs:w-full p-2  gray-text">
         <h2 className="mb-4 text-xl font-semibold">Notification Settings</h2>
 
         {notificationSettings.map((setting) => (
           <div key={setting.key} className="mb-4">
-            <label className="flex items-center text-sm font-medium text-gray-600 ">
-              {setting.label}
+            <label className="flex items-center  text-sm font-medium text-gray-600 ">
               <input
                 type="checkbox"
                 checked={notificationState[setting.key]}
                 onChange={() => handleToggle(setting.key)}
-                className="ml-2"
+                className="ml-2 mr-2 "
               />
+              {setting.label}
             </label>
           </div>
         ))}

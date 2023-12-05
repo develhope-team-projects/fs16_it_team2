@@ -76,7 +76,7 @@ const Account = () => {
   };
 
   return (
-    <div className="flex justify-between gap-4 dark:bg-black gray-text">
+    <div className="sm:flex-row flex justify-between gap-4 flex-col dark:bg-black gray-text">
       <div className="w-full p-2  gray-text">
         <h2 className="mb-6 text-2xl font-bold dark:bg-transparent dark:text-gray-400">
           Account Settings
