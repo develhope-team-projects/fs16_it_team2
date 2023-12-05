@@ -1,10 +1,10 @@
 import React from "react";
-import ChatPage from "../../pages/liveChat/ChatPage";
+import Chat from "../chat/Chat";
 
 const Messages = () => {
   return (
-    <div className="flex items-center justify-center w-full h-screen bg-blue">
-      <ChatPage />
+    <div className="w-full h-screen bg-blue">
+      <Chat />
     </div>
   );
 };
