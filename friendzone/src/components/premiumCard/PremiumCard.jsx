@@ -11,7 +11,7 @@ const PremiumCard = () => {
   };
 
   return (
-    <div className="z-10 flex flex-col items-center justify-center gap-6 mq-935:flex-row md:w-2/4">
+    <div className="relative z-10 p-10 flex flex-col lg:flex-row items-center justify-center gap-6 ">
       {people.map((person, personIndex) => {
         const { id, icon, name, title, type, price } = person;
         const typeClass = gradientClasses[type] || "";
@@ -33,7 +33,7 @@ const PremiumCard = () => {
             </h5>
             <div className="flex items-baseline text-gray-900 dark:text-white">
               <span className="text-3xl font-semibold">$</span>
-              <span className="text-5xl font-extrabold tracking-tight">
+              <span className=" text-3xl md:text-5xl font-extrabold tracking-tight">
                 {price}
               </span>
               <span className="ml-1 text-xl font-normal text-gray-500 dark:text-gray-400">

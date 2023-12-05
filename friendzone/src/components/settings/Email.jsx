@@ -72,7 +72,7 @@ const Email = () => {
   };
 
   return (
-    <div className="flex justify-between gap-4 dark:bg-black gray-text ">
+    <div className="sm:flex-row flex justify-between gap-4 flex-col dark:bg-black gray-text ">
       <div className="w-full p-2  gray-text">
         <h2 className="mb-4 text-xl font-semibold">Email Settings</h2>
         {error && <p className="mb-4 text-red-500">{error}</p>}

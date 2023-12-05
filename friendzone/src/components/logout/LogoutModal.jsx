@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const LogoutModal = () => {
   return (
-    <div className="bg-transparent">
+    <div className="bg-transparent z-10">
       <div
         id="popup-modal"
         tabIndex="-1"

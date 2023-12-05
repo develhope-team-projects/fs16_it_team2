@@ -66,14 +66,14 @@ const MyProfileCard = () => {
           <div className="relative flex flex-col items-center">
             <div className="flex flex-col items-center p-3 border-8 border-gray-500 rounded-full border-l-purple-600">
               <img
-                className="rounded-full shadow-lg w-72 h-72"
+                className="rounded-full shadow-lg w-40 h-40 sm:w-72 sm:h-72"
                 src={img}
                 alt="Bonnie image"
               />
             </div>
             <Link
               to="/app/editprofile"
-              className="absolute bottom-0 inline-flex items-center px-8 py-2 text-sm font-medium text-center text-white bg-purple-500 border border-gray-300 rounded-full hover:bg-purple-600 focus:ring-4 focus:outline-none focus:ring-gray-200  dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
+              className="absolute bottom-0 inline-flex items-center px-11 py-1 text-base sm:px-11 sm:py-3 sm:text-2xl font-medium text-center text-white bg-purple-500 border border-gray-300 rounded-full hover:bg-purple-600 focus:ring-4 focus:outline-none focus:ring-gray-200  dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700"
             >
               30% Complete
             </Link>
@@ -89,7 +89,7 @@ const MyProfileCard = () => {
             <div className="w-full ">
               <Link to="/app/settings" className="flex justify-center mb-10">
                 <div className="flex flex-col items-center ">
-                  <div className="p-4 bg-transparent border-2 border-purple-500 rounded-full hover:bg-purple-100 focus:ring-blue-300 dark:hover:bg-gray-900 dark:focus:ring-blue-800">
+                  <div className=" p-2 sm:p-4 bg-transparent border-2 border-purple-500 rounded-full hover:bg-purple-100 focus:ring-blue-300 dark:hover:bg-gray-900 dark:focus:ring-blue-800">
                     <RiSettings4Line size={24} className="fill-purple-500" />
                   </div>
 
@@ -99,31 +99,32 @@ const MyProfileCard = () => {
             </div>
             <div className="w-full">
               <Link
-                to="/app/editprofile"
+                to="/app/addmedia"
                 className="flex flex-col items-center mt-6 "
               >
-                <div className="p-6 bg-transparent border-2 border-purple-500 rounded-full hover:bg-purple-100 focus:ring-blue-300 dark:hover:bg-gray-900 dark:focus:ring-blue-800">
-                  <FaPencilAlt size={26} className="fill-purple-500" />
-                </div>
-
-                <h2 className="mt-1 text-xl text-gray-500">Edit Profile</h2>
-              </Link>
-            </div>
-            <div className="w-full">
-              <Link
-                to="/app/addmedia"
-                className="flex flex-col items-center mb-10 "
-              >
-                <div className="relative p-4 bg-purple-500 border-2 border-purple-500 rounded-full hover:bg-purple-600 focus:ring-blue-300 dark:hover:bg-purple-700 dark:focus:ring-blue-800">
-                  <BsFillCameraFill size={24} className="fill-white" />
+                <div className="relative  p-4 sm:p-6  bg-purple-500 border-2 border-purple-500 rounded-full hover:bg-purple-600 focus:ring-blue-300 dark:hover:bg-purple-700 dark:focus:ring-blue-800">
+                  <BsFillCameraFill size={26} className="fill-white" />
                   <div className="absolute bottom-0 right-0 ">
-                    <AiFillPlusCircle size={22} className="fill-white" />
+                    <AiFillPlusCircle size={22} className="fill-white " />
                   </div>
                 </div>
 
                 <h2 className="mt-1 text-xl text-gray-500">Add media</h2>
               </Link>
             </div>
+            <div className="w-full">
+              <Link
+                to="/app/editprofile"
+                className="flex flex-col items-center mb-10 "
+              >
+                <div className="p-2 sm:p-4 bg-transparent border-2 border-purple-500 rounded-full hover:bg-purple-100 focus:ring-blue-300 dark:hover:bg-gray-900 dark:focus:ring-blue-800">
+                  <FaPencilAlt size={24} className="fill-purple-500" />
+                </div>
+
+                <h2 className="mt-1 text-xl text-gray-500">Edit Profile</h2>
+              </Link>
+            </div>
+           
           </div>
         </div>
       </div>
