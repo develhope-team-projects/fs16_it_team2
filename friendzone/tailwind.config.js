@@ -6,7 +6,9 @@ export default {
   theme: {
     extend: {
       fontFamily: 
-      { cursive: ['Ms Madi', 'cursive'],
+
+      
+      { medienda: ['Merienda', 'san-serif'],
 
         mono: ['Inconsolata', 'monospace'],
         

@@ -17,7 +17,7 @@ const fadeIn = keyframes`
 
 // Componente stilizzato per il titolo
 const StyledTitle = styled.h1`
-  font-family:'Ms Madi', 'cursive';
+  font-family:'Merienda', 'san-serif';
   animation: ${fadeIn} 1s ease-in-out; // Applica l'animazione
 `;
 

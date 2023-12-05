@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Logo from "../logo/Logo";
 import logoNav from "../../assets/images/brand/logo-ice-cream-and-name-row.png";
 import Switcher from "../../components/darkMode/Switcher";
 
@@ -64,7 +63,7 @@ const Navbar = () => {
       <ul
         className={`md:flex md:items-center ${
           menuVisible
-            ? "z-[-1] md:z-auto md:static absolute bg-opacity-70 bg-black w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-100 top-[30px] transition-all ease-in duration-500"
+            ? "z-[-1] md:z-auto md:static absolute bg-opacity-70 bg-black w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-100 top-[70px] transition-all ease-in duration-500"
             : "hidden"
           }`}
       >
@@ -81,12 +80,12 @@ const Navbar = () => {
         ))}
 
          <Link to="/login">
-            <button className=" text-white px-5 py-2 rounded-full hover:text-[#e058cc]">
+            <button className=" text-white px-5 py-2 text-xl rounded-full hover:text-[#e058cc]">
               Login
             </button>
           </Link>
           <Link to="/signup">
-            <button className=" text-white px-5 py-2 rounded-full hover:text-[#e058cc]">
+            <button className=" text-white px-5 py-2 text-xl rounded-full hover:text-[#e058cc]">
               Sign Up
             </button>
           </Link>

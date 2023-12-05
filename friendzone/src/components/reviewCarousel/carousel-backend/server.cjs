@@ -1,9 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-
+const { getReviews, updateByID, newReview, deleteReview } = require('./controllers/controllerCarousel.cjs'); // Adjust the path as needed
 const app = express();
-const port = 3003;
+const port = 3000;
 
 // Aggiungi il middleware cors all'inizio
  const corsOptions = {
@@ -12,8 +12,8 @@ const port = 3003;
 };
 
 app.use(cors(corsOptions));
+app.use(express.json());
  
-
 const connectToMongoDB = async () => {
   try {
     await mongoose.connect('mongodb://localhost:27017/friendzone', {
@@ -29,31 +29,15 @@ const connectToMongoDB = async () => {
 // Chiamata alla funzione di connessione asincrona
 connectToMongoDB();
 
-const reviewSchema = new mongoose.Schema({
-  img: String,
-  name: String,
-  paragraph: String,
-});
-
-const Review = mongoose.model('Review', reviewSchema, 'reviews');
-
-app.use(express.json());
-
 // Endpoint per ottenere tutte le recensioni
 // Endpoint per ottenere tutte le recensioni
-app.get('/api/reviews', async (req, res) => {
-  try {
-    console.log('Before Review.find()'); // Aggiunto log
-    const reviews = await Review.find(); 
+app.get('/api/reviews', getReviews );
 
-    console.log('Reviews:', reviews); // Log per verificare i dati
-    res.json(reviews);
-  } catch (error) {
-    console.error('Error fetching reviews:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
-});
+app.post('/api/reviews/', newReview);
 
+app.patch('/api/reviews/:id', updateByID);
+
+app.delete('/api/reviews/:id', deleteReview);
 
 // Avvio del server
 app.listen(port, () => {
