@@ -8,7 +8,7 @@ export default {
       fontFamily: 
 
       
-      { medienda: ['Merienda', 'san-serif'],
+      { merienda: ['Merienda', 'san-serif'],
 
         mono: ['Inconsolata', 'monospace'],
         
