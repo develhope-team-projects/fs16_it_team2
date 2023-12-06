@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { RiSettings4Line, RiUserSearchLine } from "react-icons/ri";
@@ -6,12 +6,7 @@ import { MdOutlineDashboard } from "react-icons/md";
 import { PiWechatLogo } from "react-icons/pi";
 import { Link, Outlet } from "react-router-dom";
 
-import {
-  AiOutlineHeart,
-  AiOutlineHome,
-  AiOutlinePoweroff,
-  AiOutlineUser,
-} from "react-icons/ai";
+import { AiOutlineHeart, AiOutlineHome, AiOutlinePoweroff, AiOutlineUser } from "react-icons/ai";
 import { IoIceCreamOutline } from "react-icons/io5";
 import Switcher from "../../components/darkMode/Switcher";
 import bgl from "../../assets/images/backgrounds/bg-light.png";
@@ -19,12 +14,18 @@ import bgl from "../../assets/images/backgrounds/bg-light.png";
 import useDarkSide from "../../customHooks/useDarkSide";
 import { useEffect } from "react";
 
+import { AuthContext } from "./../../context/AuthContext";
+
 const SidebarHamburger = () => {
   const [colorTheme, setTheme] = useDarkSide();
 
+  const { user } = useContext(AuthContext);
+
+  const userName = `Welcome, ${user.name}`;
+
   const backgroundImage = colorTheme === "dark" ? `url(${bgl})` : `url(${bgl})`;
   const menus = [
-    { name: "home", link: "/app/", icon: AiOutlineHome },
+    { name: userName, link: "/app/", icon: AiOutlineHome },
     { name: "premium", link: "/app/premium", icon: IoIceCreamOutline },
     { name: "user", link: "/app/", icon: AiOutlineUser, margin: true },
     { name: "matches", link: "/app/matches", icon: AiOutlineHeart },
@@ -77,20 +78,14 @@ const SidebarHamburger = () => {
             open ? "w-72" : "w-16"
           } duration-500  text-gray-100 px-4 custom-box-shadow rounded-r-lg `}
         >
-          <div
-            className={`mb-10 py-3 flex justify-between ${
-              !open ? "flex-col-reverse gap-4 items-center" : "flex"
-            }`}
-          >
+          <div className={`mb-10 py-3 flex justify-between ${!open ? "flex-col-reverse gap-4 items-center" : "flex"}`}>
             <div>
               <Switcher />
             </div>
 
             <HiMenuAlt3
               size={26}
-              className={`cursor-pointer ${
-                window.innerWidth < 1120 ? "pointer-events-none" : ""
-              }`}
+              className={`cursor-pointer ${window.innerWidth < 1120 ? "pointer-events-none" : ""}`}
               onClick={() => {
                 if (window.innerWidth >= 1120) {
                   setOpen(!open);
@@ -112,9 +107,7 @@ const SidebarHamburger = () => {
                   style={{
                     transitionDelay: `${i + 3}00ms`,
                   }}
-                  className={`whitespace-pre duration-500 ${
-                    !open && "opacity-0 translate-x-28 overflow-hidden"
-                  }`}
+                  className={`whitespace-pre duration-500 ${!open && "opacity-0 translate-x-28 overflow-hidden"}`}
                 >
                   {menu?.name}
                 </h2>
@@ -143,7 +136,6 @@ const SidebarHamburger = () => {
             <Outlet className="w-full" />
           </div>
         </div>
-
         {/* <div className="m-3 font-semibold text-gray-900 text-x1">sideBar</div> */}
       </section>
     </div>

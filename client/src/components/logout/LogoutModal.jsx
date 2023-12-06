@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 
 const LogoutModal = () => {
+  const { logoutUser } = useContext(AuthContext);
+
   return (
-    <div className="bg-transparent z-10">
+    <div className="z-10 bg-transparent">
       <div
         id="popup-modal"
         tabIndex="-1"
@@ -27,20 +30,17 @@ const LogoutModal = () => {
                   d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
-              <h3 className="mb-5 text-lg font-normal text-gray-900 dark:text-gray-400">
-                Are you sure you want to logout?
-              </h3>
+              <h3 className="mb-5 text-lg font-normal text-gray-900 dark:text-gray-400">Are you sure you want to logout?</h3>
               <h4 className="mb-5 font-normal text-gray-800 dark:text-gray-500">
-                You will continue to be seen by compatible users in your last
-                known location
+                You will continue to be seen by compatible users in your last known location
               </h4>
-
               <Link to="/">
                 {" "}
                 <button
                   data-modal-hide="popup-modal"
                   type="button"
                   className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
+                  onClick={() => logoutUser()}
                 >
                   Logout
                 </button>

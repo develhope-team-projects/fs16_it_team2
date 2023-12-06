@@ -15,7 +15,7 @@ const Chat = () => {
   const { userChats, isUserChatsLoading, userChatsError, updateCurrentChat } = useContext(ChatContext);
 
   return (
-    <div id="ChatContainer" className="md:absolute flex flex-col w-full h-full overflow-y-scroll flex-nowrap">
+    <div id="ChatContainer" className="flex flex-col w-full h-full overflow-y-scroll md:absolute flex-nowrap">
       {/* SHOW MATCHED USERS IF THERE ARE ANY */}
       <MatchedUsers />
 
@@ -38,7 +38,7 @@ const Chat = () => {
             <div id="UsersContainer" className="flex flex-col items-center mb-4">
               {/* DESCRIPTION */}
               <img src={iceCream} alt="Ice cream" width="190px" />
-              <h4 className="text-2xl font-black text-red-400 dark:text-yellow-500">START A CHAT NOW:</h4>
+              <h4 className="text-2xl font-black text-red-400 dark:text-yellow-500">{user.name.toUpperCase()}, START A CHAT NOW:</h4>
             </div>
 
             {/* MAP ALL USER'S CONVESATION */}

@@ -25,7 +25,7 @@ const ChatBox = () => {
 
   if (!recipientUser)
     return (
-      <div className="hidden md:flex flex-col items-center justify-center w-full font-bold text-center">
+      <div className="flex-col items-center justify-center hidden w-full font-bold text-center md:flex">
         <h2 className="mb-8 text-3xl dark:text-white">What are you waiting for?</h2>
         <p className="text-5xl text-purple-500 dark:text-yellow-500">Start chatting!</p>
       </div>

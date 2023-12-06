@@ -10,22 +10,19 @@ const createToken = (_id) => {
 };
 
 const registerUser = async (req, res) => {
-  const { name, surname, username, email, password } = req.body;
+  const { name, surname, username, email, password, picture } = req.body;
 
   try {
     let user = await userModel.findOne({ email });
     if (user) return res.status(409).json("User already exists...");
 
-    user = new userModel({ name, surname, username, email, password });
+    user = new userModel({ name, surname, username, email, password, picture });
 
-    if (!name || !surname || !username || !email || !password)
-      return res.status(400).json("All fields are required...");
+    if (!name || !surname || !username || !email || !password) return res.status(400).json("All fields are required...");
 
-    if (!validator.isEmail(email))
-      return res.status(400).json("Email must be a valid email...");
+    if (!validator.isEmail(email)) return res.status(400).json("Email must be a valid email...");
 
-    if (!validator.isStrongPassword(password))
-      return res.status(400).json("Password must be a strong password..");
+    if (!validator.isStrongPassword(password)) return res.status(400).json("Password must be a strong password..");
 
     const salt = await bcrypt.genSalt(10);
     user.password = await bcrypt.hash(user.password, salt);
@@ -34,9 +31,7 @@ const registerUser = async (req, res) => {
 
     const token = createToken(user._id);
 
-    res
-      .status(200)
-      .json({ _id: user._id, name, surname, username, email, token });
+    res.status(200).json({ _id: user._id, name, surname, username, email, picture, token });
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
@@ -52,8 +47,7 @@ const loginUser = async (req, res) => {
     if (!user) return res.status(400).json("Invalid email or password...");
 
     const validPassword = await bcrypt.compare(password, user.password);
-    if (!validPassword)
-      return res.status(400).json("Invalid email or password...");
+    if (!validPassword) return res.status(400).json("Invalid email or password...");
 
     const token = createToken(user._id);
 
@@ -61,6 +55,8 @@ const loginUser = async (req, res) => {
       _id: user._id,
       name: user.name,
       surname: user.surname,
+      username: user.username,
+      picture: user.picture,
       email,
       token,
     });
