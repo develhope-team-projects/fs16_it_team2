@@ -7,11 +7,16 @@ import imgMiriana1 from "../../assets/images/landingPage/about-us/miriana.jpg";
 import imgMiriana2 from "../../assets/images/landingPage/about-us/japan.png";
 import imgMiriana3 from "../../assets/images/landingPage/about-us/books.png";
 import imgLuigi1 from "../../assets/images/landingPage/about-us/profile_pic.jpg"
-import imgLuigi2 from "../../assets/images/landingPage/about-us/profile_pic.jpg"
-import imgLuigi3 from "../../assets/images/landingPage/about-us/profile_pic.jpg"
+import imgLuigi2 from "../../assets/images/landingPage/about-us/hardware.png"
+import imgLuigi3 from "../../assets/images/landingPage/about-us/electronicmusic.png"
 import imgDesiré1 from "../../assets/images/landingPage/about-us/desiré.png";
 import imgDesiré2 from "../../assets/images/landingPage/about-us/dog.png";
 import imgDesiré3 from "../../assets/images/landingPage/about-us/orologio.png";
+import imgMonica1 from "../../assets/images/landingPage/about-us/monica.jpg";
+import imgMonica2 from "../../assets/images/landingPage/about-us/monicapesi.png";
+import imgMonica3 from "../../assets/images/landingPage/about-us/pittura.png";
+
+
 import iceCream from "../../assets/images/icecreams/2icecrm.png";
 import { useEffect, useState } from "react";
 import background from "../../assets/images/landingPage/about-us/sfondo.jpg";
@@ -24,7 +29,7 @@ const team2 = [
     name: "Desiré Passalacqua",
     role: "Junior Full-Stack Developer",
     iceCream: "Cream!",
-    passions: "Loving dogs, and traditional clocks",
+    passions: "Loving dogs, and traditional wristwatches",
     images: [imgDesiré1,imgDesiré2,imgDesiré3],
   },
   {
@@ -44,15 +49,15 @@ const team2 = [
   {
     name: "Monica Lucaci ",
     role: "Junior Full-Stack Developer",
-    iceCream: "Pistacho!",
-    passions: "Books and Japan world!",
-    images: [imgMiriana1, imgMiriana2, imgMiriana3],
+    iceCream: "Pink grapefruit!",
+    passions: "Weight lifting and paint pictures",
+    images: [imgMonica1, imgMonica2, imgMonica3],
   },
   {
     name: "Luigi Rauso ",
     role: "Junior Full-Stack Developer",
     iceCream: "Nuts!",
-    passions: "Books and Japan world!",
+    passions: "hardware fanatic, composing music",
     images: [imgLuigi1, imgLuigi2, imgLuigi3],
   },
 ];
@@ -135,10 +140,10 @@ const AboutUsPage = () => {
                 // Resetta l'indice dell'immagine quando l'utente esce dall'hover
                 setImageIndex(0);
               }}
-              className="p-6 w-[300px] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] flex-col justify-center mr-2 bg-white rounded-lg shadow-md"
+              className="p-6 w-[300px] bg-gradient-to-t from-[#f3e3ee] to-[#a6c1ee] flex-col justify-center mr-2 bg-white rounded-lg shadow-md"
             >
               <img
-                className="w-full h-[300px] transition-opacity duration-500"
+                className="w-[250px] h-[300px] transition-opacity duration-500"
                 src={member.images[imageIndex]}
                 alt="team member photo"
               />
