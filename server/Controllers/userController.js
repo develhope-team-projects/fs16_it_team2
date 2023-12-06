@@ -10,15 +10,15 @@ const createToken = (_id) => {
 };
 
 const registerUser = async (req, res) => {
-  const { name, surname, email, password } = req.body;
+  const { name, surname, username, email, password } = req.body;
 
   try {
     let user = await userModel.findOne({ email });
     if (user) return res.status(409).json("User already exists...");
 
-    user = new userModel({ name, surname, email, password });
+    user = new userModel({ name, surname, username, email, password });
 
-    if (!name || !surname || !email || !password)
+    if (!name || !surname || !username || !email || !password)
       return res.status(400).json("All fields are required...");
 
     if (!validator.isEmail(email))
@@ -34,7 +34,9 @@ const registerUser = async (req, res) => {
 
     const token = createToken(user._id);
 
-    res.status(200).json({ _id: user._id, name, surname, email, token });
+    res
+      .status(200)
+      .json({ _id: user._id, name, surname, username, email, token });
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
