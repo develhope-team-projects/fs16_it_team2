@@ -5,10 +5,8 @@ import CircleComponent from "../../components/animationCircles/CircleComponent";
 const Logout = () => {
   return (
     <div className="relative flex  justify-center w-full bg-transparent h-screen">
-         <CircleComponent />
-      <LogoutModal />
-
-   
+      <CircleComponent />
+      <LogoutModal />   
     </div>
   );
 };

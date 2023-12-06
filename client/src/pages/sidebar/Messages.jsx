@@ -3,7 +3,7 @@ import Chat from "../chat/Chat";
 
 const Messages = () => {
   return (
-    <div className="relative w-full h-full max-w-full max-h-full">
+    <div className="relative w-full h-full md:max-w-full md:max-h-full">
       <Chat />
     </div>
   );

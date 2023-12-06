@@ -26,7 +26,7 @@ const UserCard = ({ chat, user }) => {
   return (
     <>
       {/* SINGLE USER CARD */}
-      <div className="relative flex items-center justify-between p-2 space-x-3 text-black  dark:hover:bg-violet-900 hover:bg-violet-400 cursor-pointer min-w-[24rem] dark:active:bg-violet-500 rounded-2xl border-2 transition border-violet-800 mb-1">
+      <div className="relative flex items-center justify-between p-2 space-x-3 text-black  dark:hover:bg-violet-900 hover:bg-violet-400 cursor-pointer min-w-[19rem] md:min-w-[14rem] lg:min-w-[24rem] dark:active:bg-violet-500 rounded-2xl border-2 transition border-violet-800 mb-1">
         {/* SINGLE USER CARD - LEFT (AVATAR, NAME, SURNAME & LAST MESSAGE) */}
         <div className="flex">
           {/* AVATAR */}
@@ -40,12 +40,12 @@ const UserCard = ({ chat, user }) => {
               {recipientUser?.name} {recipientUser?.surname}
             </div>
             {/* LAST MESSAGE TIME STAMP */}
-            <div className="text-sm text-gray-500 dark:text-gray-300">{latestMessage?.text && <span>{truncateText(latestMessage?.text)}</span>}</div>
+            <div className="hidden lg:block text-sm text-gray-500 dark:text-gray-300">{latestMessage?.text && <span>{truncateText(latestMessage?.text)}</span>}</div>
           </div>
         </div>
         {/* SINGLE USER CARD - RIGHT (TIME STAMP LAST MESSAGE) */}
         <div className="flex flex-col items-end">
-          <div className="text-sm text-gray-500 dark:text-gray-400">{moment(latestMessage?.createdAt).calendar()}</div>
+          <div className="flex md:hidden lg:flex text-sm text-gray-500 dark:text-gray-400">{moment(latestMessage?.createdAt).calendar()}</div>
           <span className={isTheUserOnline ? "inline-block h-3 w-3 rounded-full bg-green-500 absolute bottom-7 left-[2.1rem] z-10" : ""}></span>
         </div>
       </div>

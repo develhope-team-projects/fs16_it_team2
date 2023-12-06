@@ -39,32 +39,32 @@ function ProfileCard({ user }) {
       url1: "https://i.imgur.com/MWAcQRM.jpeg",
     },
     {
-      name: "Dinesh Chugtai",
+      name: "Dinesh Chugtai1",
       url: img5,
       url1: "https://i.imgur.com/wDmRJPc.jpeg",
     },
     {
-      name: "Dinesh Chugtai",
+      name: "Dinesh Chugtai2",
       url: img6,
       url1: "https://i.imgur.com/OckVkRo.jpeg",
     },
     {
-      name: "Dinesh Chugtai",
+      name: "Dinesh Chugtai3",
       url: img7,
       url1: "https://i.imgur.com/H07Fxdh.jpeg",
     },
     {
-      name: "Dinesh Chugtai",
+      name: "Dinesh Chugtai4",
       url: img8,
       url1: "https://i.imgur.com/dmwjVjG.jpeg",
     },
     {
-      name: "Dinesh Chugtai",
+      name: "Dinesh Chugtai5",
       url: img9,
       url1: "https://i.imgur.com/Lnt9K7l.jpeg",
     },
     {
-      name: "Dinesh Chugtai",
+      name: "Dinesh Chugtai6",
       url: img10,
       url1: "https://i.imgur.com/Gg6BpGn.jpeg",
     },
@@ -72,6 +72,7 @@ function ProfileCard({ user }) {
   const [lastDirection, setLastDirection] = useState();
   const [swipeCount, setSwipeCount] = useState(0);
   const [showIceCreamModal, setShowIceCreamModal] = useState(false);
+  
 
   const swiped = (direction, nameToDelete) => {
     console.log("removing: " + nameToDelete);
@@ -102,7 +103,7 @@ function ProfileCard({ user }) {
           {characters.map((character,index) => (
             <TinderCard
               className="swipe"
-              key={index}
+              key={character.name}
               onSwipe={(dir) => swiped(dir, character.name)}
               onCardLeftScreen={() => outOfFrame(character.name)}
             >

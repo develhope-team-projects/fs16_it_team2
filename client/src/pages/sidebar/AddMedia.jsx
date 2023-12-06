@@ -52,7 +52,7 @@ const AddMedia = () => {
   };
 
   return (
-    <div className="max-w-screen-lg mx-auto p-4">
+    <div className="max-w-screen-lg mx-auto p-4 h-full bg-transparent min-h-screen">
       <input
         type="file"
         accept="image/*"
@@ -83,7 +83,7 @@ const AddMedia = () => {
       </div>
 
       {selectedImage !== null && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
+        <div className="h-full fixed inset-0 z-50 flex items-center justify-center">
           <div
             className="fixed inset-0 bg-transparent  opacity-50"
             onClick={closeModal}

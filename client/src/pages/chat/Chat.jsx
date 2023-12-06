@@ -15,7 +15,7 @@ const Chat = () => {
   const { userChats, isUserChatsLoading, userChatsError, updateCurrentChat } = useContext(ChatContext);
 
   return (
-    <div id="ChatContainer" className="absolute flex flex-col w-full h-full overflow-y-scroll flex-nowrap">
+    <div id="ChatContainer" className="md:absolute flex flex-col w-full h-full overflow-y-scroll flex-nowrap">
       {/* SHOW MATCHED USERS IF THERE ARE ANY */}
       <MatchedUsers />
 
