@@ -20,7 +20,7 @@ const DateForm = () => {
   return (
     <div className="py-3 border-white border-b-3">
       <div className="flex flex-col gap-1 mb-3">
-        <label className="text-xl">Birthdate</label>
+        <label className="md:text-xl">Birthdate</label>
         <MyDatePicker value={birthdate} onChange={handleDateChange} />
       </div>
     </div>
@@ -31,7 +31,7 @@ const MyDatePicker = ({ value, onChange }) => {
   return (
     <div className="relative">
       <input
-        className="p-2 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl"
+        className="p-2 bg-transparent border-2 border-white shadow-lg w-60 md:w-80 rounded-xl"
         placeholder="DD-MM-YYYY"
         type="date"
         value={value}

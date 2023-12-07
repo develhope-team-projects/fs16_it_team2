@@ -26,14 +26,14 @@ const PasswordComponent = ({ updateRegisterUserInfo, registerUserInfo }) => {
 
   return (
     <div className="py-3 border-white border-b-3">
-      <div className="flex flex-col gap-1 mb-3">
-        <label className="text-xl" htmlFor="password">
+      <div className="flex flex-col gap-1 md:mb-3">
+        <label className="md:text-xl" htmlFor="password">
           Password
         </label>
 
         <div className="relative">
           <input
-            className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl ::placeholder-gray-500 focus:placeholder-purple-600"
+            className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-60 md:w-80 rounded-xl ::placeholder-gray-500 focus:placeholder-purple-600"
             placeholder="enter your password"
             type={showPassword ? "text" : "password"}
             id="password"
@@ -67,13 +67,13 @@ const PasswordComponent = ({ updateRegisterUserInfo, registerUserInfo }) => {
           )}
         </div>
       </div>
-      <div className="flex flex-col gap-1 mb-3">
-        <label className="text-xl" htmlFor="repeatpassword">
+      <div className="flex flex-col gap-1 md:mb-3">
+        <label className="md:text-xl" htmlFor="repeatpassword">
           Repeat Password
         </label>
         <div style={{ position: "relative" }}>
           <input
-            className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl ::placeholder-gray-500 focus:placeholder-purple-700"
+            className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-60 md:w-80 rounded-xl ::placeholder-gray-500 focus:placeholder-purple-700"
             placeholder="repeat your password"
             type={showPassword ? "text" : "password"}
             id="repeatpassword"

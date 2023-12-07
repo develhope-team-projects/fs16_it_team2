@@ -15,7 +15,7 @@ const Login = () => {
 
   return (
     <div className="flex items-center justify-center w-full h-screen bg-gradient-to-t from-blue-800 via-purple-700 to-fuchsia-600">
-      <div className="sm:(small) flex flex-col gap-5 p-5 items-center justify-center border-3 custom-box-shadow rounded-2xl bg-gradient-to-t from-blue-600 via-purple-300 to-fuchsia-200 text-gray-800 w-2/4">
+      <div className="flex flex-col gap-5 p-5 items-center justify-center border-3 custom-box-shadow rounded-2xl bg-gradient-to-t from-blue-600 via-purple-300 to-fuchsia-200 text-gray-800 w-4/5 md:w-2/4">
         <div className="flex items-center">
           <span className="hover:text-[#e058cc] p-2 text-2xl">
             <ion-icon name="ice-cream-outline"></ion-icon>
@@ -36,7 +36,7 @@ const Login = () => {
               Email
             </label>
             <input
-              className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-96 rounded-xl ::placeholder-gray-500 focus:placeholder-purple-600"
+              className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-60 md:w-96 rounded-xl ::placeholder-gray-500 focus:placeholder-purple-600"
               placeholder="enter your email"
               type="email"
               id="emailLog"
@@ -52,7 +52,7 @@ const Login = () => {
               Password
             </label>
             <input
-              className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-96 rounded-xl ::placeholder-gray-500 focus:placeholder-purple-600"
+              className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-60 md:w-96 rounded-xl ::placeholder-gray-500 focus:placeholder-purple-600"
               placeholder="enter your password"
               type="password"
               id="passwordLog"
@@ -78,7 +78,7 @@ const Login = () => {
 
           <div className="flex items-center justify-center">
             <button
-              className="p-3 px-20 mt-4 mb-4 text-xl text-white bg-purple-500 border-2 border-white rounded-full shadow-xl w-96 hover:text-2xl"
+              className="p-3 px-20 mt-4 mb-4 text-xl text-white bg-purple-500 border-2 border-white rounded-full shadow-xl w-60 md:w-96hover:text-2xl"
               type="submit"
               disabled={isLoginLoading}
             >
@@ -97,7 +97,7 @@ const Login = () => {
         <div className="text-gray-800">
           <p>or login with:</p>
         </div>
-        <div className="flex gap-2 p-3">
+        <div className="flex items-center justify center flex-wrap md:flex-row gap-2 p-3">
           <button className="p-2 px-5 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl hover:text-xl">
             Google
           </button>

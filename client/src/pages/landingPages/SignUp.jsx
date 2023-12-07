@@ -14,14 +14,14 @@ const SignUp = () => {
   } = useContext(AuthContext);
 
   return (
-    <div className="flex items-center justify-center w-full h-screen sm:max-width: 640px bg-gradient-to-t from-blue-800 via-purple-700 to-fuchsia-600">
-      <div className="flex flex-col items-center justify-center w-2/4 gap-5 p-5 text-gray-800 sm:max-width: 640px border-3 custom-box-shadow rounded-2xl bg-gradient-to-t from-blue-600 via-purple-500 to-purple-400">
+    <div className="flex items-center justify-center w-full h-screen bg-gradient-to-t from-blue-800 via-purple-700 to-fuchsia-600">
+      <div className="flex flex-col items-center justify-center w-4/5 md:w-2/4 md:gap-5 md:p-5 text-gray-800 sm:max-width: 640px border-3 custom-box-shadow rounded-2xl bg-gradient-to-t from-blue-600 via-purple-500 to-purple-400">
         <div className="flex items-center">
-          <span className="hover:text-[#a22f91] p-2 text-2xl">
+          <span className="hover:text-[#a22f91] p-2 text-xl md:text-2xl">
             <ion-icon name="ice-cream-outline"></ion-icon>
           </span>
-          <h2 className="mb-2 text-3xl">Join Friendzone</h2>
-          <span className="hover:text-[#a22f91] p-2 text-2xl">
+          <h2 className="md:mb-2 text-xl md:text-3xl">Join Friendzone</h2>
+          <span className="hover:text-[#a22f91] p-2 text-xl md:text-2xl">
             <ion-icon name="ice-cream-outline"></ion-icon>
           </span>
         </div>
@@ -29,15 +29,15 @@ const SignUp = () => {
         {/* FORM */}
         <form
           onSubmit={registerUserOnSubmit}
-          className="py-3 border-white border-b-3"
+          className="md:py-3 border-white border-b-3"
         >
           {/*NAME */}
-          <div className="flex flex-col gap-1 mb-3">
-            <label className="text-xl" htmlFor="name">
+          <div className="flex flex-col gap-1 md:mb-3">
+            <label className="md:text-xl" htmlFor="name">
               Name
             </label>
             <input
-              className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl ::placeholder-gray-500 focus:placeholder-purple-600"
+              className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-60   md:w-80  rounded-xl ::placeholder-gray-500 focus:placeholder-purple-600"
               placeholder="enter your name"
               type="text"
               id="name"
@@ -52,12 +52,12 @@ const SignUp = () => {
           </div>
 
           {/* SURNAME */}
-          <div className="flex flex-col gap-1 mb-3">
-            <label className="text-xl" htmlFor="surname">
+          <div className="flex flex-col gap-1 md:mb-3">
+            <label className="md:text-xl" htmlFor="surname">
               Surname
             </label>
             <input
-              className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl ::placeholder-gray-500 focus:placeholder-purple-600"
+              className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-60  md:w-80  rounded-xl ::placeholder-gray-500 focus:placeholder-purple-600"
               placeholder="enter your surname"
               type="text"
               id="surname"
@@ -72,12 +72,12 @@ const SignUp = () => {
           </div>
 
           {/* USERNAME */}
-          <div className="flex flex-col gap-1 mb-3">
-            <label className="text-xl" htmlFor="username">
+          <div className="flex flex-col gap-1 md:mb-3">
+            <label className="md:text-xl" htmlFor="username">
               Username
             </label>
             <input
-              className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl ::placeholder-gray-500 focus:placeholder-purple-600"
+              className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-60  md:w-80  rounded-xl ::placeholder-gray-500 focus:placeholder-purple-600"
               placeholder="enter your username"
               type="text"
               id="username"
@@ -97,12 +97,12 @@ const SignUp = () => {
           </div>
 
           {/* EMAIL */}
-          <div className="flex flex-col gap-1 mb-3">
-            <label className="text-xl" htmlFor="email">
+          <div className="flex flex-col gap-1 md:mb-3">
+            <label className="md:text-xl" htmlFor="email">
               Email
             </label>
             <input
-              className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-80 rounded-xl ::placeholder-gray-500 focus:placeholder-purple-600"
+              className="p-2 placeholder-gray-700 bg-transparent border-2 border-white shadow-lg w-60  md:w-80  rounded-xl ::placeholder-gray-500 focus:placeholder-purple-600"
               placeholder="enter your email"
               type="email"
               id="email"
@@ -126,7 +126,7 @@ const SignUp = () => {
 
           <div className="flex flex-col items-center justify-center">
             <button
-              className="p-3 px-16 mt-6 mb-6 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl w-80 hover:text-2xl"
+              className="p-3 px-16 mt-6 mb-6 text-white bg-purple-500 border-2 border-white rounded-full shadow-xl w-60  md:w-80  hover:text-2xl"
               type="submit"
               disabled={isRegisterLoading}
             >
@@ -135,7 +135,7 @@ const SignUp = () => {
 
             {registerError?.error && (
               <div className="flex flex-col items-center p-4 border-2 border-white bg-fuchsia-500 rounded-xl text-black-700">
-                <b className="text-xl font-bold">{`Error status code: ${registerError?.status}`}</b>
+                <b className="md:text-xl font-bold">{`Error status code: ${registerError?.status}`}</b>
                 <p className="text-lg">{registerError?.message}</p>
               </div>
             )}

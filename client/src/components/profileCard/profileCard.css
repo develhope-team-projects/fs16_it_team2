@@ -54,7 +54,7 @@ git .swipe-container {
 }
 
 .card {
-    background-color: transparent;
+    background-color: black;
     box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.3);
     border-radius: 30px;
     background-size: cover;
