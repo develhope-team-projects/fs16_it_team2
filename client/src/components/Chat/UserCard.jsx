@@ -31,7 +31,7 @@ const UserCard = ({ chat, user }) => {
         <div className="flex">
           {/* AVATAR */}
           <div className="mr-3">
-            <img src={recipientUser?.picture} alt="person-circle" width="40px" className="rounded-full" />
+            <img src={recipientUser?.picture} alt="person-circle" className="rounded-full w-11 h-11" />
           </div>
           {/* NAME, SURNAME & LAST MESSAGE */}
           <div className="UserDataInfo">

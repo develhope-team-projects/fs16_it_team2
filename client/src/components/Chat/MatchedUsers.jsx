@@ -31,7 +31,7 @@ const MatchedUsers = () => {
                   key={index}
                   onClick={() => createChat(user._id, potentialUser._id)}
                 >
-                  <img className="w-12 rounded-full" src={potentialUser.picture} alt="Potential User Pic" />
+                  <img className="w-12 h-12 rounded-full" src={potentialUser.picture} alt="Potential User Pic" />
                   {potentialUser.name} {potentialUser.surname}
                   <span
                     id={`Matched_User${index + 1}_online_status`}
