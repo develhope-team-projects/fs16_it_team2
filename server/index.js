@@ -25,7 +25,9 @@ const uri = process.env.ATLAS_URI;
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
-  console.log(`The server's up and running on port: ${port}...`);
+  console.log(
+    `The server's up and running on port: http://localhost:${port}...`
+  );
 });
 
 mongoose

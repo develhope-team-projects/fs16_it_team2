@@ -13,7 +13,7 @@ import SleepingHabits from "./SelectSettings/SleepingHabits";
 
 const Profile = () => {
   return (
-    <div className="p-6 dark:bg-black gray-text">
+    <div className="p-6  gray-text">
       <div className="flex flex-col max-w-4xl">
         <Passions />
         <hr className="mt-5 " />

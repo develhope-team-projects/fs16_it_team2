@@ -5,12 +5,12 @@ import Profile from "../../components/settings/Profile";
 const EditProfile = () => {
   return (
     <div className=" mx-auto">
-      <div className="w-full custom-box-shadow">
+      {/* <div className="w-full custom-box-shadow">
         <AddMedia />
-      </div>
+      </div> */}
 
       <div className="w-full custom-box-shadow">
-        {" "}
+ 
         <Profile />
       </div>
     </div>

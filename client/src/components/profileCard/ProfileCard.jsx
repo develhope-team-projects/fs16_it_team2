@@ -1,78 +1,17 @@
+import React, { useEffect, useState, useContext } from "react";
 import TinderCard from "react-tinder-card";
-import { useEffect, useState } from "react";
-import "./profileCard.css";
 import IceCreamModal from "../modal/IceCreamModal";
-import img1 from "../../assets/images/profilePictures/1.jpeg"
-import img2 from "../../assets/images/profilePictures/2.jpeg"
-import img3 from "../../assets/images/profilePictures/3.jpeg"
-import img4 from "../../assets/images/profilePictures/4.jpeg"
-import img5 from "../../assets/images/profilePictures/5.jpeg"
-import img6 from "../../assets/images/profilePictures/6.jpeg"
-import img7 from "../../assets/images/profilePictures/7.jpeg"
-import img8 from "../../assets/images/profilePictures/8.jpeg"
-import img9 from "../../assets/images/profilePictures/9.jpeg"
-import img10 from "../../assets/images/profilePictures/10.jpeg"
+import { AuthContext } from "../../context/AuthContext";
+import "./profileCard.css";
+import Loading from "../loading/Loading";
 
-
-
-function ProfileCard({ user }) {
-  const characters = [
-    {
-      name: "Richard Hendricks",
-      url: img1,
-      url1: "https://i.imgur.com/oPj4A8u.jpeg",
-    },
-    {
-      name: "Erlich Bachman",
-      url: img2,
-      url1: "https://a.storyblok.com/f/149299/800x1208/f0ac56edbe/tinder-smiling_pic.jpeg",
-    },
-    {
-      name: "Monica Hall",
-      url: img3,
-      url1: "https://i.imgur.com/Q9WPlWA.jpeg",
-     
-    },
-    {
-      name: "Jared Dunn",
-      url: img4,
-      url1: "https://i.imgur.com/MWAcQRM.jpeg",
-    },
-    {
-      name: "Dinesh Chugtai1",
-      url: img5,
-      url1: "https://i.imgur.com/wDmRJPc.jpeg",
-    },
-    {
-      name: "Dinesh Chugtai2",
-      url: img6,
-      url1: "https://i.imgur.com/OckVkRo.jpeg",
-    },
-    {
-      name: "Dinesh Chugtai3",
-      url: img7,
-      url1: "https://i.imgur.com/H07Fxdh.jpeg",
-    },
-    {
-      name: "Dinesh Chugtai4",
-      url: img8,
-      url1: "https://i.imgur.com/dmwjVjG.jpeg",
-    },
-    {
-      name: "Dinesh Chugtai5",
-      url: img9,
-      url1: "https://i.imgur.com/Lnt9K7l.jpeg",
-    },
-    {
-      name: "Dinesh Chugtai6",
-      url: img10,
-      url1: "https://i.imgur.com/Gg6BpGn.jpeg",
-    },
-  ];
+function ProfileCard() {
   const [lastDirection, setLastDirection] = useState();
   const [swipeCount, setSwipeCount] = useState(0);
   const [showIceCreamModal, setShowIceCreamModal] = useState(false);
-  
+  const { user: currentUser } = useContext(AuthContext);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const swiped = (direction, nameToDelete) => {
     console.log("removing: " + nameToDelete);
@@ -83,6 +22,35 @@ function ProfileCard({ user }) {
   const outOfFrame = (name) => {
     console.log(name + " left the screen!");
   };
+
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch("http://localhost:5000/api/users");
+      const result = await response.json();
+
+      console.log("API response:", result);
+
+      if (response.ok) {
+        // Filter out the current user
+        const filteredUsers = result.filter(
+          (user) => user._id !== currentUser?._id
+        );
+        setData(filteredUsers);
+        setLoading(false);
+      } else {
+        console.log(result);
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false); // Set loading to false once the data is fetched
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [currentUser]); // Include currentUser in the dependency array to refetch data when the user changes
 
   useEffect(() => {
     if (swipeCount % 4 === 0 && swipeCount > 0) {
@@ -95,20 +63,21 @@ function ProfileCard({ user }) {
     }
   }, [swipeCount]);
 
+  if (loading) return <Loading />;
 
   return (
-    <div className="dashboard mt-10">
+    <div className="dashboard">
       <div className="swipe-container">
         <div className="card-container">
-          {characters.map((character,index) => (
+          {data.map((character, index) => (
             <TinderCard
               className="swipe"
-              key={character.name}
+              key={index}
               onSwipe={(dir) => swiped(dir, character.name)}
               onCardLeftScreen={() => outOfFrame(character.name)}
             >
               <div
-                style={{ backgroundImage: `url(${character.url})` }}
+                style={{ backgroundImage: `url(${character.picture})` }}
                 className="card"
               >
                 <h3>{character.name}</h3>
