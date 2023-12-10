@@ -27,7 +27,7 @@ const MatchedUsers = () => {
               potentialChats.map((potentialUser, index) => (
                 <div
                   id={`Matched_User_${index + 1}`}
-                  className="relative flex flex-col items-center p-1 mb-3 mr-4 text-white transition ease-in-out rounded-lg cursor-pointer bg-gradient-to-r hover:scale-110 to-blue-500 from-violet-500 hover:bg-gradient-to-l hover:from-blue-600 hover:to-violet-600"
+                  className="relative flex flex-col items-center p-1 mb-3 mr-4 text-white transition ease-in-out rounded-lg cursor-pointer bg-gradient-to-t hover:scale-110 to-sky-500 from-purple-500 hover:to-sky-600 hover:from-purple-600 dark:to-sky-600 dark:from-purple-600 dark:hover:to-sky-400 dark:hover:from-purple-500"
                   key={index}
                   onClick={() => createChat(user._id, potentialUser._id)}
                 >
