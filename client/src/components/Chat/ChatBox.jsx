@@ -13,6 +13,8 @@ const ChatBox = () => {
   const { currentChat, messages, isMessagesLoading, sendTextMessage } = useContext(ChatContext);
 
   const { recipientUser } = useFetchRecipientUserInfo(currentChat, user);
+  const { onlineUsers } = useContext(ChatContext);
+  const isTheUserOnline = onlineUsers?.some((user) => user?.userId === recipientUser?._id);
 
   const [textMessage, setTextMessage] = useState("");
   const scroll = useRef();
@@ -36,11 +38,27 @@ const ChatBox = () => {
   return (
     // CONTAINER
     <div id="ChatBox" className="flex flex-col flex-1 w-1/12 ">
-      {/* TOP - NAME */}
-      <div id="ChatBox_User_Info" className="justify-between p-3 text-center text-white bg-gradient-to-r from-violet-950 to-violet-700 rounded-t-xl">
-        <strong className="text-xl tracking-widest text-red-400 dark:text-yellow-500">
-          {recipientUser?.name} {recipientUser?.surname}
-        </strong>
+      {/* TOP - NAME -IMG - ISONLINE? */}
+      <div
+        id="ChatBox_User_Info"
+        className="flex flex-row items-center justify-center p-3 text-white bg-gradient-to-r from-violet-950 to-violet-700 rounded-t-xl "
+      >
+        <div id="User_Profile_Pic">
+          <img className="w-16 h-16 mr-4 rounded-full" src={recipientUser?.picture} alt={recipientUser?.name} />
+        </div>
+
+        <div id="User_Full_Name" className="mr-4">
+          <strong className="text-xl tracking-widest text-red-400 dark:text-yellow-500">
+            {recipientUser?.name} {recipientUser?.surname}
+          </strong>
+        </div>
+
+        <div id="User_Online_Status">
+          <span className={isTheUserOnline ? "relative flex h-3 w-3" : ""}>
+            <span className={isTheUserOnline ? "animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75" : ""}></span>
+            <span className={isTheUserOnline ? "relative inline-flex rounded-full h-3 w-3 bg-green-500" : ""}></span>
+          </span>
+        </div>
       </div>
 
       {/* MIDDLE - CHAT MESSAGES */}

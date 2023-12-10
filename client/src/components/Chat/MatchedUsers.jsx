@@ -16,7 +16,7 @@ const MatchedUsers = () => {
           <div id="MatchedUsers_Description">
             <div id="Matched_User_Title" className="flex flex-row items-center justify-center">
               <h2 className="mb-4 text-4xl font-black text-red-400 dark:text-yellow-500">
-                <span className="text-red-500">{user?.name.toUpperCase()}</span> ,YOU HAVE NEW MATCHES!
+                <span className="text-red-500">👋{user?.name.toUpperCase()}</span> ,YOU HAVE NEW MATCHES!
               </h2>
               <img src={image} alt="ice cream" width="120px" className="mb-12" />
             </div>
@@ -27,11 +27,11 @@ const MatchedUsers = () => {
               potentialChats.map((potentialUser, index) => (
                 <div
                   id={`Matched_User_${index + 1}`}
-                  className="relative flex flex-col items-center p-1 mb-2 mr-2 text-white transition bg-blue-500 rounded-lg cursor-pointer max-w-fit hover:bg-blue-700 focus:ring-blue-300 dark:hover:bg-blue-600"
+                  className="relative flex flex-col items-center p-1 mb-3 mr-4 text-white transition ease-in-out rounded-lg cursor-pointer bg-gradient-to-r hover:scale-110 to-blue-500 from-violet-500 hover:bg-gradient-to-l hover:from-blue-600 hover:to-violet-600"
                   key={index}
                   onClick={() => createChat(user._id, potentialUser._id)}
                 >
-                  <img className="w-12 h-12 rounded-full" src={potentialUser.picture} alt="Potential User Pic" />
+                  <img className="w-12 h-12 rounded-full " src={potentialUser.picture} alt="Potential User Pic" />
                   {potentialUser.name} {potentialUser.surname}
                   <span
                     id={`Matched_User${index + 1}_online_status`}
