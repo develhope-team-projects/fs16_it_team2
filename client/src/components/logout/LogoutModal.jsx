@@ -10,7 +10,7 @@ const LogoutModal = () => {
       <div
         id="popup-modal"
         tabIndex="-1"
-        className=" flex justify-center z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+        className=" flex justify-center items-center z-50  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
       >
         <div className="relative w-full max-w-md max-h-full ">
           <div className="relative bg-white rounded-lg custom-box-shadow dark:bg-gray-800">
