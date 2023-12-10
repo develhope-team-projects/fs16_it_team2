@@ -26,7 +26,7 @@ const UserCard = ({ chat, user }) => {
   return (
     <>
       {/* SINGLE USER CARD */}
-      <div className="relative flex items-center justify-between p-2 space-x-3 text-black active:bg-black dark:hover:bg-violet-900 hover:bg-violet-400 cursor-pointer min-w-[19rem] md:min-w-[14rem] lg:min-w-[24rem] dark:active:bg-violet-500 rounded-2xl border-2 transition border-violet-800 mb-1">
+      <div className="relative flex items-center justify-between p-2 space-x-3 text-black active:bg-black dark:hover:bg-violet-900 hover:bg-violet-400 cursor-pointer min-w-[19rem] md:min-w-[14rem] lg:min-w-[26rem] dark:active:bg-violet-500 rounded-2xl border-2 transition border-violet-800 mb-1">
         {/* SINGLE USER CARD - LEFT (AVATAR, NAME, SURNAME & LAST MESSAGE) */}
         <div className="flex">
           {/* AVATAR */}
