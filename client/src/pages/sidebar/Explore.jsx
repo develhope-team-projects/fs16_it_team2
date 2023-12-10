@@ -2,8 +2,8 @@ import React, { useEffect, useState, useContext } from "react";
 import TinderCard from "react-tinder-card";
 import IceCreamModal from "../../components/modal/IceCreamModal";
 import { AuthContext } from "../../context/AuthContext";
-import "../../components/profileCard/profileCard.css"
-import Loading from "../../components/loading/Loading"
+import "../../components/profileCard/profileCard.css";
+import Loading from "../../components/loading/Loading";
 
 function Explore() {
   const [lastDirection, setLastDirection] = useState();
@@ -33,9 +33,7 @@ function Explore() {
 
       if (response.ok) {
         // Filter out the current user
-        const filteredUsers = result.filter(
-          (user) => user._id !== currentUser?._id
-        );
+        const filteredUsers = result.filter((user) => user._id !== currentUser?._id);
         setData(filteredUsers);
         setLoading(false);
       } else {
@@ -66,7 +64,7 @@ function Explore() {
   if (loading) return <Loading />;
 
   return (
-    <div className="dashboard w-full relative h-full">
+    <div className="relative w-full h-full dashboard">
       <div className="swipe-container">
         <div className="card-container">
           {data.map((character, index) => (
@@ -76,11 +74,8 @@ function Explore() {
               onSwipe={(dir) => swiped(dir, character.name)}
               onCardLeftScreen={() => outOfFrame(character.name)}
             >
-              <div
-                style={{ backgroundImage: `url(${character.picture})` }}
-                className="card"
-              >
-                <h3 className="">{character.name}</h3>
+              <div style={{ backgroundImage: `url(${character.picture})` }} className="card">
+                <h3 style={{ fontSize: "3.5rem", color: "#5b21b6", paddingLeft: "10px"}}>{character.name}</h3>
               </div>
             </TinderCard>
           ))}
