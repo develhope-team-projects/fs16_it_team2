@@ -49,14 +49,14 @@ const ChatBox = () => {
 
         <div id="User_Full_Name" className="mr-4">
           <strong className="text-xl tracking-widest text-red-400 dark:text-yellow-500">
-            {recipientUser?.name} {recipientUser?.surname}
+            {recipientUser?.name.toUpperCase()} {recipientUser?.surname.toUpperCase()}
           </strong>
         </div>
 
         <div id="User_Online_Status">
-          <span className={isTheUserOnline ? "relative flex h-3 w-3" : ""}>
+          <span className={isTheUserOnline ? "relative flex h-4 w-4" : ""}>
             <span className={isTheUserOnline ? "animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75" : ""}></span>
-            <span className={isTheUserOnline ? "relative inline-flex rounded-full h-3 w-3 bg-green-500" : ""}></span>
+            <span className={isTheUserOnline ? "relative inline-flex rounded-full h-4 w-4 bg-green-500" : ""}></span>
           </span>
         </div>
       </div>
