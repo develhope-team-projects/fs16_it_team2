@@ -15,13 +15,13 @@ const Chat = () => {
   const { userChats, isUserChatsLoading, userChatsError, updateCurrentChat } = useContext(ChatContext);
 
   return (
-    <div id="ChatContainer" className="flex flex-col w-full h-full overflow-y-scroll md:absolute flex-nowrap">
+    <div id="ChatContainer" className="flex flex-col w-full h-full lg:overflow-y-scroll md:absolute flex-nowrap">
       {/* SHOW MATCHED USERS IF THERE ARE ANY */}
       <MatchedUsers />
 
       {/* AVAILABLE USERS CHATS (LEFT) & ACTUAL CHAT (RIGHT) */}
       {userChats?.length < 1 ? null : (
-        <div id="UserChatList_and_Chat" className="flex flex-row h-screen mx-4">
+        <div id="UserChatList_and_Chat" className="flex flex-row h-screen lg:mx-4 md:max-h-fit max-h-[625px]">
           {/*  */}
           {/* USER CHATS AVAIABLE (LEFT) */}
           <div id="UserChatList" className="flex flex-col mr-2 basis-1/12">
@@ -35,10 +35,10 @@ const Chat = () => {
             {(!isUserChatsLoading && !userChats) || (!userChats?.length === 0 && <p>No Chats..</p>)}
 
             {/* START A CHAT NOW - CONTAINER */}
-            <div id="UsersContainer" className="flex flex-col items-center mb-4">
+            <div id="UsersContainer" className="flex flex-col items-center mb-4 ">
               {/* DESCRIPTION */}
               <img src={iceCream} alt="Ice cream" width="190px" />
-              <h4 className="text-2xl font-black text-red-400 dark:text-yellow-500">👋{user.name.toUpperCase()}, START A CHAT NOW:</h4>
+              <h4 className="font-black text-center text-red-400 md:text-2xl dark:text-yellow-500">👋{user.name.toUpperCase()}, START A CHAT NOW:</h4>
             </div>
 
             {/* MAP ALL USER'S CONVESATION */}

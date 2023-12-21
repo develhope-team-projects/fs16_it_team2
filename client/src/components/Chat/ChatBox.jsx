@@ -37,18 +37,18 @@ const ChatBox = () => {
 
   return (
     // CONTAINER
-    <div id="ChatBox" className="flex flex-col flex-1 w-1/12 ">
+    <div id="ChatBox" className="relative flex flex-col flex-1 w-1/12">
       {/* TOP - NAME -IMG - ISONLINE? */}
       <div
         id="ChatBox_User_Info"
-        className="flex flex-row items-center justify-center p-3 text-white bg-gradient-to-r from-violet-950 to-violet-700 rounded-t-xl "
+        className="flex flex-row items-center justify-center p-1 text-white lg:p-3 bg-gradient-to-r from-violet-950 to-violet-700 rounded-t-xl "
       >
         <div id="User_Profile_Pic">
-          <img className="w-16 h-16 mr-4 rounded-full" src={recipientUser?.picture} alt={recipientUser?.name} />
+          <img className="mr-4 rounded-full h-11 md:h-16 md:w-16" src={recipientUser?.picture} alt={recipientUser?.name} />
         </div>
 
         <div id="User_Full_Name" className="mr-4">
-          <strong className="text-xl tracking-widest text-red-400 dark:text-yellow-500">
+          <strong className="tracking-widest text-red-400 md:text-xl dark:text-yellow-500">
             {recipientUser?.name.toUpperCase()} {recipientUser?.surname.toUpperCase()}
           </strong>
         </div>
@@ -90,7 +90,7 @@ const ChatBox = () => {
       </div>
 
       {/* BOTTOM - INPUT TEXT */}
-      <div id="ChatBox_TextArea" className="p-4 mb-auto space-x-3 bg-gradient-to-r from-violet-800 to-violet-950 rounded-b-xl">
+      <div id="ChatBox_TextArea" className="mb-auto space-x-3 lg:p-4 bg-gradient-to-r from-violet-800 to-violet-950 rounded-b-xl md:p-2">
         <InputEmoji
           value={textMessage}
           onChange={setTextMessage}

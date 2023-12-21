@@ -23,7 +23,7 @@ const HeroSection = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl">Swipe smiles, make friends miles! </h1>
         </DinamicColorLight>
 
-        <div className="flex flex-col items-center md:flex-row md:space-x-4 mt-4">
+        <div className="flex flex-col items-center mt-4 md:flex-row md:space-x-4">
           <DinamicColorLight>
             <h2 className="flex text-lg md:text-5xl">
               Join our community, before your ice cream melts down!
